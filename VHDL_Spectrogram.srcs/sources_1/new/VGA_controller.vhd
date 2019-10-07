@@ -46,6 +46,16 @@ end VGA_controller;
 architecture Behavioral of VGA_controller is
 
 	SIGNAL s_output_greyscale : std_logic_vector(3 DOWNTO 0) := (OTHERS => '0');
+	
+	
+	
+	--these constants is so we know where the "dynamic" portion of the image starts
+	--dynamic ? => the part of the image that is determined by the FFT 
+	
+	constant dyn_beeld_start_X: integer RANGE 0 to 640 := 46;
+	constant dyn_beeld_einde_X: integer RANGE 0 to 640 := 524;
+	constant dyn_beeld_start_Y: integer RANGE 0 to 480 := 69;
+	constant dyn_beeld_einde_Y: integer RANGE 0 to 480 := 411;
 
 begin
 
@@ -54,8 +64,27 @@ begin
 		IF rising_edge(clk) THEN
 			IF  Active_video = '1' THEN
 				--nu in actief gebied van het scherm
-			
-				
+				case X is
+					when 0 to dyn_beeld_start_X - 1 => 
+						s_output_greyscale <= "1111";	
+					when dyn_beeld_start_X to dyn_beeld_einde_X=> 
+						case Y is
+							when 0 to dyn_beeld_start_Y - 1 => 
+								s_output_greyscale <= "1111";	
+							when dyn_beeld_start_Y to dyn_beeld_einde_Y=>
+							
+							
+								--nu in dynamisch beeld gedeelte: TODO
+								s_output_greyscale <= "0000";
+							
+							
+							
+							when dyn_beeld_einde_Y + 1 to 480 => 
+								s_output_greyscale <= "1111";	
+						end case;
+					when dyn_beeld_einde_X + 1 to 640 => 
+						s_output_greyscale <= "1111";	
+				end case;
 			
 			else
 				s_output_greyscale <= "0000";				

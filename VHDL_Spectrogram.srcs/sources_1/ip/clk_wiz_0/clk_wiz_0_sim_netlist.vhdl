@@ -1,9 +1,9 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Sep 30 11:18:01 2019
+-- Date        : Mon Oct  7 11:22:22 2019
 -- Host        : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {d:/Ing/Master
+-- Command     : write_vhdl -force -mode funcsim {D:/Ing/Master
 --               1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl}
 -- Design      : clk_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
@@ -18,8 +18,6 @@ entity clk_wiz_0_clk_wiz_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
-    reset : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -45,6 +43,7 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz_0_clk_wiz is
   signal NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_LOCKED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_PSDONE_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
@@ -161,13 +160,13 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       DO(15 downto 0) => NLW_mmcm_adv_inst_DO_UNCONNECTED(15 downto 0),
       DRDY => NLW_mmcm_adv_inst_DRDY_UNCONNECTED,
       DWE => '0',
-      LOCKED => locked,
+      LOCKED => NLW_mmcm_adv_inst_LOCKED_UNCONNECTED,
       PSCLK => '0',
       PSDONE => NLW_mmcm_adv_inst_PSDONE_UNCONNECTED,
       PSEN => '0',
       PSINCDEC => '0',
       PWRDWN => '0',
-      RST => reset
+      RST => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -178,8 +177,6 @@ entity clk_wiz_0 is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
-    reset : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -192,8 +189,6 @@ inst: entity work.clk_wiz_0_clk_wiz_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,
-      clk_out2 => clk_out2,
-      locked => locked,
-      reset => reset
+      clk_out2 => clk_out2
     );
 end STRUCTURE;
