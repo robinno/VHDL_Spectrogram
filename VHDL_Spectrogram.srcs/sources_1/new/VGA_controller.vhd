@@ -81,9 +81,13 @@ begin
 							
 							when dyn_beeld_einde_Y + 1 to 480 => 
 								s_output_greyscale <= "1111";	
+							when 481 to 525 =>
+								s_output_greyscale <= "0000";
 						end case;
 					when dyn_beeld_einde_X + 1 to 640 => 
 						s_output_greyscale <= "1111";	
+					when 641 to 800 =>
+						s_output_greyscale <= "0000";
 				end case;
 			
 			else
