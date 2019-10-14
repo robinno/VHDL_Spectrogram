@@ -66,7 +66,7 @@ begin
 				--nu in actief gebied van het scherm
 				case X is
 					when 0 to dyn_beeld_start_X - 1 => 
-						s_output_greyscale <= "1011";	
+						s_output_greyscale <= "1000";	
 					when dyn_beeld_start_X to dyn_beeld_einde_X=> 
 						case Y is
 							when 0 to dyn_beeld_start_Y - 1 => 
@@ -85,7 +85,7 @@ begin
 								s_output_greyscale <= "0000";
 						end case;
 					when dyn_beeld_einde_X + 1 to 640 => 
-						s_output_greyscale <= "1011";	
+						s_output_greyscale <= "1000";	
 					when 641 to 800 =>
 						s_output_greyscale <= "0000";
 				end case;
