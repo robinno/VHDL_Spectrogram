@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Oct 27 12:14:24 2019
+| Date         : Sun Oct 27 14:17:25 2019
 | Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   40 |     0 |     53200 |  0.08 |
-|   LUT as Logic          |   40 |     0 |     53200 |  0.08 |
+| Slice LUTs*             |   61 |     0 |     53200 |  0.11 |
+|   LUT as Logic          |   61 |     0 |     53200 |  0.11 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |   23 |     0 |    106400 |  0.02 |
 |   Register as Flip Flop |   23 |     0 |    106400 |  0.02 |
@@ -77,11 +77,12 @@ Table of Contents
 3. DSP
 ------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |       220 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    1 |     0 |       220 |  0.45 |
+|   DSP48E1 only |    1 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -146,25 +147,26 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT2     |   29 |                 LUT |
 | FDRE     |   23 |        Flop & Latch |
-| LUT6     |   21 |                 LUT |
+| LUT6     |   22 |                 LUT |
 | OBUF     |   14 |                  IO |
-| LUT5     |   11 |                 LUT |
-| LUT2     |    7 |                 LUT |
-| LUT4     |    6 |                 LUT |
-| LUT3     |    4 |                 LUT |
-| LUT1     |    2 |                 LUT |
+| LUT5     |   10 |                 LUT |
+| LUT4     |    9 |                 LUT |
+| LUT3     |    8 |                 LUT |
+| DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+-----------+------+
-|  Ref Name | Used |
-+-----------+------+
-| clk_wiz_0 |    1 |
-+-----------+------+
++----------------+------+
+|    Ref Name    | Used |
++----------------+------+
+| clk_wiz_0      |    1 |
+| ROM_Static_img |    1 |
++----------------+------+
 
 
 9. Instantiated Netlists

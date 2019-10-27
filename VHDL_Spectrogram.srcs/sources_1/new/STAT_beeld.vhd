@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -45,9 +45,26 @@ end STAT_beeld;
 
 architecture Behavioral of STAT_beeld is
 
+	COMPONENT ROM_Static_img
+	  PORT (
+		clka : IN STD_LOGIC;
+		addra : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
+		douta : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	  );
+	END COMPONENT;
+	
+	signal s_addr : std_logic_vector(18 downto 0) := (others => '0'); 
+	
 begin
 
-	--TODO
-	out_greyscale <= "1100";
+	s_addr <= 	std_logic_vector(to_unsigned(Y * 640 + X, 19)) WHEN	ENA = '1' 	ELSE
+				(others => '0');
+
+	ROM_Static_img_INST: ROM_Static_img
+		PORT MAP (
+			clka => clk,
+			addra => s_addr,
+			douta => out_greyscale
+		);
 
 end Behavioral;
