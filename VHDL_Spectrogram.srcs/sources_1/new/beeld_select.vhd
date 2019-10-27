@@ -47,8 +47,8 @@ architecture Behavioral of beeld_select is
 	--these constants is so we know where the "dynamic" portion of the image starts
 	--dynamic ? => the part of the image that is determined by the FFT 
 	
-	constant dyn_beeld_start_X: integer RANGE 0 to 640 := 46;
-	constant dyn_beeld_einde_X: integer RANGE 0 to 640 := 524;
+	constant dyn_beeld_start_X: integer RANGE 0 to 640 := 48;
+	constant dyn_beeld_einde_X: integer RANGE 0 to 640 := 526;
 	constant dyn_beeld_start_Y: integer RANGE 0 to 480 := 69;
 	constant dyn_beeld_einde_Y: integer RANGE 0 to 480 := 411;
 	

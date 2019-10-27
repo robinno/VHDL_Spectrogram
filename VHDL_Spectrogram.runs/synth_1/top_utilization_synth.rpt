@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Oct 27 14:17:25 2019
+| Date         : Sun Oct 27 14:45:21 2019
 | Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -147,13 +147,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |   29 |                 LUT |
+| LUT3     |   31 |                 LUT |
+| LUT6     |   23 |                 LUT |
 | FDRE     |   23 |        Flop & Latch |
-| LUT6     |   22 |                 LUT |
 | OBUF     |   14 |                  IO |
-| LUT5     |   10 |                 LUT |
-| LUT4     |    9 |                 LUT |
-| LUT3     |    8 |                 LUT |
+| LUT4     |   10 |                 LUT |
+| LUT5     |    7 |                 LUT |
+| LUT2     |    6 |                 LUT |
 | DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 

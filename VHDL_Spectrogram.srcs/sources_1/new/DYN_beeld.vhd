@@ -47,6 +47,7 @@ architecture Behavioral of DYN_beeld is
 
 begin
 	--TODO
-	out_greyscale <= "0011";
+	out_greyscale <= 	"1001" when ENA = '1' else
+						"0000";
 
 end Behavioral;

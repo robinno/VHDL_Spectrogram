@@ -128,7 +128,7 @@ begin
 		
 	--eigen output mux:
 	output_greyscale <= s_stat_out 	when s_ENA_stat_beeld = '1' else
-						s_dyn_out 	when s_ENA_stat_beeld = '1' else
+						s_dyn_out 	when s_ENA_dyn_beeld = '1' else
 						"0000";
 	
 	-- process(clk)

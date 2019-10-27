@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Oct 27 14:16:41 2019
-# Process ID: 17064
+# Start of session at: Sun Oct 27 14:44:30 2019
+# Process ID: 12868
 # Current directory: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.vds
@@ -16,13 +16,13 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11876 
+INFO: Helper process launched with PID 12648 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 739.875 ; gain = 177.984
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 739.648 ; gain = 177.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:47]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-17064-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'clk_deler' of component 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-17064-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-12868-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'clk_deler' of component 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-12868-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:14]
 INFO: [Synth 8-3491] module 'VGA' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:34' bound to instance 'VGA_inst' of component 'VGA' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:80]
 INFO: [Synth 8-638] synthesizing module 'VGA' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:44]
 INFO: [Synth 8-3491] module 'VGA_driver' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd:34' bound to instance 'VGA_driver_inst' of component 'VGA_driver' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:75]
@@ -38,8 +38,8 @@ INFO: [Synth 8-638] synthesizing module 'DYN_beeld' [D:/Ing/Master 1sem/Digitale
 INFO: [Synth 8-256] done synthesizing module 'DYN_beeld' (3#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/DYN_beeld.vhd:46]
 INFO: [Synth 8-3491] module 'STAT_beeld' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:34' bound to instance 'STAT_beeld_INST' of component 'STAT_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:117]
 INFO: [Synth 8-638] synthesizing module 'STAT_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:46]
-INFO: [Synth 8-3491] module 'ROM_Static_img' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-17064-LAPTOP-69E4OMV9/realtime/ROM_Static_img_stub.vhdl:5' bound to instance 'ROM_Static_img_INST' of component 'ROM_Static_img' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:63]
-INFO: [Synth 8-638] synthesizing module 'ROM_Static_img' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-17064-LAPTOP-69E4OMV9/realtime/ROM_Static_img_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'ROM_Static_img' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-12868-LAPTOP-69E4OMV9/realtime/ROM_Static_img_stub.vhdl:5' bound to instance 'ROM_Static_img_INST' of component 'ROM_Static_img' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'ROM_Static_img' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-12868-LAPTOP-69E4OMV9/realtime/ROM_Static_img_stub.vhdl:14]
 INFO: [Synth 8-256] done synthesizing module 'STAT_beeld' (4#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:46]
 INFO: [Synth 8-256] done synthesizing module 'VGA_controller' (5#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'VGA' (6#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:44]
@@ -65,9 +65,8 @@ WARNING: [Synth 8-3331] design DYN_beeld has unconnected port Y[3]
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port Y[2]
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port Y[1]
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port Y[0]
-WARNING: [Synth 8-3331] design DYN_beeld has unconnected port ENA
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 806.621 ; gain = 244.730
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 806.750 ; gain = 244.906
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -80,10 +79,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 806.621 ; gain = 244.730
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 806.750 ; gain = 244.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 806.621 ; gain = 244.730
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 806.750 ; gain = 244.906
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -99,20 +98,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 922.703 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 917.344 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 922.703 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 917.344 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 922.703 ; gain = 360.813
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 917.344 ; gain = 355.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 922.703 ; gain = 360.813
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 917.344 ; gain = 355.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -122,10 +121,10 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  {d:
 Applied set_property DONT_TOUCH = true for clk_deler. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for VGA_inst/VGA_controller_inst/STAT_beeld_INST/ROM_Static_img_INST. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 922.703 ; gain = 360.813
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 917.344 ; gain = 355.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 922.703 ; gain = 360.813
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 917.344 ; gain = 355.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -144,7 +143,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     19 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -169,7 +168,7 @@ Detailed RTL Component Info :
 Module VGA_controller 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -192,7 +191,7 @@ DSP Report: register VGA_inst/VGA_driver_inst/HTeller_reg is absorbed into DSP V
 DSP Report: operator VGA_inst/VGA_controller_inst/STAT_beeld_INST/s_addr0 is absorbed into DSP VGA_inst/VGA_controller_inst/STAT_beeld_INST/s_addr0.
 DSP Report: operator VGA_inst/VGA_controller_inst/STAT_beeld_INST/s_addr1 is absorbed into DSP VGA_inst/VGA_controller_inst/STAT_beeld_INST/s_addr0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 922.703 ; gain = 360.813
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 917.344 ; gain = 355.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -222,13 +221,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_deler/clk_out1' to pi
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_deler/clk_out2' to pin 'clk_deler/bbstub_clk_out2/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 945.723 ; gain = 383.832
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 947.414 ; gain = 385.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 969.336 ; gain = 407.445
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 970.617 ; gain = 408.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -240,7 +239,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 970.859 ; gain = 408.969
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 973.316 ; gain = 411.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -264,7 +263,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 976.645 ; gain = 414.754
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -277,7 +276,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 976.645 ; gain = 414.754
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -289,25 +288,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 976.645 ; gain = 414.754
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 976.645 ; gain = 414.754
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 976.645 ; gain = 414.754
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 976.645 ; gain = 414.754
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -328,11 +327,11 @@ Report Cell Usage:
 |1     |ROM_Static_img_bbox_1 |     1|
 |2     |clk_wiz_0_bbox_0      |     1|
 |3     |DSP48E1               |     1|
-|4     |LUT2                  |    29|
-|5     |LUT3                  |     8|
-|6     |LUT4                  |     9|
-|7     |LUT5                  |    10|
-|8     |LUT6                  |    22|
+|4     |LUT2                  |     6|
+|5     |LUT3                  |    31|
+|6     |LUT4                  |    10|
+|7     |LUT5                  |     7|
+|8     |LUT6                  |    23|
 |9     |FDRE                  |    23|
 |10    |OBUF                  |    14|
 +------+----------------------+------+
@@ -341,34 +340,34 @@ Report Instance Areas:
 +------+------------------------+---------------+------+
 |      |Instance                |Module         |Cells |
 +------+------------------------+---------------+------+
-|1     |top                     |               |   122|
-|2     |  VGA_inst              |VGA            |   106|
-|3     |    VGA_controller_inst |VGA_controller |    28|
-|4     |      STAT_beeld_INST   |STAT_beeld     |    28|
-|5     |    VGA_driver_inst     |VGA_driver     |    78|
+|1     |top                     |               |   121|
+|2     |  VGA_inst              |VGA            |   105|
+|3     |    VGA_controller_inst |VGA_controller |     5|
+|4     |      STAT_beeld_INST   |STAT_beeld     |     5|
+|5     |    VGA_driver_inst     |VGA_driver     |   100|
 +------+------------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 976.645 ; gain = 414.754
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 976.645 ; gain = 298.672
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 976.645 ; gain = 414.754
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 978.109 ; gain = 305.672
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 978.109 ; gain = 416.266
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 976.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 978.109 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+39 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 976.645 ; gain = 679.418
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 976.645 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 978.109 ; gain = 687.039
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 978.109 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 27 14:17:25 2019...
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 27 14:45:21 2019...
