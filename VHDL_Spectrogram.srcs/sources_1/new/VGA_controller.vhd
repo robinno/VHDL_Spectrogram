@@ -40,7 +40,7 @@ entity VGA_controller is
 		X: in integer RANGE 0 TO 800;
 		Active_video: in std_logic;
 		
-		RAM_addr_VGA : out integer range 0 to 262144;
+		RAM_addr_VGA : out integer range 0 to 262143;
 		RAM_data_VGA : in integer range 0 to 15;
 	
 		output_greyscale: out STD_LOGIC_VECTOR (3 downto 0)
@@ -57,6 +57,9 @@ architecture Behavioral of VGA_controller is
 			X : in integer range 0 to 800;
 			Y : in integer range 0 to 525;
 			ENA: in std_logic;
+			
+			RAM_addr_VGA : out integer range 0 to 262143;
+			RAM_data_VGA : in integer range 0 to 15;
 			
 			out_greyscale : out std_logic_vector(3 downto 0)
 		);
@@ -81,8 +84,8 @@ architecture Behavioral of VGA_controller is
 	
 	signal ENA_dyn_beeld : std_logic := '0';
 	signal ENA_stat_beeld : std_logic := '0';
-	signal s_stat_out : std_logic_vector(3 downto 0) := (others => '0');
-	signal s_dyn_out : std_logic_vector(3 downto 0) := (others => '0');
+	signal stat_out : std_logic_vector(3 downto 0) := (others => '0');
+	signal dyn_out : std_logic_vector(3 downto 0) := (others => '0');
 begin
 	
 	--static beeld = de randen (blijven hetzelfde altijd)
@@ -108,9 +111,12 @@ begin
 		
 			X => X,
 			Y => Y,
-			ENA => s_ENA_dyn_beeld,
+			ENA => ENA_dyn_beeld,
 			
-			out_greyscale => s_dyn_out
+			RAM_addr_VGA => RAM_addr_VGA,
+			RAM_data_VGA => RAM_data_VGA,
+			
+			out_greyscale => dyn_out
 		);
 	
 	STAT_beeld_INST : STAT_beeld
@@ -119,15 +125,15 @@ begin
 		
 			X => X,
 			Y => Y,
-			ENA => s_ENA_stat_beeld,
+			ENA => ENA_stat_beeld,
 			
-			out_greyscale => s_stat_out
+			out_greyscale => stat_out
 		);
 		
 		
 	--eigen output mux:
-	output_greyscale <= s_stat_out 	when s_ENA_stat_beeld = '1' else
-						s_dyn_out 	when s_ENA_dyn_beeld = '1' else
+	output_greyscale <= stat_out 	when ENA_stat_beeld = '1' else
+						dyn_out 	when ENA_dyn_beeld = '1' else
 						"0000";
 	
 	-- process(clk)

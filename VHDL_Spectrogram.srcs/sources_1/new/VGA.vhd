@@ -40,7 +40,7 @@ entity VGA is
            g_out : out STD_LOGIC_VECTOR (3 downto 0);
            b_out : out STD_LOGIC_VECTOR (3 downto 0);
 			
-		   RAM_addr_VGA : out integer range 0 to 262144;
+		   RAM_addr_VGA : out integer range 0 to 262143;
 		   RAM_data_VGA : in integer range 0 to 15
 		   );
 end VGA;
@@ -54,7 +54,7 @@ architecture Behavioral of VGA is
 				X: in integer RANGE 0 TO 800;
 				Active_video: in std_logic;
 			
-				RAM_addr_VGA : out integer range 0 to 262144;
+				RAM_addr_VGA : out integer range 0 to 262143;
 				RAM_data_VGA : in integer range 0 to 15;
 			
 				output_greyscale: out STD_LOGIC_VECTOR (3 downto 0));

@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Oct 27 14:44:30 2019
-# Process ID: 12868
+# Start of session at: Mon Oct 28 12:31:13 2019
+# Process ID: 1484
 # Current directory: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.vds
@@ -16,34 +16,52 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12648 
+INFO: Helper process launched with PID 6304 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 739.648 ; gain = 177.805
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 740.102 ; gain = 177.258
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:47]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-12868-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'clk_deler' of component 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-12868-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'VGA' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:34' bound to instance 'VGA_inst' of component 'VGA' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:80]
-INFO: [Synth 8-638] synthesizing module 'VGA' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:44]
-INFO: [Synth 8-3491] module 'VGA_driver' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd:34' bound to instance 'VGA_driver_inst' of component 'VGA_driver' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:75]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-1484-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'clk_deler' of component 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-1484-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'VGA' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:34' bound to instance 'VGA_inst' of component 'VGA' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'VGA' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:48]
+INFO: [Synth 8-3491] module 'VGA_driver' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd:34' bound to instance 'VGA_driver_inst' of component 'VGA_driver' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:82]
 INFO: [Synth 8-638] synthesizing module 'VGA_driver' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd:45]
 INFO: [Synth 8-256] done synthesizing module 'VGA_driver' (1#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd:45]
-INFO: [Synth 8-3491] module 'VGA_controller' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:34' bound to instance 'VGA_controller_inst' of component 'VGA_controller' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:87]
-INFO: [Synth 8-638] synthesizing module 'VGA_controller' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:48]
-INFO: [Synth 8-3491] module 'beeld_select' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/beeld_select.vhd:34' bound to instance 'beeld_select_INST' of component 'beeld_select' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'beeld_select' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/beeld_select.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'beeld_select' (2#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/beeld_select.vhd:45]
-INFO: [Synth 8-3491] module 'DYN_beeld' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/DYN_beeld.vhd:34' bound to instance 'DYN_beeld_INST' of component 'DYN_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'DYN_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/DYN_beeld.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'DYN_beeld' (3#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/DYN_beeld.vhd:46]
-INFO: [Synth 8-3491] module 'STAT_beeld' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:34' bound to instance 'STAT_beeld_INST' of component 'STAT_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:117]
+INFO: [Synth 8-3491] module 'VGA_controller' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:34' bound to instance 'VGA_controller_inst' of component 'VGA_controller' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'VGA_controller' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:51]
+INFO: [Synth 8-3491] module 'DYN_beeld' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/DYN_beeld.vhd:34' bound to instance 'DYN_beeld_INST' of component 'DYN_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'DYN_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/DYN_beeld.vhd:49]
+WARNING: [Synth 8-3848] Net RAM_addr_VGA in module/entity DYN_beeld does not have driver. [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/DYN_beeld.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'DYN_beeld' (2#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/DYN_beeld.vhd:49]
+INFO: [Synth 8-3491] module 'STAT_beeld' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:34' bound to instance 'STAT_beeld_INST' of component 'STAT_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:122]
 INFO: [Synth 8-638] synthesizing module 'STAT_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:46]
-INFO: [Synth 8-3491] module 'ROM_Static_img' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-12868-LAPTOP-69E4OMV9/realtime/ROM_Static_img_stub.vhdl:5' bound to instance 'ROM_Static_img_INST' of component 'ROM_Static_img' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:63]
-INFO: [Synth 8-638] synthesizing module 'ROM_Static_img' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-12868-LAPTOP-69E4OMV9/realtime/ROM_Static_img_stub.vhdl:14]
-INFO: [Synth 8-256] done synthesizing module 'STAT_beeld' (4#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'VGA_controller' (5#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (6#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'top' (7#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:47]
+INFO: [Synth 8-3491] module 'ROM_Static_img' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-1484-LAPTOP-69E4OMV9/realtime/ROM_Static_img_stub.vhdl:5' bound to instance 'ROM_Static_img_INST' of component 'ROM_Static_img' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'ROM_Static_img' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-1484-LAPTOP-69E4OMV9/realtime/ROM_Static_img_stub.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'STAT_beeld' (3#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/STAT_beeld.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'VGA_controller' (4#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_controller.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (5#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA.vhd:48]
+INFO: [Synth 8-3491] module 'DUAL_PORT_RAM' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-1484-LAPTOP-69E4OMV9/realtime/DUAL_PORT_RAM_stub.vhdl:5' bound to instance 'DUAL_PORT_RAM_INST' of component 'DUAL_PORT_RAM' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'DUAL_PORT_RAM' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-1484-LAPTOP-69E4OMV9/realtime/DUAL_PORT_RAM_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:47]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[17]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[16]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[15]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[14]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[13]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[12]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[11]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[10]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[9]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[8]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[7]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[6]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[5]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[4]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[3]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[2]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[1]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_addr_VGA[0]
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port clk
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port X[9]
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port X[8]
@@ -65,8 +83,12 @@ WARNING: [Synth 8-3331] design DYN_beeld has unconnected port Y[3]
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port Y[2]
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port Y[1]
 WARNING: [Synth 8-3331] design DYN_beeld has unconnected port Y[0]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_data_VGA[3]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_data_VGA[2]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_data_VGA[1]
+WARNING: [Synth 8-3331] design DYN_beeld has unconnected port RAM_data_VGA[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 806.750 ; gain = 244.906
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 806.520 ; gain = 243.676
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,10 +101,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 806.750 ; gain = 244.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 806.520 ; gain = 243.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 806.750 ; gain = 244.906
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 806.520 ; gain = 243.676
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -92,26 +114,29 @@ Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.
 Finished Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_deler'
 Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/ROM_Static_img/ROM_Static_img/ROM_Static_img_in_context.xdc] for cell 'VGA_inst/VGA_controller_inst/STAT_beeld_INST/ROM_Static_img_INST'
 Finished Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/ROM_Static_img/ROM_Static_img/ROM_Static_img_in_context.xdc] for cell 'VGA_inst/VGA_controller_inst/STAT_beeld_INST/ROM_Static_img_INST'
+Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM/DUAL_PORT_RAM_in_context.xdc] for cell 'DUAL_PORT_RAM_INST'
+Finished Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM/DUAL_PORT_RAM_in_context.xdc] for cell 'DUAL_PORT_RAM_INST'
 Parsing XDC File [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]
 Finished Parsing XDC File [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 917.344 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 923.008 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 917.344 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 923.008 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'DUAL_PORT_RAM_INST' at clock pin 'clka' is different from the actual clock period '10.417', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 917.344 ; gain = 355.500
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 925.004 ; gain = 362.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 917.344 ; gain = 355.500
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 925.004 ; gain = 362.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -120,11 +145,12 @@ Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  {d:/In
 Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  {d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 5).
 Applied set_property DONT_TOUCH = true for clk_deler. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for VGA_inst/VGA_controller_inst/STAT_beeld_INST/ROM_Static_img_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for DUAL_PORT_RAM_INST. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 917.344 ; gain = 355.500
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 925.004 ; gain = 362.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 917.344 ; gain = 355.500
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 925.004 ; gain = 362.160
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -191,7 +217,7 @@ DSP Report: register VGA_inst/VGA_driver_inst/HTeller_reg is absorbed into DSP V
 DSP Report: operator VGA_inst/VGA_controller_inst/STAT_beeld_INST/s_addr0 is absorbed into DSP VGA_inst/VGA_controller_inst/STAT_beeld_INST/s_addr0.
 DSP Report: operator VGA_inst/VGA_controller_inst/STAT_beeld_INST/s_addr1 is absorbed into DSP VGA_inst/VGA_controller_inst/STAT_beeld_INST/s_addr0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 917.344 ; gain = 355.500
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 925.004 ; gain = 362.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -221,13 +247,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_deler/clk_out1' to pi
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_deler/clk_out2' to pin 'clk_deler/bbstub_clk_out2/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 947.414 ; gain = 385.570
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 948.180 ; gain = 385.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 970.617 ; gain = 408.773
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 972.121 ; gain = 409.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -239,7 +265,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 973.316 ; gain = 411.473
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 974.078 ; gain = 411.234
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -263,7 +289,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 978.875 ; gain = 416.031
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -276,7 +302,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 978.875 ; gain = 416.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -288,25 +314,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 978.875 ; gain = 416.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 978.875 ; gain = 416.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 978.875 ; gain = 416.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 978.875 ; gain = 416.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -317,57 +343,60 @@ Report BlackBoxes:
 |      |BlackBox name  |Instances |
 +------+---------------+----------+
 |1     |clk_wiz_0      |         1|
-|2     |ROM_Static_img |         1|
+|2     |DUAL_PORT_RAM  |         1|
+|3     |ROM_Static_img |         1|
 +------+---------------+----------+
 
 Report Cell Usage: 
 +------+----------------------+------+
 |      |Cell                  |Count |
 +------+----------------------+------+
-|1     |ROM_Static_img_bbox_1 |     1|
-|2     |clk_wiz_0_bbox_0      |     1|
-|3     |DSP48E1               |     1|
-|4     |LUT2                  |     6|
-|5     |LUT3                  |    31|
-|6     |LUT4                  |    10|
-|7     |LUT5                  |     7|
-|8     |LUT6                  |    23|
-|9     |FDRE                  |    23|
-|10    |OBUF                  |    14|
+|1     |DUAL_PORT_RAM_bbox_2  |     1|
+|2     |ROM_Static_img_bbox_1 |     1|
+|3     |clk_wiz_0_bbox_0      |     1|
+|4     |DSP48E1               |     1|
+|5     |LUT1                  |     2|
+|6     |LUT2                  |     7|
+|7     |LUT3                  |    27|
+|8     |LUT4                  |    10|
+|9     |LUT5                  |    12|
+|10    |LUT6                  |    27|
+|11    |FDRE                  |    23|
+|12    |OBUF                  |    14|
 +------+----------------------+------+
 
 Report Instance Areas: 
 +------+------------------------+---------------+------+
 |      |Instance                |Module         |Cells |
 +------+------------------------+---------------+------+
-|1     |top                     |               |   121|
-|2     |  VGA_inst              |VGA            |   105|
+|1     |top                     |               |   133|
+|2     |  VGA_inst              |VGA            |   113|
 |3     |    VGA_controller_inst |VGA_controller |     5|
 |4     |      STAT_beeld_INST   |STAT_beeld     |     5|
-|5     |    VGA_driver_inst     |VGA_driver     |   100|
+|5     |    VGA_driver_inst     |VGA_driver     |   108|
 +------+------------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 978.109 ; gain = 416.266
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 978.875 ; gain = 416.031
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 978.109 ; gain = 305.672
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 978.109 ; gain = 416.266
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 978.875 ; gain = 297.547
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 978.875 ; gain = 416.031
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 978.109 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 978.875 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+38 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 978.109 ; gain = 687.039
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 978.109 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 978.875 ; gain = 682.445
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 978.875 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 27 14:45:21 2019...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 28 12:32:01 2019...

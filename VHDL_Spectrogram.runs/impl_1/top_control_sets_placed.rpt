@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Oct 27 14:46:22 2019
+| Date         : Mon Oct 28 12:33:04 2019
 | Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     4 |
-|    Minimum number of control sets                        |     4 |
+| Total control sets                                       |     5 |
+|    Minimum number of control sets                        |     5 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    23 |
@@ -39,9 +39,9 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     4 |
+| Total control sets |     5 |
 | >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     0 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
@@ -58,9 +58,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              33 |           13 |
+| No           | No                    | No                     |              29 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               8 |            5 |
+| No           | Yes                   | No                     |              12 |            5 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -73,10 +73,11 @@ Table of Contents
 +--------------------------+---------------+---------------------------------------------+------------------+----------------+
 |       Clock Signal       | Enable Signal |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
 +--------------------------+---------------+---------------------------------------------+------------------+----------------+
-|  clk_deler/inst/clk_out2 |               | VGA_inst/VGA_driver_inst/Hsync_i_1_n_0      |                1 |              1 |
 |  clk_deler/inst/clk_out2 |               | VGA_inst/VGA_driver_inst/Vsync_i_1_n_0      |                1 |              1 |
-|  clk_deler/inst/clk_out2 |               | VGA_inst/VGA_driver_inst/VTeller[7]_i_1_n_0 |                3 |              6 |
-|  clk_deler/inst/clk_out2 |               |                                             |               13 |             33 |
+|  clk_deler/inst/clk_out2 |               | VGA_inst/VGA_driver_inst/Hsync_i_1_n_0      |                1 |              1 |
+|  clk_deler/inst/clk_out2 |               | VGA_inst/VGA_driver_inst/HTeller[3]_i_1_n_0 |                2 |              4 |
+|  clk_deler/inst/clk_out2 |               | VGA_inst/VGA_driver_inst/VTeller[7]_i_1_n_0 |                1 |              6 |
+|  clk_deler/inst/clk_out2 |               |                                             |               16 |             29 |
 +--------------------------+---------------+---------------------------------------------+------------------+----------------+
 
 

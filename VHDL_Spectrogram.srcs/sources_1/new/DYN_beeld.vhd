@@ -39,6 +39,9 @@ entity DYN_beeld is
 		Y : in integer range 0 to 525;
 		ENA: in std_logic;
 		
+		RAM_addr_VGA : out integer range 0 to 262143;
+		RAM_data_VGA : in integer range 0 to 15;
+		
 		out_greyscale : out std_logic_vector(3 downto 0)
 	);
 end DYN_beeld;
