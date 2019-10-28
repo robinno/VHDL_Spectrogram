@@ -55,7 +55,7 @@
 COMPONENT ROM_Static_img
   PORT (
     clka : IN STD_LOGIC;
-    addra : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+    addra : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
     douta : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END COMPONENT;

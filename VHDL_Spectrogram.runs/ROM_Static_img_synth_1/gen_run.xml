@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="ROM_Static_img_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1570438361">
+<GenRun Id="ROM_Static_img_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1572181936">
   <File Type="PA-TCL" Name="ROM_Static_img.tcl"/>
   <File Type="REPORTS-TCL" Name="ROM_Static_img_reports.tcl"/>
   <File Type="RDS-RDS" Name="ROM_Static_img.vds"/>

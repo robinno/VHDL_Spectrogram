@@ -38,7 +38,11 @@ entity VGA is
            Vsync : out STD_LOGIC;
            r_out : out STD_LOGIC_VECTOR (3 downto 0);
            g_out : out STD_LOGIC_VECTOR (3 downto 0);
-           b_out : out STD_LOGIC_VECTOR (3 downto 0));
+           b_out : out STD_LOGIC_VECTOR (3 downto 0);
+			
+		   RAM_addr_VGA : out integer range 0 to 262144;
+		   RAM_data_VGA : in integer range 0 to 15
+		   );
 end VGA;
 
 architecture Behavioral of VGA is
@@ -49,6 +53,9 @@ architecture Behavioral of VGA is
 				Y: in integer RANGE 0 TO 525; --positions on screen;
 				X: in integer RANGE 0 TO 800;
 				Active_video: in std_logic;
+			
+				RAM_addr_VGA : out integer range 0 to 262144;
+				RAM_data_VGA : in integer range 0 to 15;
 			
 				output_greyscale: out STD_LOGIC_VECTOR (3 downto 0));
 	end component;
@@ -91,6 +98,9 @@ begin
 			Y => s_Y, --positions on screen;
 			X => s_X,
 			Active_video => s_Flag_Active_Video,
+			
+			RAM_addr_VGA => RAM_addr_VGA,
+			RAM_data_VGA => RAM_data_VGA,
 		
 			output_greyscale => grey_out
 		);

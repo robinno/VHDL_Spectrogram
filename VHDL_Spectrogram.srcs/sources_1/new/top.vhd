@@ -62,11 +62,28 @@ architecture Behavioral of top is
 			Vsync : out STD_LOGIC;
 			r_out : out STD_LOGIC_VECTOR (3 downto 0);
 			g_out : out STD_LOGIC_VECTOR (3 downto 0);
-			b_out : out STD_LOGIC_VECTOR (3 downto 0)
+			b_out : out STD_LOGIC_VECTOR (3 downto 0);
+			
+			RAM_addr_VGA : out integer range 0 to 262144;
+			RAM_data_VGA : in integer range 0 to 15
 		);
 	end component;
 	
+	COMPONENT DUAL_PORT_RAM
+	  PORT (
+		clka : IN STD_LOGIC;
+		wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+		addra : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		dina : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		clkb : IN STD_LOGIC;
+		addrb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		doutb : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	  );
+	END COMPONENT;
+	
 	signal clk_VGA: std_logic := '0';
+	signal RAM_addr_VGA: integer range 0 to 262144 := 0;
+	signal RAM_data_VGA: integer range 0 to 15 := 0;
 
 begin
 
@@ -85,7 +102,24 @@ begin
 			Vsync => VGA_Vsync,
 			r_out => VGA_r_out,
 			g_out => VGA_g_out,
-			b_out => VGA_b_out
+			b_out => VGA_b_out,
+			
+			RAM_addr_VGA => RAM_addr_VGA,
+			RAM_data_VGA => RAM_data_VGA
 		);
 
+	DUAL_PORT_RAM_INST : DUAL_PORT_RAM
+	  PORT MAP (
+		--ports A: writing from FFT
+		clka => sysclk,
+		wea => '0',
+		addra => open,
+		dina => open,
+		
+		--ports B: reading from VGA
+		clkb => clk_VGA,
+		addrb => RAM_addr_VGA,
+		doutb => RAM_data_VGA
+	  );
+	  
 end Behavioral;
