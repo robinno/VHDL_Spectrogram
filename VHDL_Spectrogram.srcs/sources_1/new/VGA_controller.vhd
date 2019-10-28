@@ -39,6 +39,9 @@ entity VGA_controller is
 		Y: in integer RANGE 0 TO 525; --positions on screen;
 		X: in integer RANGE 0 TO 800;
 		Active_video: in std_logic;
+		
+		RAM_addr_VGA : out integer range 0 to 262144;
+		RAM_data_VGA : in integer range 0 to 15;
 	
 		output_greyscale: out STD_LOGIC_VECTOR (3 downto 0)
 	);
@@ -71,19 +74,13 @@ architecture Behavioral of VGA_controller is
 		);
 	end component;
 	
-	component beeld_select is
-		Port ( 	
-			X : in integer range 0 to 800;
-			Y : in integer range 0 to 525;
-			Active_video: in std_logic;
-			
-			ENA_dyn_beeld: out std_logic;
-			ENA_stat_beeld: out std_logic
-		);
-	end component;
+	constant dyn_beeld_start_X: integer RANGE 0 to 640 := 48;
+	constant dyn_beeld_einde_X: integer RANGE 0 to 640 := 526;
+	constant dyn_beeld_start_Y: integer RANGE 0 to 480 := 69;
+	constant dyn_beeld_einde_Y: integer RANGE 0 to 480 := 411;
 	
-	signal s_ENA_dyn_beeld : std_logic := '0';
-	signal s_ENA_stat_beeld : std_logic := '0';
+	signal ENA_dyn_beeld : std_logic := '0';
+	signal ENA_stat_beeld : std_logic := '0';
 	signal s_stat_out : std_logic_vector(3 downto 0) := (others => '0');
 	signal s_dyn_out : std_logic_vector(3 downto 0) := (others => '0');
 begin
@@ -91,16 +88,18 @@ begin
 	--static beeld = de randen (blijven hetzelfde altijd)
 	--dynamic beeld = het centrum: verandert (naar de hand van output van de FFT)
 	
-	
-	beeld_select_INST: beeld_select
-		port map( 	
-			X => X,
-			Y => Y,
-			Active_video => Active_video,
-			
-			ENA_dyn_beeld => s_ENA_dyn_beeld,
-			ENA_stat_beeld => s_ENA_stat_beeld
-		);
+	--select welk beeld:
+	ENA_dyn_beeld <= 	'1' when(	X > dyn_beeld_start_X AND
+									X < dyn_beeld_einde_X AND
+									Y > dyn_beeld_start_Y AND
+									Y < dyn_beeld_einde_Y	)
+							else
+						'0';
+						
+	ENA_stat_beeld <= 	'1' when(	Active_video = '1' 	AND
+									ENA_dyn_beeld = '0'	)
+							else
+						'0';
 	
 	
 	DYN_beeld_INST : DYN_beeld

@@ -45,9 +45,32 @@ end DYN_beeld;
 
 architecture Behavioral of DYN_beeld is
 
+	COMPONENT DUAL_PORT_RAM
+	  PORT (
+		clka : IN STD_LOGIC;
+		wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+		addra : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		dina : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		clkb : IN STD_LOGIC;
+		addrb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		doutb : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	  );
+	END COMPONENT;
+
 begin
 	--TODO
 	out_greyscale <= 	"1001" when ENA = '1' else
 						"0000";
+
+	DUAL_PORT_RAM_INST : DUAL_PORT_RAM
+	  PORT MAP (
+		clka => clk,
+		wea => '0',
+		addra => open,
+		dina => open,
+		clkb => clk,
+		addrb => addrb,
+		doutb => doutb
+	  );
 
 end Behavioral;
