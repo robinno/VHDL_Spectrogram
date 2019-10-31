@@ -53,79 +53,50 @@ architecture Behavioral of top is
 			clk_in1           : in     std_logic
 		);
 	end component;
-	
-	component VGA is
+
+	component Beeld is
 		Port ( 
-			clk: in std_logic;
+			VGA_clk: in std_logic;
 		
-			Hsync : out STD_LOGIC;
-			Vsync : out STD_LOGIC;
-			r_out : out STD_LOGIC_VECTOR (3 downto 0);
-			g_out : out STD_LOGIC_VECTOR (3 downto 0);
-			b_out : out STD_LOGIC_VECTOR (3 downto 0);
+			VGA_Vsync: out std_logic;
+			VGA_Hsync: out std_logic;
+			VGA_grey: out std_logic_vector(3 downto 0);
 			
-			RAM_addr_VGA : out integer range 0 to 262143;
-			RAM_data_VGA : in integer range 0 to 15
+			new_sample_entry: in std_logic --input of data: TODO
 		);
 	end component;
 	
-	COMPONENT DUAL_PORT_RAM
-	  PORT (
-		clka : IN STD_LOGIC;
-		wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-		addra : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-		dina : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		clkb : IN STD_LOGIC;
-		addrb : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-		doutb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
-	  );
-	END COMPONENT;
 	
-	signal clk_VGA: std_logic := '0';
-	signal RAM_addr_VGA: integer range 0 to 262143 := 0;
-	signal RAM_data_VGA: integer range 0 to 15 := 0;
+	signal VGA_clk: std_logic;
+	signal VGA_grey: std_logic_vector(3 downto 0);
 	
-	signal RAM_addr_VGA_vector: std_logic_vector(17 downto 0);
-	signal RAM_data_VGA_vector: std_logic_vector(3 downto 0);
-
+	
+	signal new_fft_output_entry: std_logic; --TODO
 begin
-
-	RAM_addr_VGA_vector <= std_logic_vector(to_unsigned(RAM_addr_VGA, 18));
-	RAM_data_VGA 		<= to_integer(unsigned(RAM_data_VGA_vector));
-
-	clk_deler: clk_wiz_0
-		port map(
-			clk_in1 => sys_clk,
-			clk_out1 => open,
-			clk_out2 => clk_VGA
-		);
 	
-	VGA_inst: VGA
-		port map( 
-			clk => clk_VGA,
-		
-			Hsync => VGA_Hsync,
-			Vsync => VGA_Vsync,
-			r_out => VGA_r_out,
-			g_out => VGA_g_out,
-			b_out => VGA_b_out,
-			
-			RAM_addr_VGA => RAM_addr_VGA,
-			RAM_data_VGA => RAM_data_VGA
+	
+	clk_deler : clk_wiz_0
+		port map ( 
+			-- Clock out ports  
+		   clk_out1 => open,
+		   clk_out2 => VGA_clk,
+		   -- Clock in ports
+		   clk_in1 => sys_clk
 		);
 
-	DUAL_PORT_RAM_INST : DUAL_PORT_RAM
-	  PORT MAP (
-		--ports A: writing from FFT
-		clka => sys_clk,
-		wea => "0",
-		addra => (others => '0'),
-		dina => (others => '0'),
+	Beeld_inst: Beeld
+		port map(
+			VGA_clk => VGA_clk,
 		
-		--ports B: reading from VGA
-		clkb => clk_VGA,
-		addrb => RAM_addr_VGA_vector,
-		doutb => RAM_data_VGA_vector
-	  );
+			VGA_Vsync => VGA_Vsync,
+			VGA_Hsync => VGA_Hsync,
+			VGA_grey => VGA_grey,
+			
+			new_sample_entry => new_fft_output_entry--input of data: TODO
+		);
 	  
+	VGA_r_out <= VGA_grey;
+	VGA_g_out <= VGA_grey;
+	VGA_b_out <= VGA_grey;
+	
 end Behavioral;
