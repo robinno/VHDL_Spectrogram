@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Mon Oct 28 12:33:42 2019
+| Date         : Thu Oct 31 14:22:16 2019
 | Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,18 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1
-+----------+------------------+----------------------------------+------------+
-| Rule     | Severity         | Description                      | Violations |
-+----------+------------------+----------------------------------+------------+
-| TIMING-2 | Critical Warning | Invalid primary clock source pin | 1          |
-+----------+------------------+----------------------------------+------------+
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-2#1 Critical Warning
-Invalid primary clock source pin  
-A primary clock clk_deler/inst/clk_in1 is created on an inappropriate pin clk_deler/inst/clk_in1. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
-Related violations: <none>
-
 

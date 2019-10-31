@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Mon Oct 28 12:32:01 2019
+| Date         : Thu Oct 31 14:20:50 2019
 | Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   67 |     0 |     53200 |  0.13 |
-|   LUT as Logic          |   67 |     0 |     53200 |  0.13 |
+| Slice LUTs*             |   30 |     0 |     53200 |  0.06 |
+|   LUT as Logic          |   30 |     0 |     53200 |  0.06 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |   23 |     0 |    106400 |  0.02 |
-|   Register as Flip Flop |   23 |     0 |    106400 |  0.02 |
+| Slice Registers         |   22 |     0 |    106400 |  0.02 |
+|   Register as Flip Flop |   22 |     0 |    106400 |  0.02 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 23    |          Yes |       Reset |            - |
+| 22    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -77,12 +77,11 @@ Table of Contents
 3. DSP
 ------
 
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| DSPs           |    1 |     0 |       220 |  0.45 |
-|   DSP48E1 only |    1 |       |           |       |
-+----------------+------+-------+-----------+-------+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |       220 |  0.00 |
++-----------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -147,28 +146,26 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |   27 |                 LUT |
-| LUT3     |   27 |                 LUT |
-| FDRE     |   23 |        Flop & Latch |
-| OBUF     |   14 |                  IO |
-| LUT5     |   12 |                 LUT |
-| LUT4     |   10 |                 LUT |
-| LUT2     |    7 |                 LUT |
-| LUT1     |    2 |                 LUT |
-| DSP48E1  |    1 |    Block Arithmetic |
+| FDRE     |   22 |        Flop & Latch |
+| LUT6     |   16 |                 LUT |
+| OBUFT    |   12 |                  IO |
+| LUT5     |    8 |                 LUT |
+| LUT3     |    6 |                 LUT |
+| LUT4     |    5 |                 LUT |
+| LUT2     |    3 |                 LUT |
+| OBUF     |    2 |                  IO |
+| LUT1     |    1 |                 LUT |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------------+------+
-|    Ref Name    | Used |
-+----------------+------+
-| clk_wiz_0      |    1 |
-| ROM_Static_img |    1 |
-| DUAL_PORT_RAM  |    1 |
-+----------------+------+
++-----------+------+
+|  Ref Name | Used |
++-----------+------+
+| clk_wiz_0 |    1 |
++-----------+------+
 
 
 9. Instantiated Netlists
