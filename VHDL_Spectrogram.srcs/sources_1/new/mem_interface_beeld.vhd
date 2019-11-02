@@ -50,27 +50,36 @@ architecture Behavioral of mem_interface_beeld is
 		PORT (
 			clka : IN STD_LOGIC;
 			wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-			addra : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+			addra : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
 			dina : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			clkb : IN STD_LOGIC;
-			addrb : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+			addrb : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
 			doutb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 		);
 	END COMPONENT;
 	
+	signal LeesAdres: std_logic_vector(18 downto 0) := (others => '0');
+	signal LeesData: std_logic_vector(3 downto 0) := (others => '0');
 begin
+
+	LeesAdres <= 	std_logic_vector(unsigned(Y * 480 + X, 19)) when active_video = '1' else
+					(others => '0');
+					
+	grey_out <= leesData when active_video = '1' else
+				(others => '0');
 
 
 	-- DUAL_PORT_RAM_inst: DUAL_PORT_RAM
 		-- port map(
+			-- --TODO
 			-- clka : IN STD_LOGIC;
 			-- wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-			-- addra : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+			-- addra : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
 			-- dina : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			
-			-- clkb : IN STD_LOGIC;
-			-- addrb : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-			-- doutb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+			-- clkb => VGA_clk,
+			-- addrb => LeesAdres,
+			-- doutb => LeesData
 		-- );
 
 end Behavioral;

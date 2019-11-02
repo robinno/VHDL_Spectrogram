@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Oct 28 12:29:14 2019
+// Date        : Fri Nov  1 11:45:10 2019
 // Host        : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub {D:/Ing/Master
 //               1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_stub.v}
@@ -15,12 +15,12 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "blk_mem_gen_v8_4_3,Vivado 2019.1" *)
 module DUAL_PORT_RAM(clka, wea, addra, dina, clkb, addrb, doutb)
-/* synthesis syn_black_box black_box_pad_pin="clka,wea[0:0],addra[17:0],dina[3:0],clkb,addrb[17:0],doutb[3:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clka,wea[0:0],addra[18:0],dina[3:0],clkb,addrb[18:0],doutb[3:0]" */;
   input clka;
   input [0:0]wea;
-  input [17:0]addra;
+  input [18:0]addra;
   input [3:0]dina;
   input clkb;
-  input [17:0]addrb;
+  input [18:0]addrb;
   output [3:0]doutb;
 endmodule
