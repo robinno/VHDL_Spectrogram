@@ -95,6 +95,7 @@
       <File Path="$PSRCDIR/sources_1/new/fft_controller.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
         </FileInfo>
       </File>
       <Config>

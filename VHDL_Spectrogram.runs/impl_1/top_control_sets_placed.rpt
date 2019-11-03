@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Nov  3 11:51:02 2019
+| Date         : Sun Nov  3 13:17:33 2019
 | Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -73,8 +73,8 @@ Table of Contents
 +--------------------------+---------------+------------------------------------------+------------------+----------------+
 |       Clock Signal       | Enable Signal |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
 +--------------------------+---------------+------------------------------------------+------------------+----------------+
-|  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/Hsync_i_1_n_0 |                1 |              1 |
 |  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/Vsync_i_1_n_0 |                1 |              1 |
+|  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/Hsync_i_1_n_0 |                1 |              1 |
 |  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/SR[0]         |                3 |             12 |
 |  clk_deler/inst/clk_out2 |               |                                          |               14 |             39 |
 +--------------------------+---------------+------------------------------------------+------------------+----------------+

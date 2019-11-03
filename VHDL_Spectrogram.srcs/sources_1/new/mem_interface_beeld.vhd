@@ -75,7 +75,7 @@ begin
 	begin
 		if rising_edge(VGA_clk) then
 			if active_video = '1' then
-				LeesAdres 	<= std_logic_vector(to_unsigned(VGA_Y * 480 + VGA_X, 19));
+				LeesAdres 	<= std_logic_vector(to_unsigned(VGA_Y * 640 + VGA_X, 19));
 				grey_out 	<= leesData;
 			else
 				LeesAdres 	<= (others => '0');
