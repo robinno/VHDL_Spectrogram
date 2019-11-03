@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Nov  1 11:40:27 2019
-# Process ID: 6876
+# Start of session at: Sun Nov  3 11:45:36 2019
+# Process ID: 15640
 # Current directory: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1
 # Command line: vivado.exe -log DUAL_PORT_RAM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DUAL_PORT_RAM.tcl
 # Log file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1/DUAL_PORT_RAM.vds
@@ -16,9 +16,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17240 
+INFO: Helper process launched with PID 7680 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 739.035 ; gain = 176.988
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 738.699 ; gain = 178.590
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DUAL_PORT_RAM' [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/synth/DUAL_PORT_RAM.vhd:71]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -49,7 +49,7 @@ INFO: [Synth 8-638] synthesizing module 'DUAL_PORT_RAM' [d:/Ing/Master 1sem/Digi
 	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
 	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_A bound to: NO_CHANGE - type: string 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 4 - type: integer 
 	Parameter C_WRITE_DEPTH_A bound to: 307200 - type: integer 
@@ -95,7 +95,7 @@ INFO: [Synth 8-638] synthesizing module 'DUAL_PORT_RAM' [d:/Ing/Master 1sem/Digi
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter C_COUNT_36K_BRAM bound to: 36 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 3 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     16.198881 mW - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     17.386754 mW - type: string 
 INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'd:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/synth/DUAL_PORT_RAM.vhd:239]
 INFO: [Synth 8-256] done synthesizing module 'DUAL_PORT_RAM' (11#1) [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/synth/DUAL_PORT_RAM.vhd:71]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_RST[0]
@@ -200,7 +200,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected p
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[435]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:03:36 ; elapsed = 00:03:43 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished RTL Elaboration : Time (s): cpu = 00:02:28 ; elapsed = 00:02:34 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -213,10 +213,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:36 ; elapsed = 00:03:44 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:29 ; elapsed = 00:02:35 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:36 ; elapsed = 00:03:44 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:29 ; elapsed = 00:02:35 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -230,30 +230,30 @@ Parsing XDC File [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.
 Finished Parsing XDC File [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1101.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1103.387 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 1101.738 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 1103.387 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:49 ; elapsed = 00:03:57 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Constraint Validation : Time (s): cpu = 00:02:37 ; elapsed = 00:02:44 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:49 ; elapsed = 00:03:57 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:37 ; elapsed = 00:02:44 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1/dont_touch.xdc}, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:49 ; elapsed = 00:03:57 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:37 ; elapsed = 00:02:44 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:52 ; elapsed = 00:04:00 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:39 ; elapsed = 00:02:47 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -309,7 +309,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:57 ; elapsed = 00:04:07 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:42 ; elapsed = 00:02:51 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,13 +321,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:12 ; elapsed = 00:04:22 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:51 ; elapsed = 00:03:00 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:12 ; elapsed = 00:04:22 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Timing Optimization : Time (s): cpu = 00:02:51 ; elapsed = 00:03:00 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -339,7 +339,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:12 ; elapsed = 00:04:22 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Technology Mapping : Time (s): cpu = 00:02:52 ; elapsed = 00:03:00 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,7 +363,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished IO Insertion : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -376,7 +376,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -388,25 +388,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -499,34 +499,34 @@ Report Instance Areas:
 |52    |            \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized8  |     2|
 +------+---------------------------------------------+-----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1103.387 ; gain = 543.277
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 129 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:04:20 . Memory (MB): peak = 1101.738 ; gain = 539.691
-Synthesis Optimization Complete : Time (s): cpu = 00:04:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1101.738 ; gain = 539.691
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:02:58 . Memory (MB): peak = 1103.387 ; gain = 543.277
+Synthesis Optimization Complete : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1103.387 ; gain = 543.277
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1101.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1103.387 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 17 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:24 ; elapsed = 00:04:36 . Memory (MB): peak = 1101.738 ; gain = 807.266
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1101.738 ; gain = 0.000
+synth_design: Time (s): cpu = 00:03:01 ; elapsed = 00:03:12 . Memory (MB): peak = 1103.387 ; gain = 813.441
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1103.387 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1/DUAL_PORT_RAM.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP DUAL_PORT_RAM, cache-ID = c1d14795f98d0e7d
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP DUAL_PORT_RAM, cache-ID = f416de8528c94d52
 INFO: [Coretcl 2-1174] Renamed 51 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1101.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1103.387 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1/DUAL_PORT_RAM.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DUAL_PORT_RAM_utilization_synth.rpt -pb DUAL_PORT_RAM_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Nov  1 11:45:11 2019...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 11:49:15 2019...

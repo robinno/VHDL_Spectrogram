@@ -69,12 +69,20 @@ architecture Behavioral of mem_interface_beeld is
 	signal schrijfadres: std_logic_vector(18 downto 0) := (others => '0');
 begin
 
-	LeesAdres <= 	std_logic_vector(to_unsigned(VGA_Y * 480 + VGA_X, 19)) when active_video = '1' else
-					(others => '0');
-					
-	grey_out <= leesData when active_video = '1' else
-				(others => '0');
 
+	--READING signals
+	process(VGA_clk)
+	begin
+		if rising_edge(VGA_clk) then
+			if active_video = '1' then
+				LeesAdres 	<= std_logic_vector(to_unsigned(VGA_Y * 480 + VGA_X, 19));
+				grey_out 	<= leesData;
+			else
+				LeesAdres 	<= (others => '0');
+				grey_out 	<= (others => '0');
+			end if;
+		end if;
+	end process;
 
 	DUAL_PORT_RAM_inst: DUAL_PORT_RAM
 		port map(
