@@ -76,10 +76,6 @@ architecture Behavioral of Beeld is
 begin
 
 
-
-
-
-
 	-----------------
 	--	Components --
 	-----------------

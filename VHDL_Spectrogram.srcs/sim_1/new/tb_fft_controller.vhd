@@ -35,16 +35,16 @@ entity tb_fft_controller is
 --  Port ( );
 end tb_fft_controller;
 
-	constant PERIOD : time := 1ns;
+--	constant PERIOD : time := 1ns;
 	
 
 architecture Behavioral of tb_fft_controller is
 
 begin
-	process()
-	begin
+	-- process
+	-- begin
 		
-	end process;
+	-- end process;
 
 
 end Behavioral;
