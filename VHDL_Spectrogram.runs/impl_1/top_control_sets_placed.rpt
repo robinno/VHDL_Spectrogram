@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Nov  3 13:17:33 2019
+| Date         : Thu Oct 31 14:21:41 2019
 | Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     4 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    19 |
+| Unused register locations in slices containing registers |    18 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -41,11 +41,11 @@ Table of Contents
 +--------------------+-------+
 | Total control sets |     4 |
 | >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     0 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     1 |
+| >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     1 |
 +--------------------+-------+
@@ -58,9 +58,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              39 |           14 |
+| No           | No                    | No                     |              16 |            5 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              14 |            5 |
+| No           | Yes                   | No                     |               6 |            3 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -70,13 +70,13 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------+---------------+------------------------------------------+------------------+----------------+
-|       Clock Signal       | Enable Signal |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
-+--------------------------+---------------+------------------------------------------+------------------+----------------+
-|  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/Vsync_i_1_n_0 |                1 |              1 |
-|  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/Hsync_i_1_n_0 |                1 |              1 |
-|  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/SR[0]         |                3 |             12 |
-|  clk_deler/inst/clk_out2 |               |                                          |               14 |             39 |
-+--------------------------+---------------+------------------------------------------+------------------+----------------+
++--------------------------+---------------+-----------------------------------------------+------------------+----------------+
+|       Clock Signal       | Enable Signal |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++--------------------------+---------------+-----------------------------------------------+------------------+----------------+
+|  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/Vsync_i_1_n_0      |                1 |              1 |
+|  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/Hsync_i_1_n_0      |                1 |              1 |
+|  clk_deler/inst/clk_out2 |               | Beeld_inst/VGA_driver_inst/HTeller[3]_i_1_n_0 |                1 |              4 |
+|  clk_deler/inst/clk_out2 |               |                                               |                5 |             16 |
++--------------------------+---------------+-----------------------------------------------+------------------+----------------+
 
 

@@ -39,9 +39,7 @@ entity Beeld is
 		VGA_Hsync: out std_logic;
 		VGA_grey: out std_logic_vector(3 downto 0);
 		
-		 --input of data: TODO
-		sample_clk: in std_logic;
-		new_sample_entry: in std_logic_vector(3 downto 0)
+		new_sample_entry: in std_logic --input of data: TODO
 	);
 end Beeld;
 
@@ -67,9 +65,7 @@ architecture Behavioral of Beeld is
 			active_video: in std_logic;
 			grey_out: out std_logic_vector(3 downto 0);
 			
-			--TODO
-			sample_clk: in std_logic;
-			new_sample_entry: in std_logic_vector(3 downto 0)
+			new_sample_entry: in std_logic --TODO
 		);
 	end component;
 
@@ -78,6 +74,10 @@ architecture Behavioral of Beeld is
 	signal s_active_video: std_logic;
 
 begin
+
+
+
+
 
 
 	-----------------
@@ -105,7 +105,6 @@ begin
 			active_video => s_active_video,
 			grey_out => VGA_grey,
 			
-			sample_clk => sample_clk,
 			new_sample_entry => new_sample_entry --TODO
 		);
 

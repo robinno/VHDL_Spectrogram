@@ -62,9 +62,7 @@ architecture Behavioral of top is
 			VGA_Hsync: out std_logic;
 			VGA_grey: out std_logic_vector(3 downto 0);
 			
-			--input of data: TODO
-			sample_clk: in std_logic;			
-			new_sample_entry: in std_logic_vector(3 downto 0)
+			new_sample_entry: in std_logic --input of data: TODO
 		);
 	end component;
 	
@@ -73,7 +71,7 @@ architecture Behavioral of top is
 	signal VGA_grey: std_logic_vector(3 downto 0);
 	
 	
-	signal new_fft_output_entry: std_logic_vector(3 downto 0); --TODO
+	signal new_fft_output_entry: std_logic; --TODO
 begin
 	
 	
@@ -94,7 +92,6 @@ begin
 			VGA_Hsync => VGA_Hsync,
 			VGA_grey => VGA_grey,
 			
-			sample_clk => VGA_clk, --TODO: AANPASSEN!!!
 			new_sample_entry => new_fft_output_entry--input of data: TODO
 		);
 	  

@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sun Nov  3 11:49:14 2019
+-- Date        : Fri Nov  1 11:45:10 2019
 -- Host        : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top DUAL_PORT_RAM -prefix
---               DUAL_PORT_RAM_ DUAL_PORT_RAM_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub {D:/Ing/Master
+--               1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_stub.vhdl}
 -- Design      : DUAL_PORT_RAM
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
