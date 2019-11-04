@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Nov  1 11:45:10 2019
+-- Date        : Sun Nov  3 11:49:14 2019
 -- Host        : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {D:/Ing/Master
---               1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top DUAL_PORT_RAM -prefix
+--               DUAL_PORT_RAM_ DUAL_PORT_RAM_sim_netlist.vhdl
 -- Design      : DUAL_PORT_RAM
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -396,8 +396,6 @@ entity DUAL_PORT_RAM_blk_mem_gen_prim_wrapper_init is
     addrb : in STD_LOGIC_VECTOR ( 15 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end DUAL_PORT_RAM_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_prim_wrapper_init is
@@ -598,8 +596,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -811,8 +809,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -1070,8 +1068,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -1283,8 +1281,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -1542,8 +1540,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -1755,8 +1753,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -2003,8 +2001,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -2269,8 +2267,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -2482,8 +2480,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -2767,8 +2765,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -2980,8 +2978,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -3265,8 +3263,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -3478,8 +3476,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -3763,8 +3761,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -3976,8 +3974,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -4250,8 +4248,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -4441,8 +4439,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"00000",
       SRVAL_B => X"00000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 2,
       WRITE_WIDTH_B => 2
     )
@@ -4692,8 +4690,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -4905,8 +4903,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -5164,8 +5162,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -5377,8 +5375,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -5636,8 +5634,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -5849,8 +5847,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -6108,8 +6106,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -6321,8 +6319,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -6580,8 +6578,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -6793,8 +6791,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -7041,8 +7039,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -7291,8 +7289,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -7467,8 +7465,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"00000",
       SRVAL_B => X"00000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 2,
       WRITE_WIDTH_B => 2
     )
@@ -7662,8 +7660,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"00000",
       SRVAL_B => X"00000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 4,
       WRITE_WIDTH_B => 4
     )
@@ -7945,8 +7943,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -8158,8 +8156,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -8417,8 +8415,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -8630,8 +8628,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -8889,8 +8887,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -9102,8 +9100,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -9361,8 +9359,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -9574,8 +9572,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"000000000",
       SRVAL_B => X"000000000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "WRITE_FIRST",
+      WRITE_MODE_B => "WRITE_FIRST",
       WRITE_WIDTH_A => 1,
       WRITE_WIDTH_B => 1
     )
@@ -9631,8 +9629,6 @@ entity DUAL_PORT_RAM_blk_mem_gen_prim_width is
     addrb : in STD_LOGIC_VECTOR ( 15 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end DUAL_PORT_RAM_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_prim_width is
@@ -10411,8 +10407,6 @@ entity DUAL_PORT_RAM_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end DUAL_PORT_RAM_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_generic_cstr is
@@ -10771,8 +10765,6 @@ entity DUAL_PORT_RAM_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end DUAL_PORT_RAM_blk_mem_gen_top;
 
 architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_top is
@@ -10802,8 +10794,6 @@ entity DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth : entity is "blk_mem_gen_v8_4_3_synth";
 end DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth;
 
 architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth is
@@ -10936,7 +10926,7 @@ entity DUAL_PORT_RAM_blk_mem_gen_v8_4_3 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "Estimated Power for IP     :     16.198881 mW";
+  attribute C_EST_POWER_SUMMARY of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "Estimated Power for IP     :     17.386754 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "zynq";
   attribute C_HAS_AXI_ID : integer;
@@ -11030,7 +11020,7 @@ entity DUAL_PORT_RAM_blk_mem_gen_v8_4_3 is
   attribute C_WRITE_DEPTH_B : integer;
   attribute C_WRITE_DEPTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 307200;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "NO_CHANGE";
+  attribute C_WRITE_MODE_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "WRITE_FIRST";
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
@@ -11039,8 +11029,6 @@ entity DUAL_PORT_RAM_blk_mem_gen_v8_4_3 is
   attribute C_WRITE_WIDTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 4;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "zynq";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "blk_mem_gen_v8_4_3";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "yes";
 end DUAL_PORT_RAM_blk_mem_gen_v8_4_3;
@@ -11225,7 +11213,7 @@ architecture STRUCTURE of DUAL_PORT_RAM is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     16.198881 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     17.386754 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "zynq";
   attribute C_HAS_AXI_ID : integer;
@@ -11319,7 +11307,7 @@ architecture STRUCTURE of DUAL_PORT_RAM is
   attribute C_WRITE_DEPTH_B : integer;
   attribute C_WRITE_DEPTH_B of U0 : label is 307200;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of U0 : label is "NO_CHANGE";
+  attribute C_WRITE_MODE_A of U0 : label is "WRITE_FIRST";
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of U0 : label is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;

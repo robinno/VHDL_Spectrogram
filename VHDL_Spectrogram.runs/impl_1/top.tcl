@@ -78,6 +78,7 @@ set rc [catch {
   add_files -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.dcp}}
   read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
   read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM.xci}}
+  read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.xci}}
   read_xdc {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc}}
   link_design -top top -part xc7z020clg484-1
   close_msg_db -file init_design.pb
