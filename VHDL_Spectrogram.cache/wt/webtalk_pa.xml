@@ -156,7 +156,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SrcMenu_IP_DOCUMENTATION" value="6" type="GuiHandlerData"/>
 <property name="SrcMenu_IP_HIERARCHY" value="23" type="GuiHandlerData"/>
 <property name="StateMonitor_RESET_RUN" value="3" type="GuiHandlerData"/>
-<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="18" type="GuiHandlerData"/>
+<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="26" type="GuiHandlerData"/>
 <property name="SyntheticaStateMonitor_CANCEL" value="5" type="GuiHandlerData"/>
 <property name="TaskBanner_CLOSE" value="2" type="GuiHandlerData"/>
 <property name="TclConsoleView_TCL_CONSOLE_CODE_EDITOR" value="1" type="GuiHandlerData"/>
