@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -62,7 +62,7 @@ architecture Behavioral of mem_interface_beeld is
 	signal LeesData: std_logic_vector(3 downto 0) := (others => '0');
 begin
 
-	LeesAdres <= 	std_logic_vector(unsigned(Y * 480 + X, 19)) when active_video = '1' else
+	LeesAdres <= 	std_logic_vector(to_unsigned(VGA_Y * 480 + VGA_X, 19)) when active_video = '1' else
 					(others => '0');
 					
 	grey_out <= leesData when active_video = '1' else

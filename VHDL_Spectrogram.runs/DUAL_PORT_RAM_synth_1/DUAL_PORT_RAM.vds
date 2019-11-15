@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov  8 14:24:04 2019
+# Process ID: 15976
+# Current directory: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1
+# Command line: vivado.exe -log DUAL_PORT_RAM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DUAL_PORT_RAM.tcl
+# Log file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1/DUAL_PORT_RAM.vds
+# Journal file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DUAL_PORT_RAM.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP DUAL_PORT_RAM, cache-ID = c1d14795f98d0e7d.
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  8 14:24:08 2019...
