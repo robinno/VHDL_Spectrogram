@@ -35,8 +35,8 @@ entity mem_interface_beeld is
 	Port ( 
 		VGA_clk: in std_logic;
 	
-		VGA_X: in integer range 0 to 1344;
-		VGA_Y: in integer range 0 to 806;
+		VGA_X: in integer range 0 to 1056;
+		VGA_Y: in integer range 0 to 628;
 		active_video: in std_logic;
 		grey_out: out std_logic_vector(3 downto 0);
 		
@@ -51,10 +51,10 @@ architecture Behavioral of mem_interface_beeld is
 			clka : IN STD_LOGIC;
 			wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 			addra : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
-			dina : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			dina : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
 			clkb : IN STD_LOGIC;
 			addrb : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
-			doutb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+			doutb : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 		);
 	END COMPONENT;
 	
@@ -62,7 +62,7 @@ architecture Behavioral of mem_interface_beeld is
 	signal LeesData: std_logic_vector(3 downto 0) := (others => '0');
 begin
 
-	LeesAdres <= 	std_logic_vector(to_unsigned(VGA_Y * 768 + VGA_X, 19)) when active_video = '1' else
+	LeesAdres <= 	std_logic_vector(to_unsigned(VGA_Y * 800 + VGA_X, 19)) when active_video = '1' else
 					(others => '0');
 					
 	grey_out <= leesData when active_video = '1' else

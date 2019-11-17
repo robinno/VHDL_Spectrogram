@@ -45,12 +45,12 @@ end Beeld;
 
 architecture Behavioral of Beeld is
 
-	component VGA_driver is --gekozen voor 1024x768
+	component VGA_driver is --gekozen voor 800x600
 		Port (	clk : in STD_LOGIC;
 
 				Flag_Active_Video: out STD_LOGIC;
-				LineCount: out integer range 0 to 806; 	--verticale positie
-				PixelCount: out integer range 0 to 1344;	--horizontale positie
+				LineCount: out integer range 0 to 628; 		--verticale positie
+				PixelCount: out integer range 0 to 1056;	--horizontale positie
 				
 				Vsync : out STD_LOGIC;
 				Hsync : out STD_LOGIC);
@@ -60,8 +60,8 @@ architecture Behavioral of Beeld is
 		Port ( 
 			VGA_clk: in std_logic;
 		
-			VGA_X: in integer range 0 to 806;
-			VGA_Y: in integer range 0 to 1344;
+			VGA_X: in integer range 0 to 628;
+			VGA_Y: in integer range 0 to 1056;
 			active_video: in std_logic;
 			grey_out: out std_logic_vector(3 downto 0);
 			
@@ -69,8 +69,8 @@ architecture Behavioral of Beeld is
 		);
 	end component;
 
-	signal s_VGA_X: integer range 0 to 1344;
-	signal s_VGA_Y: integer range 0 to 806;
+	signal s_VGA_X: integer range 0 to 1056;
+	signal s_VGA_Y: integer range 0 to 628;
 	signal s_active_video: std_logic;
 
 begin
