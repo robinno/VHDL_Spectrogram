@@ -23,7 +23,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 
-entity project_hdl is
+entity audiocodec is
 	Port(i2c_addr : out std_logic_vector(1 downto 0);
 		 m_clk : out std_logic;
 		 b_clk : out std_logic;
@@ -33,9 +33,9 @@ entity project_hdl is
 		 sda : out std_logic;
 		 scl : out std_logic;
 		 clk_in : in std_logic);
-end project_hdl;
+end audiocodec;
 
-architecture Behavioral of project_hdl is
+architecture Behavioral of audiocodec is
 
 component audio_if
 	port(clk_100M_in : in std_logic;
