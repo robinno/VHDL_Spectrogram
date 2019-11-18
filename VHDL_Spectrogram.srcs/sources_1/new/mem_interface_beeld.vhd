@@ -38,7 +38,9 @@ entity mem_interface_beeld is
 		VGA_X: in integer range 0 to 1056;
 		VGA_Y: in integer range 0 to 628;
 		active_video: in std_logic;
-		grey_out: out std_logic_vector(3 downto 0);
+		VGA_R: out std_logic_vector(3 downto 0);
+		VGA_G: out std_logic_vector(3 downto 0);
+		VGA_B: out std_logic_vector(3 downto 0);
 		
 		new_sample_entry: in std_logic --TODO
 	);
@@ -58,15 +60,100 @@ architecture Behavioral of mem_interface_beeld is
 		);
 	END COMPONENT;
 	
+	--array voor vertaling kleur in geheugen naar effectief kleur:
+	type kleurArray_type is array (0 to 75) of std_logic_vector(11 downto 0);
+	signal kleurArray : kleurArray_type := (0x"000",
+											0x"001",
+											0x"002",
+											0x"003",
+											0x"004",
+											0x"005",
+											0x"006",
+											0x"007",
+											0x"008",
+											0x"009",
+											0x"00a",
+											0x"00b",
+											0x"00c",
+											0x"00d",
+											0x"00e",
+											0x"00f",
+											0x"10f",
+											0x"20f",
+											0x"30f",
+											0x"40f",
+											0x"50f",
+											0x"60f",
+											0x"70f",
+											0x"80f",
+											0x"90f",
+											0x"a0f",
+											0x"b0f",
+											0x"c0f",
+											0x"d0f",
+											0x"e0f",
+											0x"f0f",
+											0x"f0e",
+											0x"f0d",
+											0x"f0c",
+											0x"f0b",
+											0x"f0a",
+											0x"f09",
+											0x"f08",
+											0x"f07",
+											0x"f06",
+											0x"f05",
+											0x"f04",
+											0x"f03",
+											0x"f02",
+											0x"f01",
+											0x"f00",
+											0x"f10",
+											0x"f20",
+											0x"f30",
+											0x"f40",
+											0x"f50",
+											0x"f60",
+											0x"f70",
+											0x"f80",
+											0x"f90",
+											0x"fa0",
+											0x"fb0",
+											0x"fc0",
+											0x"fd0",
+											0x"fe0",
+											0x"ff0",
+											0x"ff1",
+											0x"ff2",
+											0x"ff3",
+											0x"ff4",
+											0x"ff5",
+											0x"ff6",
+											0x"ff7",
+											0x"ff8",
+											0x"ff9",
+											0x"ffa",
+											0x"ffb",
+											0x"ffc",
+											0x"ffd",
+											0x"ffe",
+											0x"fff");
+	
 	signal LeesAdres: std_logic_vector(18 downto 0) := (others => '0');
-	signal LeesData: std_logic_vector(3 downto 0) := (others => '0');
+	signal LeesData: std_logic_vector(6 downto 0) := (others => '0');
+	
+	signal RGB: std_logic_vector(11 downto 0) := (others => '0');
 begin
 
 	LeesAdres <= 	std_logic_vector(to_unsigned(VGA_Y * 800 + VGA_X, 19)) when active_video = '1' else
 					(others => '0');
 					
-	grey_out <= leesData when active_video = '1' else
-				(others => '0');
+	RGB <= 			kleurArray(LeesData) when active_video = '1' else
+					(others => '0');
+					
+	VGA_R <= RGB(11 downto 8);
+	VGA_G <= RGB(7 downto 4);
+	VGA_B <= RGB(3 downto 0);
 
 
 	-- DUAL_PORT_RAM_inst: DUAL_PORT_RAM

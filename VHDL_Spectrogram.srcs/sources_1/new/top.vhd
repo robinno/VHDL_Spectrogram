@@ -60,7 +60,9 @@ architecture Behavioral of top is
 		
 			VGA_Vsync: out std_logic;
 			VGA_Hsync: out std_logic;
-			VGA_grey: out std_logic_vector(3 downto 0);
+			VGA_R: out std_logic_vector(3 downto 0);
+			VGA_G: out std_logic_vector(3 downto 0);
+			VGA_B: out std_logic_vector(3 downto 0);
 			
 			new_sample_entry: in std_logic --input of data: TODO
 		);
