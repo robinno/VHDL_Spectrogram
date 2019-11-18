@@ -58,7 +58,7 @@ end audio_if;
 
 architecture Behavioral of audio_if is
 
-	component clk_wiz_0
+	component clk_wiz_1
 		port(-- Clock in ports
 			clk_in1           : in     std_logic;
 			-- Clock out ports
@@ -71,9 +71,9 @@ architecture Behavioral of audio_if is
 	end component;
 
 	ATTRIBUTE SYN_BLACK_BOX : BOOLEAN;
-	ATTRIBUTE SYN_BLACK_BOX OF clk_wiz_0 : COMPONENT IS TRUE;
+	ATTRIBUTE SYN_BLACK_BOX OF clk_wiz_1 : COMPONENT IS TRUE;
 	ATTRIBUTE BLACK_BOX_PAD_PIN : STRING;
-	ATTRIBUTE BLACK_BOX_PAD_PIN OF clk_wiz_0 : COMPONENT IS "clk_in1,clk_100M,clk_12M288,reset,locked";
+	ATTRIBUTE BLACK_BOX_PAD_PIN OF clk_wiz_1 : COMPONENT IS "clk_in1,clk_100M,clk_12M288,reset,locked";
 
 	component adau1761_if
 		Port (
@@ -241,7 +241,7 @@ begin
     s_sample_r_in <= sample_r_in;
     sdata_out <= s_sdata_out; 
 
-	INST_AUDIO_SAMPLE_CLK : clk_wiz_0
+	INST_AUDIO_SAMPLE_CLK : clk_wiz_1
 		port map (
 			-- Clock in ports
 			clk_in1 => clk_100M_in,
