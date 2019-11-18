@@ -37,7 +37,9 @@ entity Beeld is
 	
 		VGA_Vsync: out std_logic;
 		VGA_Hsync: out std_logic;
-		VGA_grey: out std_logic_vector(3 downto 0);
+		VGA_R: out std_logic_vector(3 downto 0);
+		VGA_G: out std_logic_vector(3 downto 0);
+		VGA_B: out std_logic_vector(3 downto 0);
 		
 		new_sample_entry: in std_logic --input of data: TODO
 	);
@@ -63,7 +65,9 @@ architecture Behavioral of Beeld is
 			VGA_X: in integer range 0 to 628;
 			VGA_Y: in integer range 0 to 1056;
 			active_video: in std_logic;
-			grey_out: out std_logic_vector(3 downto 0);
+			VGA_R: out std_logic_vector(3 downto 0);
+			VGA_G: out std_logic_vector(3 downto 0);
+			VGA_B: out std_logic_vector(3 downto 0);
 			
 			new_sample_entry: in std_logic --TODO
 		);
@@ -103,7 +107,9 @@ begin
 			VGA_X => s_VGA_X,
 			VGA_Y => s_VGA_Y,
 			active_video => s_active_video,
-			grey_out => VGA_grey,
+			VGA_R => VGA_R,
+			VGA_G => VGA_G,
+			VGA_B => VGA_B,
 			
 			new_sample_entry => new_sample_entry --TODO
 		);
