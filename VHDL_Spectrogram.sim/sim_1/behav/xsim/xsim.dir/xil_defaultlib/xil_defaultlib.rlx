@@ -1,13 +1,13 @@
 0.6
-2019.1
-May 24 2019
-15:06:07
-C:/VHDL_Spectrogram/VHDL_Spectrogram.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+2019.2
+Oct 24 2019
+19:01:44
+C:/VHDL_Spectrogram/VHDL_Spectrogram.sim/sim_1/behav/xsim/glbl.v,1573311201,verilog,,,,glbl,,,,,,,,
 C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sim_1/new/tb_fft_controller.vhd,1572963442,vhdl,,,,tb_fft_controller,,,,,,,,
 C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sim_1/new/tb_fft_ip.vhd,1572876102,vhdl,,,,tb_fft_ip,,,,,,,,
 C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/sim/DUAL_PORT_RAM.v,1572882608,verilog,,,,DUAL_PORT_RAM,,,../../../../VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0,,,,,
 C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1570440707,verilog,,C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/sim/DUAL_PORT_RAM.v,,clk_wiz_0,,,../../../../VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0,,,,,
-C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1570440707,verilog,,C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1574084659,verilog,,C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0,,,,,
 C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/sim/fft_ip.vhd,1572691777,vhdl,C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sim_1/new/tb_fft_ip.vhd,,,fft_ip,,,,,,,,
 C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd,1572882608,vhdl,,,,beeld,,,,,,,,
 C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd,1570440707,vhdl,,,,vga_driver,,,,,,,,
