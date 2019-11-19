@@ -50,8 +50,7 @@ entity top is
 		sdata : in std_logic;
 		sdata_out : out std_logic;
 		sda : out std_logic;
-		scl : out std_logic;
-		clk_in : in std_logic
+		scl : out std_logic
 	);
 end top;
 
@@ -117,7 +116,7 @@ architecture Behavioral of top is
 	
 	signal new_fft_output_entry: std_logic; --TODO
 begin
-	
+
 	
 	clk_deler : clk_wiz_0
 		port map ( 
@@ -141,7 +140,7 @@ begin
 		
 	Audio_inst: audio_if
 		port map(
-		clk_100M_in => clk_in,
+		clk_100M_in => sys_clk,
 		m_clk => m_clk,
 		lr_clk => lr_clk,
 		b_clk => b_clk,
