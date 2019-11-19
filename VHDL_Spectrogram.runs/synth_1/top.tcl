@@ -17,6 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache C:/Users/robin/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3992-LAPTOP-69E4OMV9/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -39,7 +43,6 @@ read_vhdl -library xil_defaultlib {
   {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd}
   {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/fft_controller.vhd}
   {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd}
-  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/project_hdl.vhd}
   {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd}
 }
 read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.xci}}
@@ -52,6 +55,11 @@ set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/D
 
 read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM.xci}}
 set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_ooc.xdc}}]
+
+read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}}
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc}}]
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

@@ -65,8 +65,8 @@ architecture Behavioral of Beeld is
 			--reading side:
 			VGA_clk: in std_logic;
 		
-			VGA_X: in integer range 0 to 628;
-			VGA_Y: in integer range 0 to 1056;
+			VGA_X: in integer range 0 to 1056;
+			VGA_Y: in integer range 0 to 628;
 			active_video: in std_logic;
 			VGA_R: out std_logic_vector(3 downto 0);
 			VGA_G: out std_logic_vector(3 downto 0);
