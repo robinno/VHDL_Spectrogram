@@ -35,13 +35,14 @@ entity top is
 	Port ( 
 		sys_clk: in std_logic;
 		
+		--beeld:
 		VGA_Hsync : out STD_LOGIC;
 		VGA_Vsync : out STD_LOGIC;
 		VGA_r_out : out STD_LOGIC_VECTOR (3 downto 0);
 		VGA_g_out : out STD_LOGIC_VECTOR (3 downto 0);
 		VGA_b_out : out STD_LOGIC_VECTOR (3 downto 0);
 		
-		--audiocodec
+		--audiocodec:
 		i2c_addr : out std_logic_vector(1 downto 0);
 		m_clk : out std_logic;
 		b_clk : out std_logic;
@@ -57,15 +58,12 @@ end top;
 architecture Behavioral of top is
 
 	component clk_wiz_0
-		port
-			(-- Clock in ports
-			-- Clock out ports
-			clk_out1          : out    std_logic;
-			clk_out2          : out    std_logic;
-			clk_12M288          : out    std_logic;
-			-- Status and control signals
-			reset             : in     std_logic;
-			clk_in1           : in     std_logic
+		port( 
+			clk_96MHz          : out    std_logic;
+			clk_VGA          : out    std_logic;
+			clk_FFT          : out    std_logic;
+			clk_audio          : out    std_logic;
+			sys_clk           : in     std_logic
 		);
 	end component;
 
@@ -108,8 +106,11 @@ architecture Behavioral of top is
 	end component;
 	
 	
-	signal VGA_clk: std_logic;
-	signal VGA_grey: std_logic_vector(3 downto 0);
+	signal VGA_clk: std_logic := '0';
+	signal FFT_clk: std_logic := '0';
+	signal Audio_clk: std_logic := '0';
+	
+	signal VGA_grey: std_logic_vector(3 downto 0) := (others => '0');
 	
 	signal sample_clk : std_logic;
 	signal sample_l, sample_r, sample_l_in, sample_r_in : std_logic_vector(23 downto 0);
@@ -120,14 +121,11 @@ begin
 	
 	clk_deler : clk_wiz_0
 		port map ( 
-			-- Clock out ports  
-			clk_out1 => clk_out1,
-			clk_out2 => clk_out2,
-			clk_12M288 => clk_12M288,
-			-- Status and control signals                
-			reset => reset,
-			-- Clock in ports
-			clk_in1 => clk_in1
+			clk_96MHz => open,
+			clk_VGA => VGA_clk,
+			clk_FFT => FFT_clk,
+			clk_audio => Audio_clk,
+			sys_clk => sys_clk
 		);
 
 	Beeld_inst: Beeld

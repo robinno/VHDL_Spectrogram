@@ -55,9 +55,10 @@
 --  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 --   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 ------------------------------------------------------------------------------
--- clk_out1__96.00000______0.000______50.0______126.743_____93.984
--- clk_out2__40.00000______0.000______50.0______152.698_____93.984
--- clk_12M288__12.27273______0.000______50.0______195.434_____93.984
+-- clk_96MHz__96.00000______0.000______50.0______148.414____120.005
+-- _clk_VGA__40.00000______0.000______50.0______177.748____120.005
+-- _clk_FFT___5.62500______0.000______50.0______261.706____120.005
+-- clk_audio__12.20339______0.000______50.0______225.025____120.005
 --
 ------------------------------------------------------------------------------
 -- Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -71,12 +72,11 @@ component clk_wiz_0
 port
  (-- Clock in ports
   -- Clock out ports
-  clk_out1          : out    std_logic;
-  clk_out2          : out    std_logic;
-  clk_12M288          : out    std_logic;
-  -- Status and control signals
-  reset             : in     std_logic;
-  clk_in1           : in     std_logic
+  clk_96MHz          : out    std_logic;
+  clk_VGA          : out    std_logic;
+  clk_FFT          : out    std_logic;
+  clk_audio          : out    std_logic;
+  sys_clk           : in     std_logic
  );
 end component;
 
@@ -87,12 +87,11 @@ end component;
 your_instance_name : clk_wiz_0
    port map ( 
   -- Clock out ports  
-   clk_out1 => clk_out1,
-   clk_out2 => clk_out2,
-   clk_12M288 => clk_12M288,
-  -- Status and control signals                
-   reset => reset,
+   clk_96MHz => clk_96MHz,
+   clk_VGA => clk_VGA,
+   clk_FFT => clk_FFT,
+   clk_audio => clk_audio,
    -- Clock in ports
-   clk_in1 => clk_in1
+   sys_clk => sys_clk
  );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------
