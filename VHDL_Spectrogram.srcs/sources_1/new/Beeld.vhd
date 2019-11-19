@@ -41,7 +41,9 @@ entity Beeld is
 		VGA_G: out std_logic_vector(3 downto 0);
 		VGA_B: out std_logic_vector(3 downto 0);
 		
-		new_sample_entry: in std_logic --input of data: TODO
+		--writing side:
+		new_entry_clk: in std_logic;
+		new_entry: in std_logic
 	);
 end Beeld;
 
@@ -60,6 +62,7 @@ architecture Behavioral of Beeld is
 	
 	component mem_interface_beeld is
 		Port ( 
+			--reading side:
 			VGA_clk: in std_logic;
 		
 			VGA_X: in integer range 0 to 628;
@@ -69,7 +72,10 @@ architecture Behavioral of Beeld is
 			VGA_G: out std_logic_vector(3 downto 0);
 			VGA_B: out std_logic_vector(3 downto 0);
 			
-			new_sample_entry: in std_logic --TODO
+			--writing side:
+			new_entry_clk: in std_logic;
+			
+			new_entry: in std_logic
 		);
 	end component;
 
@@ -111,7 +117,9 @@ begin
 			VGA_G => VGA_G,
 			VGA_B => VGA_B,
 			
-			new_sample_entry => new_sample_entry --TODO
+			
+			new_entry_clk => new_entry_clk,
+			new_entry => new_entry
 		);
 
 

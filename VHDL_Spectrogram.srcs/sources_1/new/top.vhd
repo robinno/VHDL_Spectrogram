@@ -76,7 +76,9 @@ architecture Behavioral of top is
 			VGA_G: out std_logic_vector(3 downto 0);
 			VGA_B: out std_logic_vector(3 downto 0);
 			
-			new_sample_entry: in std_logic --input of data: TODO
+					
+			new_entry_clk: in std_logic;
+			new_entry: in std_logic
 		);
 	end component;
 	
@@ -109,12 +111,10 @@ architecture Behavioral of top is
 	signal FFT_clk: std_logic := '0';
 	signal Audio_clk: std_logic := '0';
 	
-	signal VGA_grey: std_logic_vector(3 downto 0) := (others => '0');
-	
 	signal sample_clk : std_logic;
 	signal sample_l, sample_r, sample_l_in, sample_r_in : std_logic_vector(23 downto 0);
 	
-	signal new_fft_output_entry: std_logic; --TODO
+	signal output_FFT: std_logic := '0'; --TODO
 begin
 
 	
@@ -133,9 +133,13 @@ begin
 		
 			VGA_Vsync => VGA_Vsync,
 			VGA_Hsync => VGA_Hsync,
-			VGA_grey => VGA_grey,
+			VGA_R => VGA_r_out,
+			VGA_G => VGA_g_out,
+			VGA_B => VGA_b_out,
 			
-			new_sample_entry => new_fft_output_entry--input of data: TODO
+			
+			new_entry_clk => FFT_clk,
+			new_entry => output_FFT
 		);
 		
 	Audio_inst: audio_if
@@ -154,9 +158,5 @@ begin
 		sample_l_in => sample_l,
 		sample_r_in => sample_r,
 		sdata_out => sdata_out);
-	  
-	VGA_r_out <= VGA_grey;
-	VGA_g_out <= VGA_grey;
-	VGA_b_out <= VGA_grey;
 	
 end Behavioral;

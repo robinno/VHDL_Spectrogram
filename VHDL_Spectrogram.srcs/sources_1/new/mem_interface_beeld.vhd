@@ -33,6 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity mem_interface_beeld is
 	Port ( 
+		--reading side:
 		VGA_clk: in std_logic;
 	
 		VGA_X: in integer range 0 to 1056;
@@ -42,7 +43,10 @@ entity mem_interface_beeld is
 		VGA_G: out std_logic_vector(3 downto 0);
 		VGA_B: out std_logic_vector(3 downto 0);
 		
-		new_sample_entry: in std_logic --TODO
+		--writing side:
+		new_entry_clk: in std_logic;
+		
+		new_entry: in std_logic
 	);
 end mem_interface_beeld;
 
@@ -139,34 +143,43 @@ architecture Behavioral of mem_interface_beeld is
 											0x"ffe",
 											0x"fff");
 	
+	--signals for reading:
 	signal LeesAdres: std_logic_vector(18 downto 0) := (others => '0');
 	signal LeesData: std_logic_vector(6 downto 0) := (others => '0');
-	
 	signal RGB: std_logic_vector(11 downto 0) := (others => '0');
+	
+	
+	--signals for writing:
+	signal writeAdres: std_logic_vector(18 downto 0) := (others => '0');
+	signal writeData: std_logic_vector(6 downto 0) := (others => '0');
+	signal wea: std_logic_vector(0 downto 0) := (others => '0');
 begin
 
-	LeesAdres <= 	std_logic_vector(to_unsigned(VGA_Y * 800 + VGA_X, 19)) when active_video = '1' else
+	--READING:
+	
+	LeesAdres 	<= 	std_logic_vector(to_unsigned(VGA_Y * 800 + VGA_X, 19)) when active_video = '1' else
 					(others => '0');
 					
-	RGB <= 			kleurArray(LeesData) when active_video = '1' else
+	RGB 		<= 	kleurArray(LeesData) when active_video = '1' else
 					(others => '0');
 					
 	VGA_R <= RGB(11 downto 8);
 	VGA_G <= RGB(7 downto 4);
 	VGA_B <= RGB(3 downto 0);
 
+	--WRITING:
+	--TODO
 
-	-- DUAL_PORT_RAM_inst: DUAL_PORT_RAM
-		-- port map(
-			-- --TODO
-			-- clka : IN STD_LOGIC;
-			-- wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-			-- addra : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
-			-- dina : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	DUAL_PORT_RAM_inst: DUAL_PORT_RAM
+		port map(
+			clka => new_entry_clk,
+			wea => wea,
+			addra => writeAdres,
+			dina => writeData,
 			
-			-- clkb => VGA_clk,
-			-- addrb => LeesAdres,
-			-- doutb => LeesData
-		-- );
+			clkb => VGA_clk,
+			addrb => LeesAdres,
+			doutb => LeesData
+		);
 
 end Behavioral;
