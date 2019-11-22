@@ -539,13 +539,14 @@
    <keyValuePair key="gettingstartedview_create_new_project" value="1" description="" />
    <keyValuePair key="graphicalview_zoom_in" value="1" description="" />
    <keyValuePair key="graphicalview_zoom_out" value="5" description="" />
-   <keyValuePair key="hacgccoefiledialog_close" value="5" description="" />
-   <keyValuePair key="hacgccoefiledialog_save" value="3" description="" />
+   <keyValuePair key="hacgccoefiledialog_close" value="6" description="" />
+   <keyValuePair key="hacgccoefiledialog_save" value="4" description="" />
    <keyValuePair key="hacgccoefiledialog_validate" value="1" description="" />
    <keyValuePair key="hacgccoefilewidget_browse" value="7" description="" />
-   <keyValuePair key="hacgccoefilewidget_edit" value="4" description="" />
+   <keyValuePair key="hacgccoefilewidget_edit" value="5" description="" />
    <keyValuePair key="hacgcipsymbol_show_disabled_ports" value="7" description="" />
    <keyValuePair key="hacgctabbedpane_tabbed_pane" value="2" description="" />
+   <keyValuePair key="hardwaretreepanel_hardware_tree_table" value="2" description="" />
    <keyValuePair key="hpopuptitle_close" value="1" description="" />
    <keyValuePair key="ipproppanel_upgrade_version" value="1" description="" />
    <keyValuePair key="launchpanel_dont_show_this_dialog_again" value="1" description="" />
@@ -571,7 +572,7 @@
    <keyValuePair key="netlistschematicview_show_io_ports_in_this_schematic" value="6" description="" />
    <keyValuePair key="openfileaction_open_directory" value="1" description="" />
    <keyValuePair key="pacommandnames_add_sources" value="10" description="" />
-   <keyValuePair key="pacommandnames_auto_connect_target" value="3" description="" />
+   <keyValuePair key="pacommandnames_auto_connect_target" value="6" description="" />
    <keyValuePair key="pacommandnames_auto_update_hier" value="35" description="" />
    <keyValuePair key="pacommandnames_goto_implemented_design" value="1" description="" />
    <keyValuePair key="pacommandnames_open_hardware_manager" value="5" description="" />
@@ -648,7 +649,7 @@
   </section>
   <section name="java_command_handlers" level="2" order="2" description="">
    <keyValuePair key="addsources" value="13" description="" />
-   <keyValuePair key="autoconnecttarget" value="3" description="" />
+   <keyValuePair key="autoconnecttarget" value="6" description="" />
    <keyValuePair key="closeproject" value="4" description="" />
    <keyValuePair key="coreview" value="6" description="" />
    <keyValuePair key="customizecore" value="10" description="" />
@@ -695,13 +696,13 @@
    <keyValuePair key="currentsynthesisrun" value="synth_1" description="" />
    <keyValuePair key="default_library" value="xil_defaultlib" description="" />
    <keyValuePair key="designmode" value="RTL" description="" />
-   <keyValuePair key="export_simulation_activehdl" value="31" description="" />
-   <keyValuePair key="export_simulation_ies" value="31" description="" />
-   <keyValuePair key="export_simulation_modelsim" value="31" description="" />
-   <keyValuePair key="export_simulation_questa" value="31" description="" />
-   <keyValuePair key="export_simulation_riviera" value="31" description="" />
-   <keyValuePair key="export_simulation_vcs" value="31" description="" />
-   <keyValuePair key="export_simulation_xsim" value="31" description="" />
+   <keyValuePair key="export_simulation_activehdl" value="32" description="" />
+   <keyValuePair key="export_simulation_ies" value="32" description="" />
+   <keyValuePair key="export_simulation_modelsim" value="32" description="" />
+   <keyValuePair key="export_simulation_questa" value="32" description="" />
+   <keyValuePair key="export_simulation_riviera" value="32" description="" />
+   <keyValuePair key="export_simulation_vcs" value="32" description="" />
+   <keyValuePair key="export_simulation_xsim" value="32" description="" />
    <keyValuePair key="implstrategy" value="Vivado Implementation Defaults" description="" />
    <keyValuePair key="launch_simulation_activehdl" value="0" description="" />
    <keyValuePair key="launch_simulation_ies" value="0" description="" />

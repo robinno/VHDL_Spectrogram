@@ -160,8 +160,8 @@ Table of Contents
 |     VGA_driver_inst          |     0.002 |
 |     mem_interface_beeld_inst |     0.012 |
 |       DUAL_PORT_RAM_inst     |     0.012 |
-|   clk_deler                  |     0.103 |
-|     inst                     |     0.103 |
+|   clk_deler                  |     0.105 |
+|     inst                     |     0.105 |
 +------------------------------+-----------+
 
 
