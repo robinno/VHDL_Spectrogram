@@ -170,6 +170,8 @@ begin
 	--WRITING:
 	--TODO
 
+
+	--MEMORY COMPONENT:
 	DUAL_PORT_RAM_inst: DUAL_PORT_RAM
 		port map(
 			clka => new_entry_clk,

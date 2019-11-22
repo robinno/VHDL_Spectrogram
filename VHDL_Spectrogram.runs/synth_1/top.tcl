@@ -18,7 +18,10 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache C:/Users/robin/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1116-LAPTOP-69E4OMV9/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,6 +37,7 @@ set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
 set_property ip_output_repo {d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/beeldCOE.coe}}
+add_files {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/test_FIFO.coe}}
 read_vhdl -library xil_defaultlib {
   {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd}
   {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd}
@@ -43,9 +47,6 @@ read_vhdl -library xil_defaultlib {
   {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd}
   {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd}
 }
-read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.xci}}
-set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_ooc.xdc}}]
-
 read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
 set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc}}]
 set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc}}]
@@ -58,6 +59,12 @@ read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.s
 set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc}}]
 set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc}}]
 set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc}}]
+
+read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.xci}}
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_ooc.xdc}}]
+
+read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/FIFO/FIFO.xci}}
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/FIFO/FIFO_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
