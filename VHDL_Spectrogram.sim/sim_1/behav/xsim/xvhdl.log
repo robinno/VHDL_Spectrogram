@@ -377,13 +377,18 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.sr
 INFO: [VRFC 10-3107] analyzing entity 'VGA_driver'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'top'
-ERROR: [VRFC 10-2989] 'clk_out1' is not declared [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:122]
-ERROR: [VRFC 10-3095] actual of formal out port 'clk_out1' cannot be an expression [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:122]
-ERROR: [VRFC 10-2989] 'clk_out2' is not declared [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:123]
-ERROR: [VRFC 10-3095] actual of formal out port 'clk_out2' cannot be an expression [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:123]
-ERROR: [VRFC 10-2989] 'clk_12m288' is not declared [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:124]
-ERROR: [VRFC 10-3095] actual of formal out port 'clk_12m288' cannot be an expression [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:124]
-ERROR: [VRFC 10-2989] 'reset' is not declared [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:126]
-ERROR: [VRFC 10-2989] 'clk_in1' is not declared [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:128]
-ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:57]
-INFO: [VRFC 10-3070] VHDL file 'C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd' ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Beeld'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mem_interface_beeld'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/fft_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fft_controller'
+WARNING: [VRFC 10-3093] actual for formal port 's_axis_data_tdata' is neither a static name nor a globally static expression [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/fft_controller.vhd:136]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'audio_if'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'adau1761_if'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sim_1/new/tb_fft_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fft_controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sim_1/new/tb_fft_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fft_ip'

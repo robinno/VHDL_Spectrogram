@@ -85,6 +85,7 @@ architecture Behavioral of top is
 	component audio_if is
 		Port(
 		clk_100M_in : in std_logic;
+		s_clk_12M288 : in std_logic;
 
 		-- adau1761 interface signals
 		m_clk : out std_logic;
@@ -145,6 +146,7 @@ begin
 	Audio_inst: audio_if
 		port map(
 		clk_100M_in => sys_clk,
+		s_clk_12M288 => Audio_clk,
 		m_clk => m_clk,
 		lr_clk => lr_clk,
 		b_clk => b_clk,
@@ -156,7 +158,7 @@ begin
 		sample_l => sample_l,
 		sample_r => sample_r,
 		sample_l_in => sample_l,
-		sample_r_in => sample_r,
+		sample_r_in => sample_r,   -- loopback
 		sdata_out => sdata_out);
 	
 end Behavioral;

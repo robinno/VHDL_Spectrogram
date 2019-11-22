@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Tue Nov 19 15:33:46 2019
-| Host             : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
+| Date             : Fri Nov 22 11:27:24 2019
+| Host             : LAPTOP-RBTKMPRA running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7z020clg484-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.367        |
+| Total On-Chip Power (W)  | 0.233        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.253        |
-| Device Static (W)        | 0.114        |
+| Dynamic (W)              | 0.121        |
+| Device Static (W)        | 0.112        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.8         |
-| Junction Temperature (C) | 29.2         |
+| Max Ambient (C)          | 82.3         |
+| Junction Temperature (C) | 27.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.003 |        9 |       --- |             --- |
-| Slice Logic    |    <0.001 |      802 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      281 |     53200 |            0.53 |
+| Clocks         |     0.003 |        7 |       --- |             --- |
+| Slice Logic    |    <0.001 |      800 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      280 |     53200 |            0.53 |
 |   Register     |    <0.001 |      254 |    106400 |            0.24 |
 |   F7/F8 Muxes  |    <0.001 |        6 |     53200 |            0.01 |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |      202 |       --- |             --- |
+|   Others       |     0.000 |      200 |       --- |             --- |
 | Signals        |     0.002 |      679 |       --- |             --- |
 | Block RAM      |     0.009 |    103.5 |       140 |           73.93 |
 | MMCM           |     0.103 |        1 |         4 |           25.00 |
-| PLL            |     0.131 |        1 |         4 |           25.00 |
 | DSPs           |    <0.001 |        1 |       220 |            0.45 |
 | I/O            |     0.003 |       24 |       200 |           12.00 |
-| Static Power   |     0.114 |          |           |                 |
-| Total          |     0.367 |          |           |                 |
+| Static Power   |     0.112 |          |           |                 |
+| Total          |     0.233 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,8 +75,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.038 |       0.028 |      0.010 |
-| Vccaux    |       1.800 |     0.134 |       0.123 |      0.011 |
+| Vccint    |       1.000 |     0.025 |       0.015 |      0.010 |
+| Vccaux    |       1.800 |     0.068 |       0.057 |      0.011 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.002 |       0.001 |      0.001 |
@@ -89,7 +88,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -136,16 +135,15 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+------------------------+------------------------------------------------------------+-----------------+
-| Clock                  | Domain                                                     | Constraint (ns) |
-+------------------------+------------------------------------------------------------+-----------------+
-| clk_12M288_clk_wiz_1   | Audio_inst/INST_AUDIO_SAMPLE_CLK/inst/clk_12M288_clk_wiz_1 |            81.3 |
-| clk_FFT_clk_wiz_0      | clk_deler/inst/clk_FFT_clk_wiz_0                           |           177.8 |
-| clk_VGA_clk_wiz_0      | clk_deler/inst/clk_VGA_clk_wiz_0                           |            25.0 |
-| clk_deler/inst/sys_clk | sys_clk_IBUF                                               |            10.4 |
-| clkfbout_clk_wiz_0     | clk_deler/inst/clkfbout_clk_wiz_0                          |            10.4 |
-| clkfbout_clk_wiz_1     | Audio_inst/INST_AUDIO_SAMPLE_CLK/inst/clkfbout_clk_wiz_1   |            10.0 |
-+------------------------+------------------------------------------------------------+-----------------+
++------------------------+------------------------------------+-----------------+
+| Clock                  | Domain                             | Constraint (ns) |
++------------------------+------------------------------------+-----------------+
+| clk_FFT_clk_wiz_0      | clk_deler/inst/clk_FFT_clk_wiz_0   |           177.8 |
+| clk_VGA_clk_wiz_0      | clk_deler/inst/clk_VGA_clk_wiz_0   |            25.0 |
+| clk_audio_clk_wiz_0    | clk_deler/inst/clk_audio_clk_wiz_0 |            81.9 |
+| clk_deler/inst/sys_clk | sys_clk_IBUF                       |            10.4 |
+| clkfbout_clk_wiz_0     | clk_deler/inst/clkfbout_clk_wiz_0  |            10.4 |
++------------------------+------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -157,10 +155,7 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| top                          |     0.253 |
-|   Audio_inst                 |     0.133 |
-|     INST_AUDIO_SAMPLE_CLK    |     0.132 |
-|       inst                   |     0.132 |
+| top                          |     0.121 |
 |   Beeld_inst                 |     0.014 |
 |     VGA_driver_inst          |     0.002 |
 |     mem_interface_beeld_inst |     0.012 |
