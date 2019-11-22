@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
-// Date        : Fri Nov 22 11:17:43 2019
+// Date        : Fri Nov 22 13:56:40 2019
 // Host        : LAPTOP-RBTKMPRA running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_stub.v

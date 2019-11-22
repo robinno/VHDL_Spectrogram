@@ -107,21 +107,42 @@ architecture Behavioral of top is
         sdata_out: out std_logic);
 	end component;
 	
+	COMPONENT FIFO
+	PORT (
+		clka : IN STD_LOGIC;
+		wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+		addra : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
+		dina : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+		clkb : IN STD_LOGIC;
+		enb : IN STD_LOGIC;
+		addrb : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
+		doutb : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
+	);
+END COMPONENT;
 	
 	signal VGA_clk: std_logic := '0';
 	signal FFT_clk: std_logic := '0';
 	signal Audio_clk: std_logic := '0';
+	signal master_clk : std_logic := '0';
 	
 	signal sample_clk : std_logic;
 	signal sample_l, sample_r, sample_l_in, sample_r_in : std_logic_vector(23 downto 0);
 	
 	signal output_FFT: std_logic := '0'; --TODO
+	
+	signal clka, clkb, enb : std_logic;
+	signal addra, addrb : std_logic_vector(10 downto 0);
+	signal wea : std_logic_vector(0 downto 0);
+	signal dina, doutb : std_logic_vector(23 downto 0);
+	signal b_counter : integer range 0 to 23 := 0;
+	signal counter : integer range 0 to 2048 := 0;
+	
 begin
 
 	
 	clk_deler : clk_wiz_0
 		port map ( 
-			clk_96MHz => open,
+			clk_96MHz => master_clk,
 			clk_VGA => VGA_clk,
 			clk_FFT => FFT_clk,
 			clk_audio => Audio_clk,
@@ -145,7 +166,7 @@ begin
 		
 	Audio_inst: audio_if
 		port map(
-		clk_100M_in => sys_clk,
+		clk_100M_in => master_clk,
 		s_clk_12M288 => Audio_clk,
 		m_clk => m_clk,
 		lr_clk => lr_clk,
@@ -160,5 +181,42 @@ begin
 		sample_l_in => sample_l,
 		sample_r_in => sample_r,   -- loopback
 		sdata_out => sdata_out);
+		
+	FIFO_inst : FIFO
+		PORT MAP (
+		clka => m_clk,
+		wea => wea,
+		addra => addra,
+		dina => dina,
+		clkb => clkb,
+		enb => enb,
+		addrb => addrb,
+		doutb => doutb);
+		
+	-- write data in fifo, make serial data parallel
+	process (b_clk)
+	begin
+		if(falling_edge (b_clk)) then
+			if(b_counter = 23) then 
+				b_counter <= 0;
+				wea <= '1';
+				counter <= counter + 1;
+			else
+				b_counter <= b_counter + 1;
+				wea <= '0';
+			end if;
+			
+			dina(b_counter) <= sdata_out;
+		end if;
+	end process;
+	
+	-- make addra
+	process
+	begin
+		if (counter = 2048) then
+			counter <= 0;
+		end if;
+		addra <= std_logic_vector(to_unsigned(counter, addra'length));
+	end process;
 	
 end Behavioral;

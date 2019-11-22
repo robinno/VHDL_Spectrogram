@@ -3,102 +3,57 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_fft_controller_behav.wdb" id="1">
+      <db_ref path="tb_audio_if_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="tb_fft_controller" />
-            <top_module name="vcomponents" />
+            <top_module name="tb_audio_if" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2046068334fs"></ZoomStartTime>
-      <ZoomEndTime time="2057658335fs"></ZoomEndTime>
-      <Cursor1Time time="2048000000fs"></Cursor1Time>
+      <ZoomStartTime time="676332887fs"></ZoomStartTime>
+      <ZoomEndTime time="676706412fs"></ZoomEndTime>
+      <Cursor1Time time="55264776000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="232"></NameColumnWidth>
-      <ValueColumnWidth column_width="145"></ValueColumnWidth>
+      <ValueColumnWidth column_width="135"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/tb_audio_if/tclk_100M_in" type="logic">
+      <obj_property name="ElementShortName">tclk_100M_in</obj_property>
+      <obj_property name="ObjectShortName">tclk_100M_in</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/counter" type="other">
-      <obj_property name="ElementShortName">counter</obj_property>
-      <obj_property name="ObjectShortName">counter</obj_property>
+   <wvobject fp_name="/tb_audio_if/ts_clk_12M288" type="logic">
+      <obj_property name="ElementShortName">ts_clk_12M288</obj_property>
+      <obj_property name="ObjectShortName">ts_clk_12M288</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/din" type="array">
-      <obj_property name="ElementShortName">din[23:0]</obj_property>
-      <obj_property name="ObjectShortName">din[23:0]</obj_property>
+   <wvobject fp_name="/tb_audio_if/tm_clk" type="logic">
+      <obj_property name="ElementShortName">tm_clk</obj_property>
+      <obj_property name="ObjectShortName">tm_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/din_valid" type="logic">
-      <obj_property name="ElementShortName">din_valid</obj_property>
-      <obj_property name="ObjectShortName">din_valid</obj_property>
+   <wvobject fp_name="/tb_audio_if/tlr_clk" type="logic">
+      <obj_property name="ElementShortName">tlr_clk</obj_property>
+      <obj_property name="ObjectShortName">tlr_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/dout" type="array">
-      <obj_property name="ElementShortName">dout[23:0]</obj_property>
-      <obj_property name="ObjectShortName">dout[23:0]</obj_property>
+   <wvobject fp_name="/tb_audio_if/tb_clk" type="logic">
+      <obj_property name="ElementShortName">tb_clk</obj_property>
+      <obj_property name="ObjectShortName">tb_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/dout_valid" type="logic">
-      <obj_property name="ElementShortName">dout_valid</obj_property>
-      <obj_property name="ObjectShortName">dout_valid</obj_property>
+   <wvobject fp_name="/tb_audio_if/tsdata" type="logic">
+      <obj_property name="ElementShortName">tsdata</obj_property>
+      <obj_property name="ObjectShortName">tsdata</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/dout_last" type="logic">
-      <obj_property name="ElementShortName">dout_last</obj_property>
-      <obj_property name="ObjectShortName">dout_last</obj_property>
+   <wvobject fp_name="/tb_audio_if/tsdata_out" type="logic">
+      <obj_property name="ElementShortName">tsdata_out</obj_property>
+      <obj_property name="ObjectShortName">tsdata_out</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/blk_exp" type="other">
-      <obj_property name="ElementShortName">blk_exp</obj_property>
-      <obj_property name="ObjectShortName">blk_exp</obj_property>
+   <wvobject fp_name="/tb_audio_if/tsample_l" type="array">
+      <obj_property name="ElementShortName">tsample_l[23:0]</obj_property>
+      <obj_property name="ObjectShortName">tsample_l[23:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_aresetn" type="logic">
-      <obj_property name="ElementShortName">s_aresetn</obj_property>
-      <obj_property name="ObjectShortName">s_aresetn</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_s_axis_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_s_axis_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_s_axis_tvalid</obj_property>
-      <obj_property name="CustomSignalColor">#00FF00</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_s_axis_tready" type="logic">
-      <obj_property name="ElementShortName">s_s_axis_tready</obj_property>
-      <obj_property name="ObjectShortName">s_s_axis_tready</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_s_axis_data_tlast" type="logic">
-      <obj_property name="ElementShortName">s_s_axis_data_tlast</obj_property>
-      <obj_property name="ObjectShortName">s_s_axis_data_tlast</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_m_axis_data_tuser" type="array">
-      <obj_property name="ElementShortName">s_m_axis_data_tuser[7:0]</obj_property>
-      <obj_property name="ObjectShortName">s_m_axis_data_tuser[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_event_tlast_unexpected" type="logic">
-      <obj_property name="ElementShortName">s_event_tlast_unexpected</obj_property>
-      <obj_property name="ObjectShortName">s_event_tlast_unexpected</obj_property>
-      <obj_property name="CustomSignalColor">#800080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_event_tlast_missing" type="logic">
-      <obj_property name="ElementShortName">s_event_tlast_missing</obj_property>
-      <obj_property name="ObjectShortName">s_event_tlast_missing</obj_property>
-      <obj_property name="CustomSignalColor">#800080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_event_data_in_channel_halt" type="logic">
-      <obj_property name="ElementShortName">s_event_data_in_channel_halt</obj_property>
-      <obj_property name="ObjectShortName">s_event_data_in_channel_halt</obj_property>
-      <obj_property name="CustomSignalColor">#800080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/s_dout" type="array">
-      <obj_property name="ElementShortName">s_dout[47:0]</obj_property>
-      <obj_property name="ObjectShortName">s_dout[47:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft_controller/INST_fft_controller/state" type="other">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
+   <wvobject fp_name="/tb_audio_if/tsample_r" type="array">
+      <obj_property name="ElementShortName">tsample_r[23:0]</obj_property>
+      <obj_property name="ObjectShortName">tsample_r[23:0]</obj_property>
    </wvobject>
 </wave_config>

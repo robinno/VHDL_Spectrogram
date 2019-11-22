@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Fri Nov 22 13:29:56 2019
+# Process ID: 3328
+# Current directory: C:/VHDL_Spectrogram/VHDL_Spectrogram.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/VHDL_Spectrogram/VHDL_Spectrogram.sim/sim_1/behav/xsim/xsim.dir/tb_audio_if_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/VHDL_Spectrogram/VHDL_Spectrogram.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/VHDL_Spectrogram/VHDL_Spectrogram.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/VHDL_Spectrogram/VHDL_Spectrogram.sim/sim_1/behav/xsim/xsim.dir/tb_audio_if_behav/webtalk/xsim_webtalk.tcl -notrace

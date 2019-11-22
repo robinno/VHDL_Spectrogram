@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/demo_tb/tb_fft_ip.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/sim/fft_ip.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sources_1/new/top.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sim_1/new/tb_fft_controller.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sim_1/new/tb_fft_ip.vhd" \
+"../../../../VHDL_Spectrogram.srcs/sim_1/new/tb_audio_if.vhd" \
+
+# Do not sort compile order
+nosort

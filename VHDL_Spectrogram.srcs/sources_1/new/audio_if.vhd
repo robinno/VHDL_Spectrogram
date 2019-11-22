@@ -71,9 +71,9 @@ architecture Behavioral of audio_if is
 		-- );
 	-- end component;
 
-	ATTRIBUTE SYN_BLACK_BOX : BOOLEAN;
+	-- ATTRIBUTE SYN_BLACK_BOX : BOOLEAN;
 	-- ATTRIBUTE SYN_BLACK_BOX OF clk_wiz_1 : COMPONENT IS TRUE;
-	ATTRIBUTE BLACK_BOX_PAD_PIN : STRING;
+	-- ATTRIBUTE BLACK_BOX_PAD_PIN : STRING;
 	-- ATTRIBUTE BLACK_BOX_PAD_PIN OF clk_wiz_1 : COMPONENT IS "clk_in1,clk_100M,clk_12M288,reset,locked";
 
 	component adau1761_if

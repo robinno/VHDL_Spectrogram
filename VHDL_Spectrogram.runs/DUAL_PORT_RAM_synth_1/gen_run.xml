@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="DUAL_PORT_RAM_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1574417655">
+<GenRun Id="DUAL_PORT_RAM_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1574427145">
   <File Type="PA-TCL" Name="DUAL_PORT_RAM.tcl"/>
   <File Type="REPORTS-TCL" Name="DUAL_PORT_RAM_reports.tcl"/>
   <File Type="RDS-RDS" Name="DUAL_PORT_RAM.vds"/>
