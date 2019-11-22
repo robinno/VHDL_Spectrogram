@@ -1,20 +1,3 @@
-2019.2:
- * Version 9.1 (Rev. 3)
- * General: support for Versal devices. No change to functionality.
- * Revision change in one or more subcores
-
-2019.1.3:
- * Version 9.1 (Rev. 2)
- * No changes
-
-2019.1.2:
- * Version 9.1 (Rev. 2)
- * No changes
-
-2019.1.1:
- * Version 9.1 (Rev. 2)
- * No changes
-
 2019.1:
  * Version 9.1 (Rev. 2)
  * General: support for new devices. No change to functionality.

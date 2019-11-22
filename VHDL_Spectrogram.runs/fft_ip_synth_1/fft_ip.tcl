@@ -33,7 +33,7 @@ set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
 set_property ip_output_repo c:/VHDL_Spectrogram/VHDL_Spectrogram.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.xci
+read_ip -quiet c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.xci
 set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -89,32 +89,32 @@ write_checkpoint -force -noxdef fft_ip.dcp
 create_report "fft_ip_synth_1_synth_report_utilization_0" "report_utilization -file fft_ip_utilization_synth.rpt -pb fft_ip_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip.dcp C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.dcp
+  file copy -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip.dcp c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.v
+  write_verilog -force -mode synth_stub c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_sim_netlist.v
+  write_verilog -force -mode funcsim c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -124,32 +124,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip.dcp C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.dcp
+  file copy -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip.dcp c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip_stub.v C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.v
+  file rename -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip_stub.v c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip_stub.vhdl C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.vhdl
+  file rename -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip_stub.vhdl c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip_sim_netlist.v C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_sim_netlist.v
+  file rename -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip_sim_netlist.v c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip_sim_netlist.vhdl C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_sim_netlist.vhdl
+  file rename -force C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/fft_ip_synth_1/fft_ip_sim_netlist.vhdl c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -158,13 +158,13 @@ if { [catch {
 
 if {[file isdir C:/VHDL_Spectrogram/VHDL_Spectrogram.ip_user_files/ip/fft_ip]} {
   catch { 
-    file copy -force C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.v C:/VHDL_Spectrogram/VHDL_Spectrogram.ip_user_files/ip/fft_ip
+    file copy -force c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.v C:/VHDL_Spectrogram/VHDL_Spectrogram.ip_user_files/ip/fft_ip
   }
 }
 
 if {[file isdir C:/VHDL_Spectrogram/VHDL_Spectrogram.ip_user_files/ip/fft_ip]} {
   catch { 
-    file copy -force C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.vhdl C:/VHDL_Spectrogram/VHDL_Spectrogram.ip_user_files/ip/fft_ip
+    file copy -force c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.vhdl C:/VHDL_Spectrogram/VHDL_Spectrogram.ip_user_files/ip/fft_ip
   }
 }
 file delete __synthesis_is_running__

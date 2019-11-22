@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri Nov 22 09:28:37 2019
-// Host        : DESKTOP-VSQA5BK running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v
+// Date        : Tue Nov 19 11:53:00 2019
+// Host        : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim {D:/Ing/Master
+//               1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v}
 // Design      : clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,48 +14,62 @@
 
 (* NotValidForBitStream *)
 module clk_wiz_0
-   (clk_out1,
-    clk_out2,
-    clk_in1);
-  output clk_out1;
-  output clk_out2;
-  input clk_in1;
+   (clk_96MHz,
+    clk_VGA,
+    clk_FFT,
+    clk_audio,
+    sys_clk);
+  output clk_96MHz;
+  output clk_VGA;
+  output clk_FFT;
+  output clk_audio;
+  input sys_clk;
 
-  (* IBUF_LOW_PWR *) wire clk_in1;
-  wire clk_out1;
-  wire clk_out2;
+  wire clk_96MHz;
+  wire clk_FFT;
+  wire clk_VGA;
+  wire clk_audio;
+  (* IBUF_LOW_PWR *) wire sys_clk;
 
   clk_wiz_0_clk_wiz_0_clk_wiz inst
-       (.clk_in1(clk_in1),
-        .clk_out1(clk_out1),
-        .clk_out2(clk_out2));
+       (.clk_96MHz(clk_96MHz),
+        .clk_FFT(clk_FFT),
+        .clk_VGA(clk_VGA),
+        .clk_audio(clk_audio),
+        .sys_clk(sys_clk));
 endmodule
 
 (* ORIG_REF_NAME = "clk_wiz_0_clk_wiz" *) 
 module clk_wiz_0_clk_wiz_0_clk_wiz
-   (clk_out1,
-    clk_out2,
-    clk_in1);
-  output clk_out1;
-  output clk_out2;
-  input clk_in1;
+   (clk_96MHz,
+    clk_VGA,
+    clk_FFT,
+    clk_audio,
+    sys_clk);
+  output clk_96MHz;
+  output clk_VGA;
+  output clk_FFT;
+  output clk_audio;
+  input sys_clk;
 
-  wire clk_in1;
-  wire clk_in1_clk_wiz_0;
-  wire clk_out1;
-  wire clk_out1_clk_wiz_0;
-  wire clk_out2;
-  wire clk_out2_clk_wiz_0;
+  wire clk_96MHz;
+  wire clk_96MHz_clk_wiz_0;
+  wire clk_FFT;
+  wire clk_FFT_clk_wiz_0;
+  wire clk_VGA;
+  wire clk_VGA_clk_wiz_0;
+  wire clk_audio;
+  wire clk_audio_clk_wiz_0;
   wire clkfbout_buf_clk_wiz_0;
   wire clkfbout_clk_wiz_0;
+  wire sys_clk;
+  wire sys_clk_clk_wiz_0;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED;
@@ -76,37 +90,45 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
   IBUF #(
     .IOSTANDARD("DEFAULT")) 
     clkin1_ibufg
-       (.I(clk_in1),
-        .O(clk_in1_clk_wiz_0));
+       (.I(sys_clk),
+        .O(sys_clk_clk_wiz_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(clk_out1_clk_wiz_0),
-        .O(clk_out1));
+       (.I(clk_96MHz_clk_wiz_0),
+        .O(clk_96MHz));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout2_buf
-       (.I(clk_out2_clk_wiz_0),
-        .O(clk_out2));
+       (.I(clk_VGA_clk_wiz_0),
+        .O(clk_VGA));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout3_buf
+       (.I(clk_FFT_clk_wiz_0),
+        .O(clk_FFT));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout4_buf
+       (.I(clk_audio_clk_wiz_0),
+        .O(clk_audio));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(10.750000),
+    .CLKFBOUT_MULT_F(7.500000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.417000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(10.750000),
+    .CLKOUT0_DIVIDE_F(7.500000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(41),
+    .CLKOUT1_DIVIDE(18),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(128),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
-    .CLKOUT3_DIVIDE(1),
+    .CLKOUT3_DIVIDE(59),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
     .CLKOUT3_USE_FINE_PS("FALSE"),
@@ -141,17 +163,17 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
         .CLKFBOUT(clkfbout_clk_wiz_0),
         .CLKFBOUTB(NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED),
         .CLKFBSTOPPED(NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED),
-        .CLKIN1(clk_in1_clk_wiz_0),
+        .CLKIN1(sys_clk_clk_wiz_0),
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
-        .CLKOUT0(clk_out1_clk_wiz_0),
+        .CLKOUT0(clk_96MHz_clk_wiz_0),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(clk_out2_clk_wiz_0),
+        .CLKOUT1(clk_VGA_clk_wiz_0),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_FFT_clk_wiz_0),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
-        .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
+        .CLKOUT3(clk_audio_clk_wiz_0),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
         .CLKOUT4(NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED),

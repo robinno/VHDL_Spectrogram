@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:ip:xfft:9.1
-// IP Revision: 3
+// IP Revision: 2
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -65,7 +65,7 @@ fft_ip your_instance_name (
   .s_axis_data_tready(s_axis_data_tready),                  // output wire s_axis_data_tready
   .s_axis_data_tlast(s_axis_data_tlast),                    // input wire s_axis_data_tlast
   .m_axis_data_tdata(m_axis_data_tdata),                    // output wire [47 : 0] m_axis_data_tdata
-  .m_axis_data_tuser(m_axis_data_tuser),                    // output wire [23 : 0] m_axis_data_tuser
+  .m_axis_data_tuser(m_axis_data_tuser),                    // output wire [7 : 0] m_axis_data_tuser
   .m_axis_data_tvalid(m_axis_data_tvalid),                  // output wire m_axis_data_tvalid
   .m_axis_data_tlast(m_axis_data_tlast),                    // output wire m_axis_data_tlast
   .m_axis_status_tdata(m_axis_status_tdata),                // output wire [7 : 0] m_axis_status_tdata

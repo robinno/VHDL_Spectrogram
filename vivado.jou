@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Fri Nov 15 14:52:28 2019
+# Process ID: 1296
+# Current directory: C:/VHDL_Spectrogram
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5768 C:\VHDL_Spectrogram\VHDL_Spectrogram.xpr
+# Log file: C:/VHDL_Spectrogram/vivado.log
+# Journal file: C:/VHDL_Spectrogram\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/VHDL_Spectrogram/VHDL_Spectrogram.xpr

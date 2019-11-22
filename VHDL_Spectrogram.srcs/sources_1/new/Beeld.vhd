@@ -37,20 +37,24 @@ entity Beeld is
 	
 		VGA_Vsync: out std_logic;
 		VGA_Hsync: out std_logic;
-		VGA_grey: out std_logic_vector(3 downto 0);
+		VGA_R: out std_logic_vector(3 downto 0);
+		VGA_G: out std_logic_vector(3 downto 0);
+		VGA_B: out std_logic_vector(3 downto 0);
 		
-		new_sample_entry: in std_logic --input of data: TODO
+		--writing side:
+		new_entry_clk: in std_logic;
+		new_entry: in std_logic
 	);
 end Beeld;
 
 architecture Behavioral of Beeld is
 
-	component VGA_driver is --gekozen voor 640 x 400
+	component VGA_driver is --gekozen voor 800x600
 		Port (	clk : in STD_LOGIC;
 
 				Flag_Active_Video: out STD_LOGIC;
-				LineCount: out integer range 0 to 525; 	--verticale positie
-				PixelCount: out integer range 0 to 800;	--horizontale positie
+				LineCount: out integer range 0 to 628; 		--verticale positie
+				PixelCount: out integer range 0 to 1056;	--horizontale positie
 				
 				Vsync : out STD_LOGIC;
 				Hsync : out STD_LOGIC);
@@ -58,19 +62,25 @@ architecture Behavioral of Beeld is
 	
 	component mem_interface_beeld is
 		Port ( 
+			--reading side:
 			VGA_clk: in std_logic;
 		
-			VGA_X: in integer range 0 to 800;
-			VGA_Y: in integer range 0 to 525;
+			VGA_X: in integer range 0 to 1056;
+			VGA_Y: in integer range 0 to 628;
 			active_video: in std_logic;
-			grey_out: out std_logic_vector(3 downto 0);
+			VGA_R: out std_logic_vector(3 downto 0);
+			VGA_G: out std_logic_vector(3 downto 0);
+			VGA_B: out std_logic_vector(3 downto 0);
 			
-			new_sample_entry: in std_logic --TODO
+			--writing side:
+			new_entry_clk: in std_logic;
+			
+			new_entry: in std_logic
 		);
 	end component;
 
-	signal s_VGA_X: integer range 0 to 800;
-	signal s_VGA_Y: integer range 0 to 525;
+	signal s_VGA_X: integer range 0 to 1056;
+	signal s_VGA_Y: integer range 0 to 628;
 	signal s_active_video: std_logic;
 
 begin
@@ -103,9 +113,13 @@ begin
 			VGA_X => s_VGA_X,
 			VGA_Y => s_VGA_Y,
 			active_video => s_active_video,
-			grey_out => VGA_grey,
+			VGA_R => VGA_R,
+			VGA_G => VGA_G,
+			VGA_B => VGA_B,
 			
-			new_sample_entry => new_sample_entry --TODO
+			
+			new_entry_clk => new_entry_clk,
+			new_entry => new_entry
 		);
 
 
