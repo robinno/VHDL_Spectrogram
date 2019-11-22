@@ -105,7 +105,7 @@ architecture tb of tb_fft_ip is
   -- Data master channel signals
   signal m_axis_data_tvalid          : std_logic := '0';  -- payload is valid
   signal m_axis_data_tdata           : std_logic_vector(47 downto 0) := (others => '0');  -- data payload
-  signal m_axis_data_tuser           : std_logic_vector(7 downto 0) := (others => '0');  -- user-defined payload
+  signal m_axis_data_tuser           : std_logic_vector(23 downto 0) := (others => '0');  -- user-defined payload
   signal m_axis_data_tlast           : std_logic := '0';  -- indicates end of packet
 
   -- Status master channel signals
@@ -135,6 +135,7 @@ architecture tb of tb_fft_ip is
   -- Data master channel alias signals
   signal m_axis_data_tdata_re             : std_logic_vector(23 downto 0) := (others => '0');  -- real data
   signal m_axis_data_tdata_im             : std_logic_vector(23 downto 0) := (others => '0');  -- imaginary data
+  signal m_axis_data_tuser_xk_index       : std_logic_vector(10 downto 0) := (others => '0');  -- sample index
   signal m_axis_data_tuser_blk_exp        : std_logic_vector(4 downto 0) := (others => '0');  -- block exponent
 
   -- Status master channel alias signals
@@ -198,8 +199,6 @@ architecture tb of tb_fft_ip is
   signal cfg_fwd_inv : T_CFG_FWD_INV := FWD;
 
   -- Recording output data, for reuse as input data
-  signal op_sample       : integer    := 0;    -- output sample number
-  signal op_sample_first : std_logic  := '1';  -- indicates first output sample of a frame
   signal ip_frame        : integer    := 0;    -- input / configuration frame number
   signal op_data         : T_IP_TABLE := IP_TABLE_CLEAR;  -- recorded output data
   signal op_frame        : integer    := 0;    -- output frame number (incremented at end of frame output)
@@ -488,22 +487,16 @@ begin
   begin
     if rising_edge(aclk) then
       if aresetn = '0' then  -- aresetn is active low
-        op_sample_first <= '1';
-        op_sample       <= 0;
         op_data         <= IP_TABLE_CLEAR;
       elsif m_axis_data_tvalid = '1' then
         -- Record output data such that it can be used as input data
-        index := op_sample;
+        -- Output sample index is given by xk_index field of m_axis_data_tuser
+        index := to_integer(unsigned(m_axis_data_tuser(10 downto 0)));
         op_data(index).re <= m_axis_data_tdata(23 downto 0);
         op_data(index).im <= m_axis_data_tdata(47 downto 24);
-        -- Increment output sample counter
-        if m_axis_data_tlast = '1' then  -- end of output frame: reset sample counter and increment frame counter
-          op_sample <= 0;
+        -- Track the number of output frames
+        if m_axis_data_tlast = '1' then  -- end of output frame: increment frame counter
           op_frame <= op_frame + 1;
-          op_sample_first <= '1';  -- for next output frame
-        else
-          op_sample_first <= '0';
-          op_sample <= op_sample + 1;
         end if;
       end if;
     end if;
@@ -565,7 +558,8 @@ begin
   -- Data master channel alias signals
   m_axis_data_tdata_re           <= m_axis_data_tdata(23 downto 0);
   m_axis_data_tdata_im           <= m_axis_data_tdata(47 downto 24);
-  m_axis_data_tuser_blk_exp      <= m_axis_data_tuser(4 downto 0);
+  m_axis_data_tuser_xk_index     <= m_axis_data_tuser(10 downto 0);
+  m_axis_data_tuser_blk_exp      <= m_axis_data_tuser(20 downto 16);
 
   -- Status master channel alias signals
   m_axis_status_tdata_blk_exp    <= m_axis_status_tdata(4 downto 0);
