@@ -34,6 +34,7 @@ use UNISIM.VComponents.all;
 entity audio_if is
     Port (
 		clk_100M_in : in std_logic;
+		s_clk_12M288 : in std_logic;
 
 		-- adau1761 interface signals
 		m_clk : out std_logic;
@@ -58,22 +59,22 @@ end audio_if;
 
 architecture Behavioral of audio_if is
 
-	component clk_wiz_1
-		port(-- Clock in ports
-			clk_in1           : in     std_logic;
+	-- component clk_wiz_1
+		-- port(-- Clock in ports
+			-- clk_in1           : in     std_logic;
 			-- Clock out ports
-			clk_100M          : out    std_logic;
-			clk_12M288          : out    std_logic;
+			-- clk_100M          : out    std_logic;
+			-- clk_12M288          : out    std_logic;
 			-- Status and control signals
-			reset             : in     std_logic;
-			locked            : out    std_logic
-		);
-	end component;
+			-- reset             : in     std_logic;
+			-- locked            : out    std_logic
+		-- );
+	-- end component;
 
 	ATTRIBUTE SYN_BLACK_BOX : BOOLEAN;
-	ATTRIBUTE SYN_BLACK_BOX OF clk_wiz_1 : COMPONENT IS TRUE;
+	-- ATTRIBUTE SYN_BLACK_BOX OF clk_wiz_1 : COMPONENT IS TRUE;
 	ATTRIBUTE BLACK_BOX_PAD_PIN : STRING;
-	ATTRIBUTE BLACK_BOX_PAD_PIN OF clk_wiz_1 : COMPONENT IS "clk_in1,clk_100M,clk_12M288,reset,locked";
+	-- ATTRIBUTE BLACK_BOX_PAD_PIN OF clk_wiz_1 : COMPONENT IS "clk_in1,clk_100M,clk_12M288,reset,locked";
 
 	component adau1761_if
 		Port (
@@ -90,7 +91,7 @@ architecture Behavioral of audio_if is
 		);
 	end component;
 
-	signal s_clk_12M288 : std_logic;
+	-- signal s_clk_12M288 : std_logic;
 
     signal s_sample_l_in: std_logic_vector (23 downto 0);
     signal s_sample_r_in: std_logic_vector (23 downto 0);
@@ -241,17 +242,17 @@ begin
     s_sample_r_in <= sample_r_in;
     sdata_out <= s_sdata_out; 
 
-	INST_AUDIO_SAMPLE_CLK : clk_wiz_1
-		port map (
+	-- INST_AUDIO_SAMPLE_CLK : clk_wiz_1
+		-- port map (
 			-- Clock in ports
-			clk_in1 => clk_100M_in,
+			-- clk_in1 => clk_100M_in,
 			-- Clock out ports
-			clk_100M => open,
-			clk_12M288 => s_clk_12M288,
+			-- clk_100M => open,
+			-- clk_12M288 => s_clk_12M288,
 			-- Status and control signals
-			reset => '0',
-			locked => open
-		);
+			-- reset => '0',
+			-- locked => open
+		-- );
 
 	-- generate lr_clk and b_clk
 	process(s_clk_12M288)

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Fri Nov 22 10:59:23 2019
-| Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
+| Date         : Fri Nov 22 11:27:23 2019
+| Host         : LAPTOP-RBTKMPRA running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7z020clg484-1
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 40
+             Violations found: 39
 +-----------+------------------+------------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                      | Violations |
 +-----------+------------------+------------------------------------------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 37         |
-| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 2          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1          |
 | CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
 +-----------+------------------+------------------------------------------------------------------+------------+
 
@@ -220,11 +220,6 @@ The clock pin Audio_inst/s_sda_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-27#1 Critical Warning
-Invalid primary clock on hierarchical pin  
-A primary clock Audio_inst/INST_AUDIO_SAMPLE_CLK/inst/clk_in1 is created on an inappropriate internal pin Audio_inst/INST_AUDIO_SAMPLE_CLK/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
-Related violations: <none>
-
-TIMING-27#2 Critical Warning
 Invalid primary clock on hierarchical pin  
 A primary clock clk_deler/inst/sys_clk is created on an inappropriate internal pin clk_deler/inst/sys_clk. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
 Related violations: <none>

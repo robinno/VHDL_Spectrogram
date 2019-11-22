@@ -2,30 +2,28 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Nov 22 10:54:54 2019
-# Process ID: 19220
+# Start of session at: Fri Nov 22 13:10:43 2019
+# Process ID: 11688
 # Current directory: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.vds
-# Journal file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1\vivado.jou
+# Log file: C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.vds
+# Journal file: C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
 Command: synth_design -top top -part xc7z020clg484-1
 Starting synth_design
-INFO: [IP_Flow 19-2162] IP 'fft_ip' is locked:
-* IP definition 'Fast Fourier Transform (9.1)' for IP 'fft_ip' (customized with software release 2019.1) has a different revision in the IP Catalog.
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2840 
+INFO: Helper process launched with PID 7752 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 875.547 ; gain = 234.773
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 877.168 ; gain = 235.688
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-1565] actual for formal port s_axis_data_tdata is neither a static name nor a globally static expression [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/fft_controller.vhd:136]
+WARNING: [Synth 8-2519] partially associated formal m_axis_data_tdata cannot have actual OPEN [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/fft_controller.vhd:116]
 INFO: [Synth 8-638] synthesizing module 'top' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:57]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-19220-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'clk_deler' of component 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:121]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-19220-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-11688-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'clk_deler' of component 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-11688-LAPTOP-69E4OMV9/realtime/clk_wiz_0_stub.vhdl:16]
 INFO: [Synth 8-3491] module 'Beeld' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd:34' bound to instance 'Beeld_inst' of component 'Beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:130]
 INFO: [Synth 8-638] synthesizing module 'Beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd:50]
 INFO: [Synth 8-3491] module 'VGA_driver' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd:34' bound to instance 'VGA_driver_inst' of component 'VGA_driver' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd:97]
@@ -33,8 +31,8 @@ INFO: [Synth 8-638] synthesizing module 'VGA_driver' [D:/Ing/Master 1sem/Digital
 INFO: [Synth 8-256] done synthesizing module 'VGA_driver' (1#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd:45]
 INFO: [Synth 8-3491] module 'mem_interface_beeld' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd:34' bound to instance 'mem_interface_beeld_inst' of component 'mem_interface_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd:109]
 INFO: [Synth 8-638] synthesizing module 'mem_interface_beeld' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd:53]
-INFO: [Synth 8-3491] module 'DUAL_PORT_RAM' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-19220-LAPTOP-69E4OMV9/realtime/DUAL_PORT_RAM_stub.vhdl:5' bound to instance 'DUAL_PORT_RAM_inst' of component 'DUAL_PORT_RAM' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd:173]
-INFO: [Synth 8-638] synthesizing module 'DUAL_PORT_RAM' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-19220-LAPTOP-69E4OMV9/realtime/DUAL_PORT_RAM_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'DUAL_PORT_RAM' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-11688-LAPTOP-69E4OMV9/realtime/DUAL_PORT_RAM_stub.vhdl:5' bound to instance 'DUAL_PORT_RAM_inst' of component 'DUAL_PORT_RAM' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'DUAL_PORT_RAM' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/.Xil/Vivado-11688-LAPTOP-69E4OMV9/realtime/DUAL_PORT_RAM_stub.vhdl:18]
 INFO: [Synth 8-256] done synthesizing module 'mem_interface_beeld' (2#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd:53]
 INFO: [Synth 8-256] done synthesizing module 'Beeld' (3#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd:50]
 INFO: [Synth 8-3491] module 'audio_if' declared at 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd:34' bound to instance 'Audio_inst' of component 'audio_if' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:145]
@@ -46,26 +44,25 @@ INFO: [Synth 8-638] synthesizing module 'adau1761_if' [D:/Ing/Master 1sem/Digita
 	Parameter IS_I_INVERTED bound to: 1'b0 
 	Parameter SIM_DEVICE bound to: ULTRASCALE - type: string 
 	Parameter STARTUP_SYNC bound to: FALSE - type: string 
-INFO: [Synth 8-113] binding component instance 'BUFGCE_inst' to cell 'BUFGCE' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd:109]
-INFO: [Synth 8-256] done synthesizing module 'adau1761_if' (4#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd:49]
-INFO: [Synth 8-637] synthesizing blackbox instance 'INST_AUDIO_SAMPLE_CLK' of component 'clk_wiz_1' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd:244]
+INFO: [Synth 8-113] binding component instance 'BUFGCE_inst' to cell 'BUFGCE' [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd:109]
+INFO: [Synth 8-256] done synthesizing module 'adau1761_if' (4#1) [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd:49]
 	Parameter CE_TYPE bound to: SYNC - type: string 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_I_INVERTED bound to: 1'b0 
 	Parameter SIM_DEVICE bound to: ULTRASCALE - type: string 
 	Parameter STARTUP_SYNC bound to: FALSE - type: string 
-INFO: [Synth 8-113] binding component instance 'BUFGCE_B_CLK_inst' to cell 'BUFGCE' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd:292]
+INFO: [Synth 8-113] binding component instance 'BUFGCE_B_CLK_inst' to cell 'BUFGCE' [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd:293]
 	Parameter CE_TYPE bound to: SYNC - type: string 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_I_INVERTED bound to: 1'b0 
 	Parameter SIM_DEVICE bound to: ULTRASCALE - type: string 
 	Parameter STARTUP_SYNC bound to: FALSE - type: string 
-INFO: [Synth 8-113] binding component instance 'BUFGCE_I2C_CLK_inst' to cell 'BUFGCE' [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd:393]
-INFO: [Synth 8-256] done synthesizing module 'audio_if' (5#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd:59]
-INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:57]
+INFO: [Synth 8-113] binding component instance 'BUFGCE_I2C_CLK_inst' to cell 'BUFGCE' [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd:394]
+INFO: [Synth 8-256] done synthesizing module 'audio_if' (5#1) [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd:57]
 WARNING: [Synth 8-3331] design mem_interface_beeld has unconnected port new_entry
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 948.098 ; gain = 307.324
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 949.145 ; gain = 307.664
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -78,12 +75,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 948.098 ; gain = 307.324
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 949.145 ; gain = 307.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 948.098 ; gain = 307.324
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 949.145 ; gain = 307.664
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 948.098 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 949.145 ; gain = 0.000
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'Audio_inst/BUFGCE_B_CLK_inst' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'Audio_inst/BUFGCE_I2C_CLK_inst' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'Audio_inst/INST_ADAU1761/BUFGCE_inst' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
@@ -96,45 +93,41 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_deler'
-Finished Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_deler'
-Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM/DUAL_PORT_RAM_in_context.xdc] for cell 'Beeld_inst/mem_interface_beeld_inst/DUAL_PORT_RAM_inst'
-Finished Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM/DUAL_PORT_RAM_in_context.xdc] for cell 'Beeld_inst/mem_interface_beeld_inst/DUAL_PORT_RAM_inst'
-Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'Audio_inst/INST_AUDIO_SAMPLE_CLK'
-WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc:1]
-Finished Parsing XDC File [d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'Audio_inst/INST_AUDIO_SAMPLE_CLK'
-Parsing XDC File [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]
-Finished Parsing XDC File [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_deler'
+Finished Parsing XDC File [c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_deler'
+Parsing XDC File [c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM/DUAL_PORT_RAM_in_context.xdc] for cell 'Beeld_inst/mem_interface_beeld_inst/DUAL_PORT_RAM_inst'
+Finished Parsing XDC File [c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM/DUAL_PORT_RAM_in_context.xdc] for cell 'Beeld_inst/mem_interface_beeld_inst/DUAL_PORT_RAM_inst'
+Parsing XDC File [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]
+Finished Parsing XDC File [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1057.887 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1053.559 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   BUFGCE => BUFGCTRL: 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1057.887 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1053.559 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1057.887 ; gain = 417.113
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1053.559 ; gain = 412.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1057.887 ; gain = 417.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1053.559 ; gain = 412.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  {d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc}, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  {d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc}, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 7).
 Applied set_property DONT_TOUCH = true for clk_deler. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Beeld_inst/mem_interface_beeld_inst/DUAL_PORT_RAM_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Audio_inst/INST_AUDIO_SAMPLE_CLK. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1057.887 ; gain = 417.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1053.559 ; gain = 412.078
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 's_i2c_state_reg' in module 'audio_if'
 INFO: [Synth 8-5544] ROM "s_sda" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -156,7 +149,7 @@ INFO: [Synth 8-5544] ROM "s_i2c_cntr" won't be mapped to Block RAM because addre
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 's_i2c_state_reg' using encoding 'one-hot' in module 'audio_if'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1057.887 ; gain = 417.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1053.559 ; gain = 412.078
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,7 +279,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio_in
 INFO: [Synth 8-3886] merging instance 'Audio_inst/INST_ADAU1761/s_sample_reg[6]' (FD) to 'Audio_inst/INST_ADAU1761/s_sample_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio_inst/INST_ADAU1761/s_sample_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1057.887 ; gain = 417.113
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1053.559 ; gain = 412.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -321,15 +314,14 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-565] redefining clock 'sys_clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1076.070 ; gain = 435.297
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1073.953 ; gain = 432.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1076.949 ; gain = 436.176
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1074.898 ; gain = 433.418
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -341,7 +333,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1099.004 ; gain = 458.230
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1097.098 ; gain = 455.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -365,13 +357,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1103.809 ; gain = 463.035
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1102.781 ; gain = 461.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1103.809 ; gain = 463.035
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1102.781 ; gain = 461.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -390,25 +382,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1103.809 ; gain = 463.035
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.781 ; gain = 461.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1103.809 ; gain = 463.035
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.781 ; gain = 461.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1103.809 ; gain = 463.035
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.781 ; gain = 461.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1103.809 ; gain = 463.035
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.781 ; gain = 461.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -419,8 +411,7 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |clk_wiz_0     |         1|
-|2     |clk_wiz_1     |         1|
-|3     |DUAL_PORT_RAM |         1|
+|2     |DUAL_PORT_RAM |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
@@ -429,41 +420,40 @@ Report Cell Usage:
 +------+---------------------+------+
 |1     |DUAL_PORT_RAM_bbox_1 |     1|
 |2     |clk_wiz_0_bbox_0     |     1|
-|3     |clk_wiz_1_bbox_2     |     1|
-|4     |BUFGCE               |     3|
-|5     |DSP48E1              |     1|
-|6     |LUT1                 |     8|
-|7     |LUT2                 |    48|
-|8     |LUT3                 |    25|
-|9     |LUT4                 |    63|
-|10    |LUT5                 |    27|
-|11    |LUT6                 |    80|
-|12    |MUXF7                |     4|
-|13    |MUXF8                |     2|
-|14    |FDRE                 |   235|
-|15    |IBUF                 |     1|
-|16    |OBUF                 |    22|
+|3     |BUFGCE               |     3|
+|4     |DSP48E1              |     1|
+|5     |LUT1                 |     8|
+|6     |LUT2                 |    48|
+|7     |LUT3                 |    25|
+|8     |LUT4                 |    63|
+|9     |LUT5                 |    27|
+|10    |LUT6                 |    80|
+|11    |MUXF7                |     4|
+|12    |MUXF8                |     2|
+|13    |FDRE                 |   235|
+|14    |IBUF                 |     1|
+|15    |OBUF                 |    22|
 +------+---------------------+------+
 
 Report Instance Areas: 
 +------+-----------------------------+--------------------+------+
 |      |Instance                     |Module              |Cells |
 +------+-----------------------------+--------------------+------+
-|1     |top                          |                    |   533|
-|2     |  Audio_inst                 |audio_if            |   371|
+|1     |top                          |                    |   530|
+|2     |  Audio_inst                 |audio_if            |   368|
 |3     |    INST_ADAU1761            |adau1761_if         |   223|
 |4     |  Beeld_inst                 |Beeld               |   135|
 |5     |    VGA_driver_inst          |VGA_driver          |   108|
 |6     |    mem_interface_beeld_inst |mem_interface_beeld |    27|
 +------+-----------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1103.809 ; gain = 463.035
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.781 ; gain = 461.301
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1103.809 ; gain = 353.246
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1103.809 ; gain = 463.035
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 1102.781 ; gain = 356.887
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.781 ; gain = 461.301
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1103.809 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1102.781 ; gain = 0.000
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'Audio_inst/BUFGCE_B_CLK_inst' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'Audio_inst/BUFGCE_I2C_CLK_inst' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'Audio_inst/INST_ADAU1761/BUFGCE_inst' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
@@ -475,18 +465,18 @@ INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1115.242 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.656 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   BUFGCE => BUFGCTRL: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-61 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+60 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 1115.242 ; gain = 777.781
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1115.242 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1108.656 ; gain = 769.680
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1108.656 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 22 10:56:32 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 22 13:11:45 2019...

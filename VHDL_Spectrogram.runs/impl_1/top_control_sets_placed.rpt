@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Fri Nov 22 10:58:32 2019
-| Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
+| Date         : Fri Nov 22 11:26:32 2019
+| Host         : LAPTOP-RBTKMPRA running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7z020
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             107 |           42 |
+| No           | No                    | No                     |             107 |           41 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              36 |           13 |
-| Yes          | No                    | No                     |             105 |           23 |
+| No           | Yes                   | No                     |              36 |           12 |
+| Yes          | No                    | No                     |             105 |           26 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               6 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,28 +70,28 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
-|                    Clock Signal                   |                    Enable Signal                    |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
-+---------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
-|  Audio_inst/s_i2c_clk                             | Audio_inst/s_scl                                    |                                                     |                1 |              1 |
-|  Audio_inst/s_i2c_clk                             | Audio_inst/s_sda                                    |                                                     |                1 |              1 |
-| ~Audio_inst/s_b_clk_real                          |                                                     |                                                     |                1 |              1 |
-|  sys_clk_IBUF                                     |                                                     |                                                     |                1 |              1 |
-|  Audio_inst/INST_AUDIO_SAMPLE_CLK/inst/clk_12M288 |                                                     | Audio_inst/s_b_clk_en_i_1_n_0                       |                1 |              1 |
-|  clk_deler/inst/clk_VGA                           |                                                     | Beeld_inst/VGA_driver_inst/Hsync_i_1_n_0            |                1 |              1 |
-|  clk_deler/inst/clk_VGA                           |                                                     | Beeld_inst/VGA_driver_inst/Vsync_i_1_n_0            |                1 |              1 |
-|  Audio_inst/INST_AUDIO_SAMPLE_CLK/inst/clk_12M288 |                                                     |                                                     |                3 |              5 |
-|  Audio_inst/s_i2c_clk                             | Audio_inst/s_i2c_cntr                               | Audio_inst/s_i2c_cntr0                              |                2 |              6 |
-|  Audio_inst/s_i2c_clk                             | Audio_inst/FSM_onehot_s_i2c_state[0]_i_1_n_0        |                                                     |                3 |              7 |
-|  Audio_inst/INST_AUDIO_SAMPLE_CLK/inst/clk_12M288 |                                                     | Audio_inst/clear                                    |                2 |              8 |
-|  Audio_inst/s_i2c_clk                             |                                                     |                                                     |                2 |             10 |
-|  sys_clk_IBUF                                     |                                                     | Audio_inst/s_i2c_clk_cntr[9]_i_1_n_0                |                2 |             10 |
-|  Audio_inst/s_b_clk_real                          |                                                     | Audio_inst/INST_ADAU1761/s_sample_r_out[23]_i_1_n_0 |                6 |             15 |
-|  Audio_inst/s_b_clk_real                          | Audio_inst/INST_ADAU1761/s_sample_r[23]_i_1_n_0     |                                                     |                5 |             24 |
-|  Audio_inst/s_b_clk_real                          | Audio_inst/INST_ADAU1761/s_sample_l[23]_i_1_n_0     |                                                     |                4 |             24 |
-|  clk_deler/inst/clk_VGA                           |                                                     |                                                     |               20 |             41 |
-|  Audio_inst/s_b_clk_real                          | Audio_inst/INST_ADAU1761/s_sample_r_out[23]_i_1_n_0 |                                                     |                9 |             48 |
-|  Audio_inst/s_b_clk_real                          |                                                     |                                                     |               15 |             49 |
-+---------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
++---------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+|        Clock Signal       |                    Enable Signal                    |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
++---------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+|  Audio_inst/s_i2c_clk     | Audio_inst/s_scl                                    |                                                     |                1 |              1 |
+|  Audio_inst/s_i2c_clk     | Audio_inst/s_sda                                    |                                                     |                1 |              1 |
+| ~Audio_inst/s_b_clk_real  |                                                     |                                                     |                1 |              1 |
+|  sys_clk_IBUF             |                                                     |                                                     |                1 |              1 |
+|  clk_deler/inst/clk_audio |                                                     | Audio_inst/s_b_clk_en_i_1_n_0                       |                1 |              1 |
+|  clk_deler/inst/clk_VGA   |                                                     | Beeld_inst/VGA_driver_inst/Hsync_i_1_n_0            |                1 |              1 |
+|  clk_deler/inst/clk_VGA   |                                                     | Beeld_inst/VGA_driver_inst/Vsync_i_1_n_0            |                1 |              1 |
+|  clk_deler/inst/clk_audio |                                                     |                                                     |                2 |              5 |
+|  Audio_inst/s_i2c_clk     | Audio_inst/s_i2c_cntr                               | Audio_inst/s_i2c_cntr0                              |                2 |              6 |
+|  Audio_inst/s_i2c_clk     | Audio_inst/FSM_onehot_s_i2c_state[0]_i_1_n_0        |                                                     |                4 |              7 |
+|  clk_deler/inst/clk_audio |                                                     | Audio_inst/clear                                    |                3 |              8 |
+|  Audio_inst/s_i2c_clk     |                                                     |                                                     |                3 |             10 |
+|  sys_clk_IBUF             |                                                     | Audio_inst/s_i2c_clk_cntr[9]_i_1_n_0                |                2 |             10 |
+|  Audio_inst/s_b_clk_real  |                                                     | Audio_inst/INST_ADAU1761/s_sample_r_out[23]_i_1_n_0 |                4 |             15 |
+|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_l[23]_i_1_n_0     |                                                     |                4 |             24 |
+|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_r[23]_i_1_n_0     |                                                     |                5 |             24 |
+|  clk_deler/inst/clk_VGA   |                                                     |                                                     |               20 |             41 |
+|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_r_out[23]_i_1_n_0 |                                                     |               11 |             48 |
+|  Audio_inst/s_b_clk_real  |                                                     |                                                     |               14 |             49 |
++---------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
 
 
