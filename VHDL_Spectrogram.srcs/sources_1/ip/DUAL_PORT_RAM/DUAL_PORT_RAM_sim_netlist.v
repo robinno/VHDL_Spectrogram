@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Nov  1 11:45:10 2019
-// Host        : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {D:/Ing/Master
-//               1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_sim_netlist.v}
+// Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+// Date        : Fri Nov 22 09:26:38 2019
+// Host        : DESKTOP-VSQA5BK running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_sim_netlist.v
 // Design      : DUAL_PORT_RAM
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "DUAL_PORT_RAM,blk_mem_gen_v8_4_3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_4_3,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "DUAL_PORT_RAM,blk_mem_gen_v8_4_4,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_4_4,Vivado 2019.2" *) 
 (* NotValidForBitStream *)
 module DUAL_PORT_RAM
    (clka,
@@ -134,7 +134,7 @@ module DUAL_PORT_RAM
   (* C_WRITE_WIDTH_B = "4" *) 
   (* C_XDEVICEFAMILY = "zynq" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  DUAL_PORT_RAM_blk_mem_gen_v8_4_3 U0
+  DUAL_PORT_RAM_blk_mem_gen_v8_4_4 U0
        (.addra(addra),
         .addrb(addrb),
         .clka(clka),
@@ -10974,8 +10974,8 @@ endmodule
 (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) (* C_WRITE_DEPTH_A = "307200" *) 
 (* C_WRITE_DEPTH_B = "307200" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
 (* C_WRITE_WIDTH_A = "4" *) (* C_WRITE_WIDTH_B = "4" *) (* C_XDEVICEFAMILY = "zynq" *) 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_3" *) (* downgradeipidentifiedwarnings = "yes" *) 
-module DUAL_PORT_RAM_blk_mem_gen_v8_4_3
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4" *) (* downgradeipidentifiedwarnings = "yes" *) 
+module DUAL_PORT_RAM_blk_mem_gen_v8_4_4
    (clka,
     rsta,
     ena,
@@ -11184,7 +11184,7 @@ module DUAL_PORT_RAM_blk_mem_gen_v8_4_3
   assign sbiterr = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth inst_blk_mem_gen
+  DUAL_PORT_RAM_blk_mem_gen_v8_4_4_synth inst_blk_mem_gen
        (.addra(addra),
         .addrb(addrb),
         .clka(clka),
@@ -11194,8 +11194,8 @@ module DUAL_PORT_RAM_blk_mem_gen_v8_4_3
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_3_synth" *) 
-module DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4_synth" *) 
+module DUAL_PORT_RAM_blk_mem_gen_v8_4_4_synth
    (doutb,
     clka,
     clkb,

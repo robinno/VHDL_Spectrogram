@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Nov  1 11:45:10 2019
--- Host        : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {D:/Ing/Master
---               1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_sim_netlist.vhdl}
+-- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+-- Date        : Fri Nov 22 09:26:38 2019
+-- Host        : DESKTOP-VSQA5BK running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_sim_netlist.vhdl
 -- Design      : DUAL_PORT_RAM
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -10792,7 +10792,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth is
+entity DUAL_PORT_RAM_blk_mem_gen_v8_4_4_synth is
   port (
     doutb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clka : in STD_LOGIC;
@@ -10803,10 +10803,10 @@ entity DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth : entity is "blk_mem_gen_v8_4_3_synth";
-end DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth;
+  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_v8_4_4_synth : entity is "blk_mem_gen_v8_4_4_synth";
+end DUAL_PORT_RAM_blk_mem_gen_v8_4_4_synth;
 
-architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth is
+architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4_synth is
 begin
 \gnbram.gnativebmg.native_blk_mem_gen\: entity work.DUAL_PORT_RAM_blk_mem_gen_top
      port map (
@@ -10823,7 +10823,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity DUAL_PORT_RAM_blk_mem_gen_v8_4_3 is
+entity DUAL_PORT_RAM_blk_mem_gen_v8_4_4 is
   port (
     clka : in STD_LOGIC;
     rsta : in STD_LOGIC;
@@ -10890,162 +10890,162 @@ entity DUAL_PORT_RAM_blk_mem_gen_v8_4_3 is
     s_axi_rdaddrecc : out STD_LOGIC_VECTOR ( 18 downto 0 )
   );
   attribute C_ADDRA_WIDTH : integer;
-  attribute C_ADDRA_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 19;
+  attribute C_ADDRA_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 19;
   attribute C_ADDRB_WIDTH : integer;
-  attribute C_ADDRB_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 19;
+  attribute C_ADDRB_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 19;
   attribute C_ALGORITHM : integer;
-  attribute C_ALGORITHM of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_ALGORITHM of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 4;
+  attribute C_AXI_ID_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 4;
   attribute C_AXI_SLAVE_TYPE : integer;
-  attribute C_AXI_SLAVE_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_AXI_SLAVE_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_AXI_TYPE : integer;
-  attribute C_AXI_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_AXI_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_BYTE_SIZE : integer;
-  attribute C_BYTE_SIZE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 9;
+  attribute C_BYTE_SIZE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 9;
   attribute C_COMMON_CLK : integer;
-  attribute C_COMMON_CLK of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_COMMON_CLK of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_COUNT_18K_BRAM : string;
-  attribute C_COUNT_18K_BRAM of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "3";
+  attribute C_COUNT_18K_BRAM of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "3";
   attribute C_COUNT_36K_BRAM : string;
-  attribute C_COUNT_36K_BRAM of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "36";
+  attribute C_COUNT_36K_BRAM of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "36";
   attribute C_CTRL_ECC_ALGO : string;
-  attribute C_CTRL_ECC_ALGO of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "NONE";
+  attribute C_CTRL_ECC_ALGO of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "NONE";
   attribute C_DEFAULT_DATA : string;
-  attribute C_DEFAULT_DATA of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "0";
+  attribute C_DEFAULT_DATA of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "0";
   attribute C_DISABLE_WARN_BHV_COLL : integer;
-  attribute C_DISABLE_WARN_BHV_COLL of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_DISABLE_WARN_BHV_COLL of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_DISABLE_WARN_BHV_RANGE : integer;
-  attribute C_DISABLE_WARN_BHV_RANGE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_DISABLE_WARN_BHV_RANGE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_ELABORATION_DIR : string;
-  attribute C_ELABORATION_DIR of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "./";
+  attribute C_ELABORATION_DIR of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "./";
   attribute C_ENABLE_32BIT_ADDRESS : integer;
-  attribute C_ENABLE_32BIT_ADDRESS of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_ENABLE_32BIT_ADDRESS of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_EN_DEEPSLEEP_PIN : integer;
-  attribute C_EN_DEEPSLEEP_PIN of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_EN_DEEPSLEEP_PIN of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_EN_ECC_PIPE : integer;
-  attribute C_EN_ECC_PIPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_EN_ECC_PIPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_EN_RDADDRA_CHG : integer;
-  attribute C_EN_RDADDRA_CHG of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_EN_RDADDRA_CHG of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_EN_RDADDRB_CHG : integer;
-  attribute C_EN_RDADDRB_CHG of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_EN_RDADDRB_CHG of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_EN_SAFETY_CKT : integer;
-  attribute C_EN_SAFETY_CKT of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_EN_SAFETY_CKT of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_EN_SHUTDOWN_PIN : integer;
-  attribute C_EN_SHUTDOWN_PIN of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_EN_SHUTDOWN_PIN of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_EN_SLEEP_PIN : integer;
-  attribute C_EN_SLEEP_PIN of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_EN_SLEEP_PIN of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "Estimated Power for IP     :     16.198881 mW";
+  attribute C_EST_POWER_SUMMARY of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "Estimated Power for IP     :     16.198881 mW";
   attribute C_FAMILY : string;
-  attribute C_FAMILY of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "zynq";
+  attribute C_FAMILY of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "zynq";
   attribute C_HAS_AXI_ID : integer;
-  attribute C_HAS_AXI_ID of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_AXI_ID of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_ENA of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_ENB : integer;
-  attribute C_HAS_ENB of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_ENB of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_INJECTERR : integer;
-  attribute C_HAS_INJECTERR of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_INJECTERR of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MUX_OUTPUT_REGS_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_MUX_OUTPUT_REGS_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MUX_OUTPUT_REGS_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_MUX_OUTPUT_REGS_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_REGCEA : integer;
-  attribute C_HAS_REGCEA of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_REGCEA of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_REGCEB : integer;
-  attribute C_HAS_REGCEB of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_REGCEB of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_RSTA : integer;
-  attribute C_HAS_RSTA of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_RSTA of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_RSTB : integer;
-  attribute C_HAS_RSTB of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_RSTB of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
-  attribute C_HAS_SOFTECC_INPUT_REGS_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_SOFTECC_INPUT_REGS_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_HAS_SOFTECC_OUTPUT_REGS_B : integer;
-  attribute C_HAS_SOFTECC_OUTPUT_REGS_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_HAS_SOFTECC_OUTPUT_REGS_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_INITA_VAL : string;
-  attribute C_INITA_VAL of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "0";
+  attribute C_INITA_VAL of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "0";
   attribute C_INITB_VAL : string;
-  attribute C_INITB_VAL of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "0";
+  attribute C_INITB_VAL of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "0";
   attribute C_INIT_FILE : string;
-  attribute C_INIT_FILE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "DUAL_PORT_RAM.mem";
+  attribute C_INIT_FILE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "DUAL_PORT_RAM.mem";
   attribute C_INIT_FILE_NAME : string;
-  attribute C_INIT_FILE_NAME of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "DUAL_PORT_RAM.mif";
+  attribute C_INIT_FILE_NAME of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "DUAL_PORT_RAM.mif";
   attribute C_INTERFACE_TYPE : integer;
-  attribute C_INTERFACE_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_INTERFACE_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_LOAD_INIT_FILE : integer;
-  attribute C_LOAD_INIT_FILE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_LOAD_INIT_FILE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_MEM_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_MUX_PIPELINE_STAGES : integer;
-  attribute C_MUX_PIPELINE_STAGES of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_MUX_PIPELINE_STAGES of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_PRIM_TYPE : integer;
-  attribute C_PRIM_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_PRIM_TYPE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_READ_DEPTH_A : integer;
-  attribute C_READ_DEPTH_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 307200;
+  attribute C_READ_DEPTH_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 307200;
   attribute C_READ_DEPTH_B : integer;
-  attribute C_READ_DEPTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 307200;
+  attribute C_READ_DEPTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 307200;
   attribute C_READ_LATENCY_A : integer;
-  attribute C_READ_LATENCY_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_READ_LATENCY_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_READ_LATENCY_B : integer;
-  attribute C_READ_LATENCY_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_READ_LATENCY_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_READ_WIDTH_A : integer;
-  attribute C_READ_WIDTH_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 4;
+  attribute C_READ_WIDTH_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 4;
   attribute C_READ_WIDTH_B : integer;
-  attribute C_READ_WIDTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 4;
+  attribute C_READ_WIDTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 4;
   attribute C_RSTRAM_A : integer;
-  attribute C_RSTRAM_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_RSTRAM_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_RSTRAM_B : integer;
-  attribute C_RSTRAM_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_RSTRAM_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_RST_PRIORITY_A : string;
-  attribute C_RST_PRIORITY_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "CE";
+  attribute C_RST_PRIORITY_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "CE";
   attribute C_RST_PRIORITY_B : string;
-  attribute C_RST_PRIORITY_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "CE";
+  attribute C_RST_PRIORITY_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "CE";
   attribute C_SIM_COLLISION_CHECK : string;
-  attribute C_SIM_COLLISION_CHECK of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "ALL";
+  attribute C_SIM_COLLISION_CHECK of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "ALL";
   attribute C_USE_BRAM_BLOCK : integer;
-  attribute C_USE_BRAM_BLOCK of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_USE_BRAM_BLOCK of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_USE_BYTE_WEA : integer;
-  attribute C_USE_BYTE_WEA of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_USE_BYTE_WEA of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_USE_BYTE_WEB : integer;
-  attribute C_USE_BYTE_WEB of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_USE_BYTE_WEB of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_USE_DEFAULT_DATA : integer;
-  attribute C_USE_DEFAULT_DATA of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_USE_DEFAULT_DATA of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_USE_ECC : integer;
-  attribute C_USE_ECC of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_USE_ECC of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_USE_SOFTECC : integer;
-  attribute C_USE_SOFTECC of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_USE_SOFTECC of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_USE_URAM : integer;
-  attribute C_USE_URAM of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 0;
+  attribute C_USE_URAM of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_WEA_WIDTH : integer;
-  attribute C_WEA_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_WEA_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_WEB_WIDTH : integer;
-  attribute C_WEB_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_WEB_WIDTH of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_WRITE_DEPTH_A : integer;
-  attribute C_WRITE_DEPTH_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 307200;
+  attribute C_WRITE_DEPTH_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 307200;
   attribute C_WRITE_DEPTH_B : integer;
-  attribute C_WRITE_DEPTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 307200;
+  attribute C_WRITE_DEPTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 307200;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "NO_CHANGE";
+  attribute C_WRITE_MODE_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "NO_CHANGE";
   attribute C_WRITE_MODE_B : string;
-  attribute C_WRITE_MODE_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "WRITE_FIRST";
+  attribute C_WRITE_MODE_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
-  attribute C_WRITE_WIDTH_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 4;
+  attribute C_WRITE_WIDTH_A of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 4;
   attribute C_WRITE_WIDTH_B : integer;
-  attribute C_WRITE_WIDTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is 4;
+  attribute C_WRITE_WIDTH_B of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is 4;
   attribute C_XDEVICEFAMILY : string;
-  attribute C_XDEVICEFAMILY of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "zynq";
+  attribute C_XDEVICEFAMILY of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "zynq";
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "blk_mem_gen_v8_4_3";
+  attribute ORIG_REF_NAME of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "blk_mem_gen_v8_4_4";
   attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 : entity is "yes";
-end DUAL_PORT_RAM_blk_mem_gen_v8_4_3;
+  attribute downgradeipidentifiedwarnings of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 : entity is "yes";
+end DUAL_PORT_RAM_blk_mem_gen_v8_4_4;
 
-architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_v8_4_3 is
+architecture STRUCTURE of DUAL_PORT_RAM_blk_mem_gen_v8_4_4 is
   signal \<const0>\ : STD_LOGIC;
 begin
   dbiterr <= \<const0>\;
@@ -11122,7 +11122,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-inst_blk_mem_gen: entity work.DUAL_PORT_RAM_blk_mem_gen_v8_4_3_synth
+inst_blk_mem_gen: entity work.DUAL_PORT_RAM_blk_mem_gen_v8_4_4_synth
      port map (
       addra(18 downto 0) => addra(18 downto 0),
       addrb(18 downto 0) => addrb(18 downto 0),
@@ -11150,11 +11150,11 @@ entity DUAL_PORT_RAM is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of DUAL_PORT_RAM : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of DUAL_PORT_RAM : entity is "DUAL_PORT_RAM,blk_mem_gen_v8_4_3,{}";
+  attribute CHECK_LICENSE_TYPE of DUAL_PORT_RAM : entity is "DUAL_PORT_RAM,blk_mem_gen_v8_4_4,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of DUAL_PORT_RAM : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of DUAL_PORT_RAM : entity is "blk_mem_gen_v8_4_3,Vivado 2019.1";
+  attribute x_core_info of DUAL_PORT_RAM : entity is "blk_mem_gen_v8_4_4,Vivado 2019.2";
 end DUAL_PORT_RAM;
 
 architecture STRUCTURE of DUAL_PORT_RAM is
@@ -11341,7 +11341,7 @@ architecture STRUCTURE of DUAL_PORT_RAM is
   attribute x_interface_info of doutb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT";
   attribute x_interface_info of wea : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA WE";
 begin
-U0: entity work.DUAL_PORT_RAM_blk_mem_gen_v8_4_3
+U0: entity work.DUAL_PORT_RAM_blk_mem_gen_v8_4_4
      port map (
       addra(18 downto 0) => addra(18 downto 0),
       addrb(18 downto 0) => addrb(18 downto 0),

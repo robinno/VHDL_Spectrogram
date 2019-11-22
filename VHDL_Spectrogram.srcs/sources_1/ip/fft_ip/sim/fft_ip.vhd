@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:xfft:9.1
--- IP Revision: 2
+-- IP Revision: 3
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY xfft_v9_1_2;
-USE xfft_v9_1_2.xfft_v9_1_2;
+LIBRARY xfft_v9_1_3;
+USE xfft_v9_1_3.xfft_v9_1_3;
 
 ENTITY fft_ip IS
   PORT (
@@ -68,7 +68,7 @@ ENTITY fft_ip IS
     s_axis_data_tready : OUT STD_LOGIC;
     s_axis_data_tlast : IN STD_LOGIC;
     m_axis_data_tdata : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
-    m_axis_data_tuser : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    m_axis_data_tuser : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
     m_axis_data_tvalid : OUT STD_LOGIC;
     m_axis_data_tlast : OUT STD_LOGIC;
     m_axis_status_tdata : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -83,7 +83,7 @@ END fft_ip;
 ARCHITECTURE fft_ip_arch OF fft_ip IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF fft_ip_arch: ARCHITECTURE IS "yes";
-  COMPONENT xfft_v9_1_2 IS
+  COMPONENT xfft_v9_1_3 IS
     GENERIC (
       C_XDEVICEFAMILY : STRING;
       C_S_AXIS_CONFIG_TDATA_WIDTH : INTEGER;
@@ -131,7 +131,7 @@ ARCHITECTURE fft_ip_arch OF fft_ip IS
       s_axis_data_tready : OUT STD_LOGIC;
       s_axis_data_tlast : IN STD_LOGIC;
       m_axis_data_tdata : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
-      m_axis_data_tuser : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+      m_axis_data_tuser : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
       m_axis_data_tvalid : OUT STD_LOGIC;
       m_axis_data_tready : IN STD_LOGIC;
       m_axis_data_tlast : OUT STD_LOGIC;
@@ -146,7 +146,7 @@ ARCHITECTURE fft_ip_arch OF fft_ip IS
       event_data_in_channel_halt : OUT STD_LOGIC;
       event_data_out_channel_halt : OUT STD_LOGIC
     );
-  END COMPONENT xfft_v9_1_2;
+  END COMPONENT xfft_v9_1_3;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF event_data_in_channel_halt: SIGNAL IS "XIL_INTERFACENAME event_data_in_channel_halt_intf, SENSITIVITY EDGE_RISING, PortWidth 1";
@@ -163,7 +163,7 @@ ARCHITECTURE fft_ip_arch OF fft_ip IS
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_data_tlast: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DATA TLAST";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_data_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DATA TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_data_tuser: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DATA TUSER";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_data_tdata: SIGNAL IS "XIL_INTERFACENAME M_AXIS_DATA, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_data_tdata: SIGNAL IS "XIL_INTERFACENAME M_AXIS_DATA, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 24, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_data_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DATA TDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_data_tlast: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_DATA TLAST";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_data_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_DATA TREADY";
@@ -179,18 +179,18 @@ ARCHITECTURE fft_ip_arch OF fft_ip IS
   ATTRIBUTE X_INTERFACE_PARAMETER OF aclk: SIGNAL IS "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF S_AXIS_CONFIG:M_AXIS_DATA:M_AXIS_STATUS:S_AXIS_DATA, ASSOCIATED_RESET aresetn, ASSOCIATED_CLKEN aclken, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 aclk_intf CLK";
 BEGIN
-  U0 : xfft_v9_1_2
+  U0 : xfft_v9_1_3
     GENERIC MAP (
       C_XDEVICEFAMILY => "zynq",
       C_S_AXIS_CONFIG_TDATA_WIDTH => 8,
       C_S_AXIS_DATA_TDATA_WIDTH => 48,
       C_M_AXIS_DATA_TDATA_WIDTH => 48,
-      C_M_AXIS_DATA_TUSER_WIDTH => 8,
+      C_M_AXIS_DATA_TUSER_WIDTH => 24,
       C_M_AXIS_STATUS_TDATA_WIDTH => 8,
       C_THROTTLE_SCHEME => 0,
       C_CHANNELS => 1,
       C_NFFT_MAX => 11,
-      C_ARCH => 3,
+      C_ARCH => 1,
       C_HAS_NFFT => 0,
       C_USE_FLT_PT => 0,
       C_INPUT_WIDTH => 24,
@@ -205,10 +205,10 @@ BEGIN
       C_HAS_NATURAL_INPUT => 1,
       C_HAS_NATURAL_OUTPUT => 1,
       C_HAS_CYCLIC_PREFIX => 0,
-      C_HAS_XK_INDEX => 0,
+      C_HAS_XK_INDEX => 1,
       C_DATA_MEM_TYPE => 1,
       C_TWIDDLE_MEM_TYPE => 1,
-      C_BRAM_STAGES => 4,
+      C_BRAM_STAGES => 0,
       C_REORDER_MEM_TYPE => 1,
       C_USE_HYBRID_RAM => 0,
       C_OPTIMIZE_GOAL => 0,

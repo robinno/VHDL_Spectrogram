@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sat Nov  2 11:55:04 2019
+-- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+-- Date        : Fri Nov 22 09:30:35 2019
 -- Host        : DESKTOP-VSQA5BK running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.vhdl
+--               C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_stub.vhdl
 -- Design      : fft_ip
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
@@ -24,7 +24,7 @@ entity fft_ip is
     s_axis_data_tready : out STD_LOGIC;
     s_axis_data_tlast : in STD_LOGIC;
     m_axis_data_tdata : out STD_LOGIC_VECTOR ( 47 downto 0 );
-    m_axis_data_tuser : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_data_tuser : out STD_LOGIC_VECTOR ( 23 downto 0 );
     m_axis_data_tvalid : out STD_LOGIC;
     m_axis_data_tlast : out STD_LOGIC;
     m_axis_status_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -41,8 +41,8 @@ architecture stub of fft_ip is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,s_axis_config_tdata[7:0],s_axis_config_tvalid,s_axis_config_tready,s_axis_data_tdata[47:0],s_axis_data_tvalid,s_axis_data_tready,s_axis_data_tlast,m_axis_data_tdata[47:0],m_axis_data_tuser[7:0],m_axis_data_tvalid,m_axis_data_tlast,m_axis_status_tdata[7:0],m_axis_status_tvalid,event_frame_started,event_tlast_unexpected,event_tlast_missing,event_data_in_channel_halt";
+attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,s_axis_config_tdata[7:0],s_axis_config_tvalid,s_axis_config_tready,s_axis_data_tdata[47:0],s_axis_data_tvalid,s_axis_data_tready,s_axis_data_tlast,m_axis_data_tdata[47:0],m_axis_data_tuser[23:0],m_axis_data_tvalid,m_axis_data_tlast,m_axis_status_tdata[7:0],m_axis_status_tvalid,event_frame_started,event_tlast_unexpected,event_tlast_missing,event_data_in_channel_halt";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "xfft_v9_1_2,Vivado 2019.1";
+attribute x_core_info of stub : architecture is "xfft_v9_1_3,Vivado 2019.2";
 begin
 end;
