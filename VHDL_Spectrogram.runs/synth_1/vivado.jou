@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Vivado v2019.2 (64-bit)
-# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Nov 22 13:10:43 2019
-# Process ID: 11688
-# Current directory: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Fri Nov 22 11:23:55 2019
+# Process ID: 11488
+# Current directory: C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.vds
-# Journal file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1\vivado.jou
+# Log file: C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1/top.vds
+# Journal file: C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
