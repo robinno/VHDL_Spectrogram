@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
-| Date         : Fri Nov 22 11:26:32 2019
-| Host         : LAPTOP-RBTKMPRA running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Nov 24 17:08:14 2019
+| Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7z020
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    19 |
-|    Minimum number of control sets                        |    19 |
+| Total control sets                                       |    22 |
+|    Minimum number of control sets                        |    22 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    82 |
+| Unused register locations in slices containing registers |    95 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,12 +39,12 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    19 |
+| Total control sets |    22 |
 | >= 0 to < 4        |     7 |
 | >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     2 |
+| >= 6 to < 8        |     3 |
 | >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     2 |
+| >= 10 to < 12      |     4 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     1 |
 | >= 16              |     5 |
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             107 |           41 |
+| No           | No                    | No                     |             107 |           43 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              36 |           12 |
-| Yes          | No                    | No                     |             105 |           26 |
+| No           | Yes                   | No                     |              63 |           24 |
+| Yes          | No                    | No                     |             105 |           31 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               6 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,28 +70,31 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
-|        Clock Signal       |                    Enable Signal                    |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
-+---------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
-|  Audio_inst/s_i2c_clk     | Audio_inst/s_scl                                    |                                                     |                1 |              1 |
-|  Audio_inst/s_i2c_clk     | Audio_inst/s_sda                                    |                                                     |                1 |              1 |
-| ~Audio_inst/s_b_clk_real  |                                                     |                                                     |                1 |              1 |
-|  sys_clk_IBUF             |                                                     |                                                     |                1 |              1 |
-|  clk_deler/inst/clk_audio |                                                     | Audio_inst/s_b_clk_en_i_1_n_0                       |                1 |              1 |
-|  clk_deler/inst/clk_VGA   |                                                     | Beeld_inst/VGA_driver_inst/Hsync_i_1_n_0            |                1 |              1 |
-|  clk_deler/inst/clk_VGA   |                                                     | Beeld_inst/VGA_driver_inst/Vsync_i_1_n_0            |                1 |              1 |
-|  clk_deler/inst/clk_audio |                                                     |                                                     |                2 |              5 |
-|  Audio_inst/s_i2c_clk     | Audio_inst/s_i2c_cntr                               | Audio_inst/s_i2c_cntr0                              |                2 |              6 |
-|  Audio_inst/s_i2c_clk     | Audio_inst/FSM_onehot_s_i2c_state[0]_i_1_n_0        |                                                     |                4 |              7 |
-|  clk_deler/inst/clk_audio |                                                     | Audio_inst/clear                                    |                3 |              8 |
-|  Audio_inst/s_i2c_clk     |                                                     |                                                     |                3 |             10 |
-|  sys_clk_IBUF             |                                                     | Audio_inst/s_i2c_clk_cntr[9]_i_1_n_0                |                2 |             10 |
-|  Audio_inst/s_b_clk_real  |                                                     | Audio_inst/INST_ADAU1761/s_sample_r_out[23]_i_1_n_0 |                4 |             15 |
-|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_l[23]_i_1_n_0     |                                                     |                4 |             24 |
-|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_r[23]_i_1_n_0     |                                                     |                5 |             24 |
-|  clk_deler/inst/clk_VGA   |                                                     |                                                     |               20 |             41 |
-|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_r_out[23]_i_1_n_0 |                                                     |               11 |             48 |
-|  Audio_inst/s_b_clk_real  |                                                     |                                                     |               14 |             49 |
-+---------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
++---------------------------+-----------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+|        Clock Signal       |                    Enable Signal                    |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
++---------------------------+-----------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+|  Audio_inst/s_i2c_clk     | Audio_inst/s_scl                                    |                                                       |                1 |              1 |
+|  Audio_inst/s_i2c_clk     | Audio_inst/s_sda                                    |                                                       |                1 |              1 |
+| ~Audio_inst/s_b_clk_real  |                                                     |                                                       |                1 |              1 |
+|  sys_clk_IBUF             |                                                     |                                                       |                1 |              1 |
+|  clk_deler/inst/clk_VGA   |                                                     | Beeld_inst/VGA_driver_inst/Hsync_i_1_n_0              |                1 |              1 |
+|  clk_deler/inst/clk_VGA   |                                                     | Beeld_inst/VGA_driver_inst/Vsync_i_1_n_0              |                1 |              1 |
+|  clk_deler/inst/clk_audio |                                                     | Audio_inst/s_b_clk_en_i_1_n_0                         |                1 |              1 |
+|  clk_deler/inst/clk_audio |                                                     |                                                       |                3 |              5 |
+|  Audio_inst/s_i2c_clk     | Audio_inst/s_i2c_cntr                               | Audio_inst/s_i2c_cntr0                                |                2 |              6 |
+|  Audio_inst/s_i2c_clk     | Audio_inst/FSM_onehot_s_i2c_state[0]_i_1_n_0        |                                                       |                4 |              7 |
+|  clk_deler/inst/clk_FFT   |                                                     | Beeld_inst/mem_interface_beeld_inst/teller[6]_i_1_n_0 |                3 |              7 |
+|  clk_deler/inst/clk_audio |                                                     | Audio_inst/s_lr_clk_cntr[7]_i_1_n_0                   |                2 |              8 |
+|  Audio_inst/s_i2c_clk     |                                                     |                                                       |                3 |             10 |
+|  sys_clk_IBUF             |                                                     | Audio_inst/s_i2c_clk_cntr[9]_i_1_n_0                  |                3 |             10 |
+|  clk_deler/inst/clk_FFT   |                                                     | Beeld_inst/mem_interface_beeld_inst/in                |                5 |             10 |
+|  clk_deler/inst/clk_FFT   |                                                     | Beeld_inst/mem_interface_beeld_inst/clear             |                5 |             10 |
+|  Audio_inst/s_b_clk_real  |                                                     | Audio_inst/INST_ADAU1761/s_sample_r_out[23]_i_1_n_0   |                3 |             15 |
+|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_l[23]_i_1_n_0     |                                                       |                7 |             24 |
+|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_r[23]_i_1_n_0     |                                                       |                6 |             24 |
+|  clk_deler/inst/clk_VGA   |                                                     |                                                       |               19 |             41 |
+|  Audio_inst/s_b_clk_real  | Audio_inst/INST_ADAU1761/s_sample_r_out[23]_i_1_n_0 |                                                       |               12 |             48 |
+|  Audio_inst/s_b_clk_real  |                                                     |                                                       |               16 |             49 |
++---------------------------+-----------------------------------------------------+-------------------------------------------------------+------------------+----------------+
 
 
