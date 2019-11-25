@@ -201,30 +201,12 @@ begin
 			
 			if (X >= circ_X_stop) then
 				X := circ_X_start;
+				teller := 0;
 			end if;
 			
 			if(teller >= 75) then
 				teller := 0;
 			end if;
-
-			--HORIZONTALE ADRESSERING:
-
-			-- X := X + 1;
-			
-			-- --randgevallen:
-			-- if(X >= circ_X_stop) then
-				-- X := circ_X_start;
-				-- Y := Y + 1;
-				-- teller := teller + 1;
-			-- end if;
-			
-			-- if(Y >= circ_Y_stop) then
-				-- Y := circ_Y_start;
-			-- end if;
-			
-			-- if(teller >= 75) then
-				-- teller := 0;
-			-- end if;
 			
 		end if;
 		
