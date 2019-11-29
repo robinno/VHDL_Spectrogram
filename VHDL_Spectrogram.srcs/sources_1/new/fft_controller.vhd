@@ -100,6 +100,8 @@ architecture Behavioral of fft_controller is
 	signal fft_dout: STD_LOGIC_VECTOR(din_width-1 downto 0);
 	signal counter_fft : integer range 0 to transform_length-1;
 	
+	signal temp: STD_LOGIC_VECTOR(din_width-1 downto 0);
+	
 begin
 	INST_fft_ip : fft_ip
 	  PORT MAP (
@@ -113,7 +115,7 @@ begin
 		s_axis_data_tvalid => fifo_read,
 		s_axis_data_tready => open,
 		s_axis_data_tlast => s_s_axis_data_tlast,
-		m_axis_data_tdata(tdata_width-1 downto din_width) => open,
+		m_axis_data_tdata(tdata_width-1 downto din_width) => temp,--liever open maar werkt niet
 		m_axis_data_tdata(din_width-1 downto 0) => fft_dout,
 		m_axis_data_tuser => s_m_axis_data_tuser,
 		m_axis_data_tvalid => dout_valid,
@@ -141,7 +143,7 @@ begin
 				fifo_full <= '1';
 			end if;
 			
-			if(fifo_full = '1' or counter_fft > 0) then
+			if(fifo_full = '1' or counter_fft > 2) then
 				fifo_read <= '1';
 			else
 				fifo_read <= '0';

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
-| Date             : Fri Nov 22 11:27:24 2019
-| Host             : LAPTOP-RBTKMPRA running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date             : Mon Nov 25 14:30:37 2019
+| Host             : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7z020clg484-1
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        7 |       --- |             --- |
-| Slice Logic    |    <0.001 |      800 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      280 |     53200 |            0.53 |
-|   Register     |    <0.001 |      254 |    106400 |            0.24 |
+| Slice Logic    |    <0.001 |      962 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      367 |     53200 |            0.69 |
+|   Register     |    <0.001 |      281 |    106400 |            0.26 |
 |   F7/F8 Muxes  |    <0.001 |        6 |     53200 |            0.01 |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |      200 |       --- |             --- |
-| Signals        |     0.002 |      679 |       --- |             --- |
-| Block RAM      |     0.009 |    103.5 |       140 |           73.93 |
+|   Others       |     0.000 |      191 |       --- |             --- |
+| Signals        |     0.002 |      845 |       --- |             --- |
+| Block RAM      |     0.010 |    103.5 |       140 |           73.93 |
 | MMCM           |     0.103 |        1 |         4 |           25.00 |
-| DSPs           |    <0.001 |        1 |       220 |            0.45 |
-| I/O            |     0.003 |       24 |       200 |           12.00 |
+| DSPs           |    <0.001 |        2 |       220 |            0.91 |
+| I/O            |     0.002 |       24 |       200 |           12.00 |
 | Static Power   |     0.112 |          |           |                 |
 | Total          |     0.233 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -101,17 +101,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
-| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
-| Device models               | High       | Device models are Production                           |                                                                                                                    |
-|                             |            |                                                        |                                                                                                                    |
-| Overall confidence level    | Low        |                                                        |                                                                                                                    |
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -156,12 +156,12 @@ Table of Contents
 | Name                         | Power (W) |
 +------------------------------+-----------+
 | top                          |     0.121 |
-|   Beeld_inst                 |     0.014 |
+|   Beeld_inst                 |     0.015 |
 |     VGA_driver_inst          |     0.002 |
-|     mem_interface_beeld_inst |     0.012 |
+|     mem_interface_beeld_inst |     0.013 |
 |       DUAL_PORT_RAM_inst     |     0.012 |
-|   clk_deler                  |     0.105 |
-|     inst                     |     0.105 |
+|   clk_deler                  |     0.103 |
+|     inst                     |     0.103 |
 +------------------------------+-----------+
 
 

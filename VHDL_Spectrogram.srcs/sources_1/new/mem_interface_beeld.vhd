@@ -143,21 +143,34 @@ architecture Behavioral of mem_interface_beeld is
 											x"ffe",
 											x"fff");
 	
+	--some properties of the image: where is the circular buffer?
+	constant Breedte: integer := 800;
+	constant Hoogte: integer := 600;
+	constant circ_X_start: integer := 20;
+	constant circ_Y_start: integer := 20;
+	constant circ_X_stop: integer := 665;
+	constant circ_Y_stop: integer := 543;
+	
 	--signals for reading:
 	signal LeesAdres: std_logic_vector(18 downto 0) := (others => '0');
 	signal LeesData: std_logic_vector(6 downto 0) := (others => '0');
 	signal RGB: std_logic_vector(11 downto 0) := (others => '0');
+	signal inCircBuffer: std_logic := '0';
 	
 	
 	--signals for writing:
 	signal writeAdres: std_logic_vector(18 downto 0) := (others => '0');
 	signal writeData: std_logic_vector(6 downto 0) := (others => '0');
-	signal wea: std_logic_vector(0 downto 0) := (others => '0');
+	signal wea: std_logic_vector(0 downto 0) := (others => '1');
 begin
 
 	--READING:
+	inCircBuffer <= '1' when 	(VGA_X > circ_X_start) and (VGA_X < circ_X_stop) and
+								(VGA_Y > circ_Y_start) and (VGA_Y < circ_Y_stop)
+						else '0';
 	
-	LeesAdres 	<= 	std_logic_vector(to_unsigned(VGA_Y * 800 + VGA_X, 19)) when active_video = '1' else
+	--TODO: leesAdres aanpassen adhv inCircBuffer
+	LeesAdres 	<= 	std_logic_vector(to_unsigned(VGA_Y * Breedte + VGA_X, 19)) when active_video = '1' else
 					(others => '0');
 					
 	RGB 		<= 	kleurArray(to_integer(unsigned(leesData))) when active_video = '1' else
@@ -169,7 +182,41 @@ begin
 
 	--WRITING:
 	--TODO
+	process(new_entry_clk)
+		variable teller : integer range 0 to 75 := 0;
+		
+		variable X: integer range 0 to Breedte := circ_X_start;
+		variable Y: integer range 0 to Hoogte := circ_Y_start;
+	begin
+		if rising_edge(new_entry_clk) then			
 
+			Y  := Y + 1;
+			
+			--randgevallen
+			if (Y >= circ_Y_stop) then
+				Y := circ_Y_start;
+				X := X + 1;
+				teller := teller + 1;
+			end if;
+			
+			if (X >= circ_X_stop) then
+				X := circ_X_start;
+				teller := 0;
+			end if;
+			
+			if(teller >= 75) then
+				teller := 0;
+			end if;
+			
+		end if;
+		
+		writeAdres 	<= std_logic_vector(to_unsigned(X + Y * Breedte, 19));
+		writeData 	<= std_logic_vector(to_unsigned(teller, 7));
+	end process;
+	
+	
+
+	--MEMORY COMPONENT:
 	DUAL_PORT_RAM_inst: DUAL_PORT_RAM
 		port map(
 			clka => new_entry_clk,

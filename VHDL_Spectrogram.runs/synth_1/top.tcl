@@ -17,49 +17,44 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/Gebruiker/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-2004-LAPTOP-RBTKMPRA/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/VHDL_Spectrogram/VHDL_Spectrogram.cache/wt [current_project]
-set_property parent.project_path C:/VHDL_Spectrogram/VHDL_Spectrogram.xpr [current_project]
+set_property webtalk.parent_dir {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.cache/wt} [current_project]
+set_property parent.project_path {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.xpr} [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property ip_output_repo c:/VHDL_Spectrogram/VHDL_Spectrogram.cache/ip [current_project]
+set_property ip_output_repo {d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files C:/VHDL_Spectrogram/beeldCOE.coe
+add_files {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/beeldCOE.coe}}
+add_files {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/test_FIFO.coe}}
 read_vhdl -library xil_defaultlib {
-  C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd
-  C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd
-  C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd
-  C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd
-  C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/fft_controller.vhd
-  C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd
-  C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd
+  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/VGA_driver.vhd}
+  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/top.vhd}
+  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/Beeld.vhd}
+  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/mem_interface_beeld.vhd}
+  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/fft_controller.vhd}
+  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/audio_if.vhd}
+  {D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/new/adau1761_if.vhd}
 }
-read_ip -quiet C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.xci
-set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_ooc.xdc]
+read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc}}]
 
-read_ip -quiet C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM.xci}}
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_ooc.xdc}}]
 
-read_ip -quiet C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM.xci
-set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/DUAL_PORT_RAM/DUAL_PORT_RAM_ooc.xdc]
+read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip.xci}}
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/fft_ip/fft_ip_ooc.xdc}}]
 
-read_ip -quiet C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
-set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc]
-set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc]
+read_ip -quiet {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/FIFO/FIFO.xci}}
+set_property used_in_implementation false [get_files -all {{d:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/sources_1/ip/FIFO/FIFO_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -69,8 +64,8 @@ set_property used_in_implementation false [get_files -all c:/VHDL_Spectrogram/VH
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc
-set_property used_in_implementation false [get_files C:/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc]
+read_xdc {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc}}
+set_property used_in_implementation false [get_files {{D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.srcs/constrs_1/new/pinlayout.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -54,13 +54,13 @@ architecture Behavioral of tb_fft_controller is
 		Port (
 			clk : in STD_LOGIC;
 			counter_in : in integer range 0 to transform_length-1;
-			addr_ram : IN STD_LOGIC_VECTOR(10 downto 0);
-			dout_ram : OUT STD_LOGIC_VECTOR(din_width-1 downto 0);
+			addr_ram : OUT STD_LOGIC_VECTOR(10 downto 0);
+			dout_ram : IN STD_LOGIC_VECTOR(din_width-1 downto 0);
 			ena_ram : out STD_LOGIC;
 			dout : out STD_LOGIC_VECTOR(din_width+(2**blk_exp_length)-1 downto 0);
 			dout_valid : out STD_LOGIC; --Asserted when able to provide sample data
 			dout_last : out STD_LOGIC; --Asserted on the last sample of the frame.
-			dout_counter: integer range 0 to transform_length-1
+			dout_counter: OUT integer range 0 to transform_length-1
 			);
 	end component;
 	
@@ -109,7 +109,7 @@ begin
 	INST_FIFO : FIFO
 	  PORT MAP (
 		clka => clk_48k,
-		wea => '1',
+		wea => "1",
 		addra => (others => '0'),
 		dina => (others => '0'),
 		clkb => clk,
@@ -137,10 +137,10 @@ begin
 	process(clk_48k)
 	begin
 		if(rising_edge(clk_48k)) then
-			if(s_counter < transform_length-1) then
-				s_counter <= s_counter +1;
+			if(counter_in < transform_length-1) then
+				counter_in <= counter_in +1;
 			else
-				s_counter <= 0;
+				counter_in <= 0;
 			end if;
 		end if;
 	end process;

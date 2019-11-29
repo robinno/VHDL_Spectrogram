@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_fft_controller_behav/xsimk.exe -simmode gui -wdb tb_fft_controller_behav.wdb -simrunnum 0 -socket 63786
+Running: xsim.dir/tb_fft_controller_behav/xsimk.exe -simmode gui -wdb tb_fft_controller_behav.wdb -simrunnum 0 -socket 52730
 Design successfully loaded
-Design Loading Memory Usage: 36736 KB (Peak: 36736 KB)
-Design Loading CPU Usage: 93 ms
+Design Loading Memory Usage: 16804 KB (Peak: 16804 KB)
+Design Loading CPU Usage: 108 ms
 Simulation completed
-Simulation Memory Usage: 48744 KB (Peak: 48744 KB)
-Simulation CPU Usage: 159077 ms
+Simulation Memory Usage: 27836 KB (Peak: 27836 KB)
+Simulation CPU Usage: 2483968 ms

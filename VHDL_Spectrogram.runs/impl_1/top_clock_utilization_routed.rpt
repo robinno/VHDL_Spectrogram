@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
-| Date         : Fri Nov 22 11:27:25 2019
-| Host         : LAPTOP-RBTKMPRA running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Nov 25 14:30:38 2019
+| Host         : LAPTOP-69E4OMV9 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file top_clock_utilization_routed.rpt
 | Design       : top
 | Device       : 7z020-clg484
@@ -56,7 +56,7 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+---------------------+----------------------------------+---------------------------------------+
 | g0        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y1 | n/a          |                 1 |         161 |               0 |       81.947 | clk_audio_clk_wiz_0 | Audio_inst/BUFGCE_B_CLK_inst/O   | Audio_inst/s_b_clk_real               |
 | g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 6 |         149 |               0 |       25.001 | clk_VGA_clk_wiz_0   | clk_deler/inst/clkout2_buf/O     | clk_deler/inst/clk_VGA                |
-| g2        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 6 |         105 |               0 |      177.783 | clk_FFT_clk_wiz_0   | clk_deler/inst/clkout3_buf/O     | clk_deler/inst/clk_FFT                |
+| g2        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 6 |         132 |               0 |      177.783 | clk_FFT_clk_wiz_0   | clk_deler/inst/clkout3_buf/O     | clk_deler/inst/clk_FFT                |
 | g3        | src2      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y4 | n/a          |                 1 |          25 |               0 |              |                     | Audio_inst/BUFGCE_I2C_CLK_inst/O | Audio_inst/s_i2c_clk                  |
 | g4        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 2 |          15 |               1 |       81.947 | clk_audio_clk_wiz_0 | clk_deler/inst/clkout4_buf/O     | clk_deler/inst/clk_audio              |
 | g5        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y5 | n/a          |                 1 |           1 |               0 |       10.417 | clkfbout_clk_wiz_0  | clk_deler/inst/clkf_buf/O        | clk_deler/inst/clkfbout_buf_clk_wiz_0 |
@@ -90,12 +90,12 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  201 |  2500 |  111 |  1000 |    0 |    60 |   25 |    30 |    0 |    60 |
-| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   32 |  3200 |   20 |   850 |    1 |    60 |   28 |    30 |    1 |    40 |
-| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1200 |    0 |   400 |    0 |    20 |    9 |    10 |    0 |    20 |
-| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   10 |  2600 |    2 |   850 |    0 |    60 |   29 |    30 |    0 |    40 |
-| X0Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1200 |    0 |   400 |    0 |    20 |    4 |    10 |    0 |    20 |
-| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   850 |    0 |    60 |    7 |    30 |    0 |    40 |
+| X0Y0              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  227 |  2500 |  108 |  1000 |    0 |    60 |   29 |    30 |    1 |    60 |
+| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   43 |  3200 |   28 |   850 |    0 |    60 |   29 |    30 |    0 |    40 |
+| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1200 |    0 |   400 |    0 |    20 |   10 |    10 |    0 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   850 |    1 |    60 |   27 |    30 |    0 |    40 |
+| X0Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1200 |    0 |   400 |    0 |    20 |    3 |    10 |    0 |    20 |
+| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   850 |    0 |    60 |    4 |    30 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -153,9 +153,9 @@ All Modules
 +----+-----+-----+
 |    | X0  | X1  |
 +----+-----+-----+
-| Y2 |   4 |   7 |
-| Y1 |   9 |  40 |
-| Y0 |  26 |  63 |
+| Y2 |   3 |   4 |
+| Y1 |  10 |  29 |
+| Y0 |  57 |  46 |
 +----+-----+-----+
 
 
@@ -165,7 +165,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock             | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                    |
 +-----------+-----------------+-------------------+-------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------+
-| g2        | BUFG/O          | n/a               | clk_FFT_clk_wiz_0 |     177.783 | {0.000 88.892} |         105 |        0 |              0 |        0 | clk_deler/inst/clk_FFT |
+| g2        | BUFG/O          | n/a               | clk_FFT_clk_wiz_0 |     177.783 | {0.000 88.892} |         132 |        0 |              0 |        0 | clk_deler/inst/clk_FFT |
 +-----------+-----------------+-------------------+-------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -176,9 +176,9 @@ All Modules
 +----+-----+-----+
 |    | X0  | X1  |
 +----+-----+-----+
-| Y2 |   4 |   7 |
-| Y1 |   9 |  30 |
-| Y0 |  25 |  30 |
+| Y2 |   3 |   4 |
+| Y1 |  10 |  29 |
+| Y0 |  29 |  57 |
 +----+-----+-----+
 
 
@@ -258,8 +258,8 @@ All Modules
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------+
 | g0        | n/a   | BUFGCTRL/O      | None       |         161 |               0 | 161 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Audio_inst/s_b_clk_real               |
-| g1        | n/a   | BUFG/O          | None       |          26 |               0 |   1 |      0 |   25 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA                |
-| g2        | n/a   | BUFG/O          | None       |          25 |               0 |   0 |      0 |   25 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT                |
+| g1        | n/a   | BUFG/O          | None       |          57 |               0 |  27 |      0 |   29 |   1 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA                |
+| g2        | n/a   | BUFG/O          | None       |          29 |               0 |   0 |      0 |   29 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT                |
 | g3        | n/a   | BUFGCTRL/O      | None       |          25 |               0 |  25 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Audio_inst/s_i2c_clk                  |
 | g4        | n/a   | BUFG/O          | None       |          14 |               1 |  14 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_audio              |
 | g5        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | clk_deler/inst/clkfbout_buf_clk_wiz_0 |
@@ -275,8 +275,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
-| g1        | n/a   | BUFG/O          | None       |          63 |               0 | 32 |      0 |   29 |   1 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
-| g2        | n/a   | BUFG/O          | None       |          30 |               0 |  0 |      0 |   29 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
+| g1        | n/a   | BUFG/O          | None       |          46 |               0 | 16 |      0 |   29 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
+| g2        | n/a   | BUFG/O          | None       |          57 |               0 | 27 |      0 |   29 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -289,8 +289,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
-| g1        | n/a   | BUFG/O          | None       |           9 |               0 |  0 |      0 |    9 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
-| g2        | n/a   | BUFG/O          | None       |           9 |               0 |  0 |      0 |    9 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
+| g1        | n/a   | BUFG/O          | None       |          10 |               0 |  0 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
+| g2        | n/a   | BUFG/O          | None       |          10 |               0 |  0 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -303,8 +303,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
-| g1        | n/a   | BUFG/O          | None       |          40 |               0 | 10 |      0 |   29 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
-| g2        | n/a   | BUFG/O          | None       |          30 |               0 |  0 |      0 |   29 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
+| g1        | n/a   | BUFG/O          | None       |          29 |               0 |  0 |      0 |   28 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
+| g2        | n/a   | BUFG/O          | None       |          29 |               0 |  0 |      0 |   28 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -317,8 +317,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
-| g1        | n/a   | BUFG/O          | None       |           4 |               0 |  0 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
-| g2        | n/a   | BUFG/O          | None       |           4 |               0 |  0 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
+| g1        | n/a   | BUFG/O          | None       |           3 |               0 |  0 |      0 |    3 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
+| g2        | n/a   | BUFG/O          | None       |           3 |               0 |  0 |      0 |    3 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -331,8 +331,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
-| g1        | n/a   | BUFG/O          | None       |           7 |               0 |  0 |      0 |    7 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
-| g2        | n/a   | BUFG/O          | None       |           7 |               0 |  0 |      0 |    7 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
+| g1        | n/a   | BUFG/O          | None       |           4 |               0 |  0 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_VGA |
+| g2        | n/a   | BUFG/O          | None       |           4 |               0 |  0 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | clk_deler/inst/clk_FFT |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
