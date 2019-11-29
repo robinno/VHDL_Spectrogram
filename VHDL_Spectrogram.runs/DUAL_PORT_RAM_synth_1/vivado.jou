@@ -6,7 +6,7 @@
 # Process ID: 10084
 # Current directory: C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1
 # Command line: vivado.exe -log DUAL_PORT_RAM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DUAL_PORT_RAM.tcl
-# Log file: C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1/DUAL_PORT_RAM.vds
-# Journal file: C:/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1\vivado.jou
+# Log file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1/DUAL_PORT_RAM.vds
+# Journal file: D:/Ing/Master 1sem/Digitale/VHDL_Spectrogram/VHDL_Spectrogram.runs/DUAL_PORT_RAM_synth_1\vivado.jou
 #-----------------------------------------------------------
 source DUAL_PORT_RAM.tcl -notrace
